@@ -1,0 +1,38 @@
+/*   .mat-toolbar.menu .mat-icon {
+  color: rgb(157, 255, 0);
+} 
+ */
+mat-toolbar.menu {
+  background-size: 100%;
+  background-size: cover;
+  background-image: url("../../../assets/images/IMG_32071.jpg");
+
+  height: 400px;
+  // display: block;
+  display: flex;
+
+  /*   justify-content: center;
+  align-items: center; */
+}
+mat-toolbar.menu div#contmenu {
+  color: rgb(239, 239, 239);
+  margin: -330px 0px 0px 0px;
+  float: left;
+  position: absolute;
+  height: 30px;
+  width: 300px;
+}
+mat-toolbar.menu div#hello {
+  position: relative;
+  height: 30px;
+  width: auto;
+  margin: 0 auto;
+  border-style: inset;
+  border-color: #ff29b4;
+  padding: 12px;
+}
+
+#hello h1 {
+  color: rgb(239, 239, 239);
+  text-align: center;
+}
