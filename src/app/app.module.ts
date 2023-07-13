@@ -11,13 +11,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-
-
- 
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent,FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    AboutComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

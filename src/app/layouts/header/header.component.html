@@ -2,23 +2,23 @@
     <div class="cont">
         <mat-toolbar class="menu">
             <div id="contmenu">
-                <button mat-button class="optionMenu">Home</button>
-                <button mat-button class="optionMenu">About</button>
-                <button mat-button class="optionMenu">Resume</button>
+                <button mat-button class="optionMenu">Contactme</button>
                 <button mat-button class="optionMenu">Portfolio</button>
-                <button mat-button class="optionMenu" id="active">Contactme</button>
+                <button (click)="goDown1()" mat-button class="optionMenu">About</button>
+                <button mat-button class="optionMenu">Home</button>
             </div>
 
             <div class="contpre">
                 <h1 id="hello">Hi, I'm Angélica<strong id="point">.</strong></h1>
                 <span id="name"> Web Developer</span>
                 <div id="conthello">
-                    <button mat-raised-button id="raised">Download CV</button>
+                    <button mat-raised-button id="raised" (click)="toTheTop()">
+                        Download CV
+                    </button>
                 </div>
-                <mat-icon>facebook</mat-icon>
-
+                <a href="" class="social"> Github</a>
+                <a href="" class="social"> Linkedin </a>
             </div>
-
         </mat-toolbar>
     </div>
 </section>
