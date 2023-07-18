@@ -2,22 +2,26 @@
     <div class="cont">
         <mat-toolbar class="menu">
             <div id="contmenu">
-                <button mat-button class="optionMenu">Contactme</button>
-                <button mat-button class="optionMenu">Portfolio</button>
-                <button (click)="goDown1()" mat-button class="optionMenu">About</button>
-                <button mat-button class="optionMenu">Home</button>
+                <button mat-button class="optionMenu">Contáctame</button>
+                <button mat-button class="optionMenu">Portafolio</button>
+                <button (click)="goDown1()" mat-button class="optionMenu" routerLink="about"
+                    routerLinkActive="active">Acerca de mi</button>
+                <button mat-button class="optionMenu" routerLink="foot" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}>Home</button>
+
             </div>
 
             <div class="contpre">
-                <h1 id="hello">Hi, I'm Angélica<strong id="point">.</strong></h1>
-                <span id="name"> Web Developer</span>
+                <h1 id="hello">Hola<strong id="point">.</strong></h1>
+                <span id="name" class="line">
+                    Soy desarroladora web
+                </span>
+
                 <div id="conthello">
-                    <button mat-raised-button id="raised" (click)="toTheTop()">
-                        Download CV
+                    <button mat-raised-button id="raised" (click)="toTheTop()" class="btn btn1">
+                        Contáctame
                     </button>
                 </div>
-                <a href="" class="social"> Github</a>
-                <a href="" class="social"> Linkedin </a>
             </div>
         </mat-toolbar>
     </div>

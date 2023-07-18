@@ -17,9 +17,9 @@ section#head div.cont {
   /*   position: absolute; */
   margin: 50px auto;
 
-  -webkit-box-shadow: 0 0px 4px #0b0b0b, 0 0 5px #111111 inset;
-  -moz-box-shadow: 0 0px 4px #111111, 0 0 5px #171717 inset;
-  box-shadow: 0 0px 4px #0b0b0b, 0 0 5px #111111 inset;
+  -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
+  -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
+  box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
 }
 //////////////////////7
 
@@ -48,26 +48,26 @@ mat-toolbar.menu div#contmenu .optionMenu:hover {
   color: #ffffff;
 }
 
-#point {
+h1 strong#point {
   color: #e349c4;
-  font-size: 0px;
+  font-size: 65px;
+}
+span {
+  display: inline-block;
+  position: relative;
+  left: 50px;
 }
 
-/* mat-toolbar.menu div#conthi {
-  background-color: blue;
-  float: left;
-  height: 30px;
-  width: 300px;
-  margin: 0 auto;
-} */
-/* mat-toolbar.menu div#hello {
-  height: 30px;
-  width: auto;
-  // margin: 0 auto;
-  border-style: inset;
-  border-color: #ff29b4;
-  padding: 12px;
-} */
+.line::before {
+  content: "";
+  left: -45px;
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #e349c4;
+  top: 0.65em;
+}
+
 mat-toolbar.menu div.contpre {
   float: left;
   height: auto;
@@ -85,11 +85,7 @@ mat-toolbar.menu div.contpre {
   font-size: 25px;
   font-weight: lighter;
 }
-.mat-mdc-raised-button#raised {
-  margin-top: 15px;
-  background-color: #e349c4;
-  color: white;
-}
+
 a.social {
   color: rgb(255, 255, 255);
   font-size: 13px;
@@ -97,4 +93,70 @@ a.social {
   letter-spacing: 2px;
   margin: 1px;
   text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #2d3436;
+}
+
+.btn {
+  position: relative;
+  display: block;
+
+  font-size: 14px;
+  font-family: "montserrat";
+  text-decoration: none;
+  margin: 30px 0;
+  border: 1px solid #e349c4;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn::before {
+  background: #e349c4;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btn1::before {
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+.mat-mdc-raised-button#raised:hover {
+  background-color: #e349c400;
+  color: #ffffff;
+  /*  border: 1px solid#ffffffea; */
+}
+.mat-mdc-raised-button#raised {
+  margin-top: 25px;
+  /*   transition: all 0.5s ease; */
+  transform: translate(0%, -20%);
+  border: 1px solid #e349c4;
+  color: #e349c4;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  outline: none;
+  border-radius: 2px;
+}
+
+mat-toolbar.menu div#contmenu .optionMenu.active {
+  color: #ffffff;
 }
