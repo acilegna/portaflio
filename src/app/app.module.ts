@@ -13,6 +13,7 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
