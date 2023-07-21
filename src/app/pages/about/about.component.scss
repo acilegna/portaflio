@@ -45,16 +45,17 @@ span#name {
 p#code {
   color: white;
   margin-left: 31px;
-  margin-top: 35px;
+  margin-top: 20px;
 }
 #junior {
   color: white;
-  margin-left: 30px;
+  margin-left: 10px;
+  font-size: smaller;
 }
 .write {
   color: aqua;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 .mat-mdc-raised-button#raised {
   margin-top: 15px;
@@ -62,16 +63,20 @@ p#code {
   color: rgb(250, 250, 250);
 }
 
-div#cv {
-  margin-left: 31px;
-  margin-bottom: 10px;
+#cv {
+  color: #e349c4;
+  text-decoration: underline;
+}
+div#redes {
+  margin-left: 2px;
+  margin-top: 10px;
 }
 a.social {
-  color: rgb(253, 253, 253);
+  color: rgb(226, 225, 225);
   font-size: 13px;
   font-weight: lighter;
   letter-spacing: 2px;
-  margin: 1px;
+
   margin-left: 32px;
   text-decoration: none;
 }
