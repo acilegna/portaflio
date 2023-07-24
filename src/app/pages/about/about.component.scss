@@ -18,22 +18,30 @@ h1 {
 section.about {
   height: 100%;
   width: 100%;
-
-  background-color: rgb(207, 158, 158);
+  background-color: rgb(234, 233, 233);
 }
-div.contpre {
-  float: left;
+
+div.contabout {
+  height: 100%;
+
+  width: 90%;
+  margin: 0px auto;
+  background-color: #3a3837;
+
+  -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
+  -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
+  box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
+}
+div.contabout div.contpre {
   height: auto;
-  width: 750px;
-  margin: 130px auto auto 90px;
-  background-color: rgb(30, 30, 30);
+  width: auto;
+  padding-top: 70px;
 }
-
 #hello {
   color: rgb(255, 255, 255);
   font-size: 44px;
   font-weight: bold;
-  margin-bottom: 40px;
+  margin-bottom: 45px;
 }
 span#name {
   margin-left: 31px;
@@ -53,7 +61,7 @@ p#code {
   font-size: smaller;
 }
 .write {
-  color: aqua;
+  color: #e349c4;
   text-decoration: none;
   margin-left: 5px;
 }
@@ -68,17 +76,25 @@ p#code {
   text-decoration: underline;
 }
 div#redes {
-  margin-left: 2px;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 a.social {
-  color: rgb(226, 225, 225);
+  color: rgb(255, 255, 255);
   font-size: 13px;
-  font-weight: lighter;
+  font-weight: unset;
   letter-spacing: 2px;
-
-  margin-left: 32px;
   text-decoration: none;
+}
+
+#redes .social#git,
+#redes .social#link {
+  margin-left: 30px;
+  padding: 8px 8px 8px 8px;
+  background-color: rgb(65, 62, 62);
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 1px #111111 inset;
+  -moz-box-shadow: 0 0 1px #171717 inset;
+  box-shadow: 0 0 1px #111111 inset;
 }
 h1 #point {
   color: #e349c4;
