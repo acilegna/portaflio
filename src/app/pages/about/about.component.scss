@@ -41,6 +41,7 @@ div.contabout div.contpre {
   color: rgb(255, 255, 255);
   font-size: 44px;
   font-weight: bold;
+
   margin-bottom: 45px;
 }
 span#name {
@@ -50,10 +51,14 @@ span#name {
   font-size: 25px;
   font-weight: lighter;
 }
-p#code {
+p.code {
   color: white;
   margin-left: 31px;
   margin-top: 20px;
+}
+#can {
+  margin-top: -16px;
+  font-style: italic;
 }
 #junior {
   color: white;
