@@ -25,6 +25,10 @@ section.about {
 div.contabout {
   height: 100%;
 
+  width: 90%;
+  margin: 0px auto;
+  background-color: #3a3837;
+
   -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
   -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
   box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
@@ -38,7 +42,6 @@ div.contabout div.contpre {
   color: rgb(255, 255, 255);
   font-size: 44px;
   font-weight: bold;
-
   margin-bottom: 45px;
 }
 span#name {
@@ -48,15 +51,10 @@ span#name {
   font-size: 25px;
   font-weight: lighter;
 }
-p.code {
 p#code {
   color: white;
   margin-left: 31px;
   margin-top: 20px;
-}
-#can {
-  margin-top: -16px;
-  font-style: italic;
 }
 #junior {
   color: white;
@@ -101,5 +99,4 @@ a.social {
 }
 h1 #point {
   color: #e349c4;
-}
 }
