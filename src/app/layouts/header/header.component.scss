@@ -7,15 +7,19 @@
   /*   position: relative; */
   display: flex;
 }
+.point{
+  font-size: 90px;
+  margin-top: -52px;
+}
 section#head div.cont {
-  height: 92%;
+  height: 95%;
 
   width: 90%;
   background-size: 100%;
   background-size: cover;
   background-image: url("../../../assets/images/IMG_32071.jpg");
   /*   position: absolute; */
-  margin: 50px auto;
+  margin: 30px auto;
 
   -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
   -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
@@ -30,6 +34,7 @@ mat-toolbar.menu {
       display: block;
   background-image: url("../../../assets/images/IMG_32071.jpg"); */
   background-color: rgba(255, 0, 0, 0);
+ 
   display: block;
 }
 mat-toolbar.menu div#contmenu {
