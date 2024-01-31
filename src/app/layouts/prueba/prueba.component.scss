@@ -1,0 +1,100 @@
+.section {
+    padding: 2rem 0 60rem; // rough idea for space
+    border: 1px solid black;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    will-change: opacity;
+    &.visible {
+  opacity: 1;   
+    }
+    h1 {
+      display: flex;
+      justify-content: center;
+      color: white;
+    }
+    &#about {
+      background-color: rgb(236, 5, 5);
+    }
+    &#portfolio {
+      background-color: rgb(0, 0, 255);
+    }
+    &#experience {
+      background-color: rgb(0, 128, 0);
+    }
+  }
+  #wrapper{
+    margin: 10px;
+    background: red;
+    width: 300px;
+    height: 300px;
+    overflow-y: auto;
+  }
+  
+  #wrapper div{
+    width: 100%;
+    background: blue;
+    margin: 5px 0px;
+    color: white;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0;
+    transition: all 2s linear;
+  }
+  
+  #wrapper div.show{
+    opacity: 1;
+  }
+
+  /* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 0 15px;
+}
+
+.menu a {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 50px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  background-color: var(--secundary-color);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 4px);
+  width: 100%;
+  height: 4px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.menu a.selected::after,
+.menu a:hover::after {
+  opacity: 0.8;
+}
+
+.menu a:hover {
+  color: var(--primary-color);
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+.logotype {
+  display: flex;
+  justify-content: center;
+}

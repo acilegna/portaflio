@@ -2,23 +2,39 @@
     <div class="cont">
         <mat-toolbar class="menu">
             <div id="contmenu">
-                <button mat-button class="optionMenu">Contáctame</button>
-                <button mat-button class="optionMenu">Portafolio</button>
-                <button (click)="goDown1()" mat-button class="optionMenu" routerLink="about"
-                    routerLinkActive="active">Acerca de mi</button>
-                <button mat-button class="optionMenu" routerLink="foot" routerLinkActive="active"
-                    [routerLinkActiveOptions]={exact:true}>Home</button>
+
+                <button class="optionMenu social">Email</button>
+                <button class="optionMenu social">Github</button>
+                <button class="optionMenu social">Linkedin</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <button class="optionMenu"> <a href="" #portfolio>Portafolio</a></button>
+                <button class="optionMenu" routerLink="about" routerLinkActive="active"><a #about>about</a></button>
+
+
+                <button class="optionMenu point" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}><a href="" #home>Home</a></button>
+
+                <!-- <button (click)="goDown1()" mat-button class="optionMenu"  routerLink="about"
+                    routerLinkActive="active">about</button>
+                      <button  [ngClass]="newValue == 0 ? 'resaltar' : 'deresaltar'" mat-button class="optionMenu point" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}>.</button>
+           
+
+                <button mat-button class="optionMenu point" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}>.</button> -->
 
             </div>
 
             <div class="contpre">
+
                 <h1 id="hello">Hola<strong id="point">.</strong></h1>
                 <span id="name" class="line">
                     Soy Programadora Web
                 </span>
 
                 <div id="conthello">
-                    <button mat-raised-button id="raised" (click)="toTheTop()" class="btn btn1">
+                    <button mat-raised-button id="raised" class="btn btn1">
                         Ver CV
                     </button>
                 </div>
@@ -28,4 +44,6 @@
         <!-- <span class="material-icons">auto_awesome</span>
         <mat-icon>keyboard_arrow_down</mat-icon> -->
     </div>
+
 </section>
+<app-about [about]='btnAbout' [childMessage]="parentMessage"></app-about>
