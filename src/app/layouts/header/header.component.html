@@ -36,7 +36,7 @@
                 <div id="conthello">
                     <button mat-raised-button id="raised" class="btn btn1">
                         Ver CV
-                    </button>
+                    </button>{{menuHome }}
                 </div>
 
             </div>
@@ -46,4 +46,5 @@
     </div>
 
 </section>
-<app-about [about]='btnAbout' [childMessage]="parentMessage"></app-about>
+<app-about [about]='menuAbout'></app-about>
+ <app-trabajo [trabajo]="menuTrabajo"></app-trabajo>

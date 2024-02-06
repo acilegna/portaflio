@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef,   EventEmitter,   Input, OnInit, Output, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+/* import { AfterViewInit, Component, ElementRef,   EventEmitter,   Input, OnInit, Output, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { FadeInDirective } from '../prueba/fade-in.directive';
 import { Directive } from '@angular/core';
@@ -59,7 +59,7 @@ public changeRed (){
  
    } 
 
-   }
+   } */
 
 /*   ngAfterViewInit() {
     this.intersectionObserver  = new IntersectionObserver((entries) => {

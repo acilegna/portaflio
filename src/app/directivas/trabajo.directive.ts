@@ -17,25 +17,22 @@ import {
     ViewChildren
   } from '@angular/core';
 
-  
+  import { TrabajoComponent} from '../pages/trabajo/trabajo.component';
+import { HeaderComponent } from '../layouts/header/header.component';
  
   @Directive({
-    selector: '[fadeIn]',
+    selector: '[TrabajoDir]',
   })
-  export class FadeInDirective implements OnInit {
+  export class  TrabajoDirective implements OnInit {
     
-    
-     
-   
-    @Input() thresholdMax = 0.8;
     @Input() thresholdMin = 0.4;
     @Output() isVisible = new EventEmitter<string>();
-     
+    @ViewChild('TrabajoCompon', { static: false }) trabajoCompon = TrabajoComponent;
     buton: any
  
    
   
-    constructor(private element : ElementRef, private renderer: Renderer2) {}
+    constructor(private element : ElementRef, private renderer: Renderer2, private header:HeaderComponent, private trabajo: TrabajoComponent ) {}
   
     //TODO: possibly implement debouncing
   
@@ -43,7 +40,7 @@ import {
       this.createObserver();
     }
      
-    addClassName(className:any) {
+   /*  addClassName(className:any) {
       this.renderer.addClass(this.buton=this.element.nativeElement, className);
      
       this.isVisible.emit();
@@ -55,39 +52,30 @@ import {
         this.renderer.removeClass(this.element.nativeElement, className);
          
       }
-    }
+    } */
   
     createObserver() {
-      const options = {
-        threshold: [this.thresholdMin, this.thresholdMax],
+      const option = {
+        threshold: [this.thresholdMin],
       };
   
       const callback = (entries:any) => {
         entries &&
           entries.forEach((entry:any) => {
             if (entry.isIntersecting) {
-              this.addClassName('visible');
-             
+        
+             this.header.envia(this.trabajo.trabajo)
             } else {
-              this.removeClassName('visible');
-              
+             // this.header.envia(0)
             }
           });
       };
       
-      const observer = new IntersectionObserver(callback, options);
+      const observer = new IntersectionObserver(callback, option);
       const target = this.element.nativeElement;   
       target  &&  observer.observe(target );
       
     }
   }
   
- /*  //this.renderer2.addClass(this.element.nativeElement, 'visible');
-     //this.element.nativeElement.style.color = 'blue';
-     this.buton= this.element.nativeElement;
-     
-     this.renderer2.setStyle(
-       this.buton,
-       'border-left',
-       '23px dashed olive'
-     ); */
+ 

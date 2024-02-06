@@ -22,16 +22,18 @@ import {
 
 } from '@angular/core';
 
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../layouts/header/header.component';
 import { AboutComponent } from 'src/app/pages/about/about.component';
+
+
 @Directive({
-  selector: '[fadeIn]',
+  selector: '[aboutDir]',
 
 })
 
-export class FadeInDirective implements OnInit, AfterViewInit {
+export class AboutDirective implements OnInit, AfterViewInit {
 
-  @Input() thresholdMax = 1;
+  @Input() thresholdMax = 0.4;
   @Input() thresholdMin = 0.1;
   @Output() isVisible = new EventEmitter<string>();
 
@@ -39,6 +41,8 @@ export class FadeInDirective implements OnInit, AfterViewInit {
 
   @ViewChild('HeaderComponent', { static: false }) headerComponent = HeaderComponent;
   @ViewChild('AboutComponent', { static: false }) aboutComponent = AboutComponent;
+
+
   constructor(private element: ElementRef, private renderer: Renderer2, private header: HeaderComponent, private about: AboutComponent) {
 
   }
@@ -56,7 +60,6 @@ export class FadeInDirective implements OnInit, AfterViewInit {
 
   addClassName(className: any) {
     this.renderer.addClass(this.element.nativeElement, className);
-
     this.isVisible.emit();
 
   }
@@ -76,20 +79,23 @@ export class FadeInDirective implements OnInit, AfterViewInit {
     const callback = (entries: any) => {
       entries &&
         entries.forEach((entry: any) => {
-           
+
 
           if (entry.isIntersecting) {
 
             this.addClassName('visible');
-          
             this.header.envia(this.about.about)
- 
+
+           // console.log("hola me veo")
+
 
           } else {
             this.removeClassName('visible');
-              
-            this.header.changeBlue()
-          
+             
+
+
+            // this.header.changeBlue()
+            //console.log("hola2 no me veo")
 
           }
         });
