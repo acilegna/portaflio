@@ -22,51 +22,45 @@ export class HeaderComponent {
   menuTrabajo = 3;
   claseActiva = 'activa';
   claseInactiva = 'inactiva';
-  ngOnInit() {
-
-    //this.desactivarAll();
-  
-  }
+   
 
 
 
-  public envia(valor: any) {     
-
-    if (this.menuAbout === valor) {
-      
+  public envia(valor: any) {
+     console.log(valor)
+   /*  if (this.menuAbout === valor) {
+      this.desactivaBoton(this.buttonTrabajo, this.claseActiva);
+      this.desactivaBoton(this.buttonHome, this.claseActiva);
       this.activaBoton(this.buttonAbout, this.claseActiva);
-  
-
-    } else if (this.menuTrabajo === valor ) {
       
-     
+
+
+    } else if (this.menuTrabajo === valor) {
+
+      this.desactivaBoton(this.buttonAbout, this.claseActiva);
+      this.desactivaBoton(this.buttonHome, this.claseActiva);
       this.activaBoton(this.buttonTrabajo, this.claseActiva);
 
-       this.desactivaBoton(this.buttonAbout,this.claseActiva);
+      
 
     }
 
-     
+ */
   }
-  
-  public desactivarAll(){
-    this.renderer.addClass(this.buttonAbout.nativeElement, 'inactiva');
-    this.renderer.addClass(this.buttonHome.nativeElement, 'inactiva');
-    this.renderer.addClass(this.buttonTrabajo.nativeElement, 'inactiva');
 
-  }
+  
   public activaBoton(boton: ElementRef, clase: string) {
     this.renderer.addClass(boton.nativeElement, clase);
   }
 
 
- 
+
   public desactivaBoton(boton: ElementRef, clase: string) {
     if (boton.nativeElement.classList.contains(clase)) {
       this.renderer.removeClass(boton.nativeElement, clase);
 
     }
-     
+
   }
 
 

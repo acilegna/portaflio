@@ -23,27 +23,26 @@ import {
 } from '@angular/core';
 
 import { HeaderComponent } from '../layouts/header/header.component';
-import { AboutComponent } from 'src/app/pages/about/about.component';
+ 
 
 
 @Directive({
-  selector: '[aboutDir]',
+  selector: '[homeDir]',
 
 })
 
-export class AboutDirective implements OnInit, AfterViewInit {
+export class HomeDirective implements OnInit, AfterViewInit {
 
   @Input() thresholdMax = 0.4;
   @Input() thresholdMin = 0.1;
   @Output() isVisible = new EventEmitter<string>();
 
-  //buton: any
-
+  
   @ViewChild('HeaderComponent', { static: false }) headerComponent = HeaderComponent;
-  @ViewChild('AboutComponent', { static: false }) aboutComponent = AboutComponent;
+ 
 
 
-  constructor(private element: ElementRef, private renderer: Renderer2, private header: HeaderComponent, private about: AboutComponent) {
+  constructor(private element: ElementRef, private renderer: Renderer2, private header: HeaderComponent ) {
 
   }
 
@@ -54,22 +53,10 @@ export class AboutDirective implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.createObserver();
-
-    // console.log(this.headerComponent)
+ 
   }
 
-  addClassName(className: any) {
-    this.renderer.addClass(this.element.nativeElement, className);
-    this.isVisible.emit();
-
-  }
-
-  removeClassName(className: any) {
-    if (this.element.nativeElement.classList.contains(className)) {
-      this.renderer.removeClass(this.element.nativeElement, className);
-
-    }
-  }
+   
 
   createObserver() {
     const options = {
@@ -83,18 +70,18 @@ export class AboutDirective implements OnInit, AfterViewInit {
 
           if (entry.isIntersecting) {
 
-            this.addClassName('visible');
+         
             // this.header.envia(this.about.about)
-            this.renderer.addClass(this.header.buttonAbout.nativeElement, 'activa');
-            if (this.header.buttonHome.nativeElement.classList.contains('activa') ||
+            this.renderer.addClass(this.header.buttonHome.nativeElement, 'activa');
+             if (this.header.buttonAbout.nativeElement.classList.contains('activa') ||
               this.header.buttonTrabajo.nativeElement.classList.contains('activa')) {
-              this.renderer.removeClass(this.header.buttonHome.nativeElement, 'activa');
+              this.renderer.removeClass(this.header.buttonAbout.nativeElement, 'activa');
               this.renderer.removeClass(this.header.buttonTrabajo.nativeElement, 'activa');
 
-            }
+            }  
 
           } else {
-            this.removeClassName('visible');
+           
 
           }
         });
@@ -107,12 +94,4 @@ export class AboutDirective implements OnInit, AfterViewInit {
   }
 }
 
-/*  //this.renderer2.addClass(this.element.nativeElement, 'visible');
-   //this.element.nativeElement.style.color = 'blue';
-   this.buton= this.element.nativeElement;
-   
-   this.renderer2.setStyle(
-     this.buton,
-     'border-left',
-     '23px dashed olive'
-   ); */
+ 

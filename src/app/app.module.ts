@@ -17,7 +17,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { AboutDirective } from './directivas/about.directive';
  
 import { TrabajoDirective} from './directivas/trabajo.directive';
- 
+ import { HomeDirective } from './directivas/home.directive';
  
 import { MatCardModule } from '@angular/material/card';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
@@ -29,7 +29,8 @@ import { TrabajoComponent } from './pages/trabajo/trabajo.component';
     AboutComponent,
     FooterComponent,  
     AboutDirective, TrabajoComponent, 
-    TrabajoDirective
+    TrabajoDirective,
+    HomeDirective
   ],
   imports: [
     BrowserModule,
