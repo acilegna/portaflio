@@ -13,18 +13,12 @@ import {
   Input,
   Output,
   EventEmitter,
-  ViewChild,
-  ViewChildren,
-  QueryList,
   AfterViewInit,
-  Component,
-  ComponentRef,
+
 
 } from '@angular/core';
 
 import { HeaderComponent } from '../layouts/header/header.component';
-import { AboutComponent } from 'src/app/pages/about/about.component';
-
 
 @Directive({
   selector: '[aboutDir]',
@@ -37,13 +31,7 @@ export class AboutDirective implements OnInit, AfterViewInit {
   @Input() thresholdMin = 0.1;
   @Output() isVisible = new EventEmitter<string>();
 
-  //buton: any
-
-  @ViewChild('HeaderComponent', { static: false }) headerComponent = HeaderComponent;
-  @ViewChild('AboutComponent', { static: false }) aboutComponent = AboutComponent;
-
-
-  constructor(private element: ElementRef, private renderer: Renderer2, private header: HeaderComponent, private about: AboutComponent) {
+  constructor(private element: ElementRef, private renderer: Renderer2, private header: HeaderComponent) {
 
   }
 
@@ -55,7 +43,6 @@ export class AboutDirective implements OnInit, AfterViewInit {
   ngOnInit() {
     this.createObserver();
 
-    // console.log(this.headerComponent)
   }
 
   addClassName(className: any) {
@@ -83,9 +70,10 @@ export class AboutDirective implements OnInit, AfterViewInit {
 
           if (entry.isIntersecting) {
 
-            this.addClassName('visible');
-            // this.header.envia(this.about.about)
             this.renderer.addClass(this.header.buttonAbout.nativeElement, 'activa');
+            
+            this.addClassName('visible');
+           
             if (this.header.buttonHome.nativeElement.classList.contains('activa') ||
               this.header.buttonTrabajo.nativeElement.classList.contains('activa')) {
               this.renderer.removeClass(this.header.buttonHome.nativeElement, 'activa');
@@ -107,12 +95,3 @@ export class AboutDirective implements OnInit, AfterViewInit {
   }
 }
 
-/*  //this.renderer2.addClass(this.element.nativeElement, 'visible');
-   //this.element.nativeElement.style.color = 'blue';
-   this.buton= this.element.nativeElement;
-   
-   this.renderer2.setStyle(
-     this.buton,
-     'border-left',
-     '23px dashed olive'
-   ); */

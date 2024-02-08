@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
-import { AboutDirective} from 'src/app/directivas/about.directive';
+import { Component  } from '@angular/core';
+ 
 @Component({
   selector: 'app-trabajo',
   templateUrl: './trabajo.component.html',
   styleUrls: ['./trabajo.component.scss']
 })
 export class TrabajoComponent {
-@Input() trabajo:any
+ 
 }

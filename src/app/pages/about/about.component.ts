@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -8,15 +8,12 @@ import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/cor
 export class AboutComponent {
 
 
-  constructor(private element: ElementRef, render: Renderer2) { }
-  @Input() about: any;
+  constructor( ) { }
+  //comunicacion a hijo about desde padre header@Input() about: any;
   
 
-  public ejecuta() {
-    console.log(this.about)
-  }
 
   ngOnInit() {
-    // this.ejecuta()
+ 
   }
 }
