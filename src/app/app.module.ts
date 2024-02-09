@@ -23,6 +23,7 @@ import { TrabajoDirective} from './directivas/trabajo.directive';
 import { MatCardModule } from '@angular/material/card';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
  
+ 
 @NgModule({
   declarations: [
     AppComponent,
