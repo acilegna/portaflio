@@ -1,80 +1,66 @@
-/* :host {
-  font-style: italic;
-} */
+#presentacion {
+  //background-color: red;
+}
+
 #head {
   background-size: 100%;
   background-size: cover;
-  background-color: chartreuse;
   background-image: url("../../../assets/images/IMG_3207.jpg");
   height: 100%;
-  /*   position: relative; */
   display: flex;
-
 }
 
 section#head div.cont {
   height: 95%;
-
   width: 90%;
   background-size: 100%;
   background-size: cover;
-  background-image: url("../../../assets/images/IMG_32071.jpg");
-  /*   position: absolute; */
-  margin: 30px auto;
 
+   background-image: url("../../../assets/images/IMG_32071.jpg");
+  margin: 30px auto;
   -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
   -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
   box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
 }
 
-//////////////////////7
 
-mat-toolbar.menu {
-  /*  background-size: 100%;
-  background-size: cover;
-    height: 350px;
-      display: block;
-  background-image: url("../../../assets/images/IMG_32071.jpg"); */
-  background-color: rgba(255, 0, 0, 0);
-
-  display: block;
-}
-
-mat-toolbar.menu div#contmenu {
-  /* float:right; */
-
+div#contmenu {
   transform: rotate(-90deg) translateX(10px);
   transform-origin: bottom right;
-  /* height: 30px; 
-    width: 380px; 
-  background-color: aqua;*/
   position: fixed;
   right: 20px;
 
 }
 
- 
 
-mat-toolbar.menu div#contmenu .optionMenu a,
-mat-toolbar.menu div#contmenu .optionMenu {
-  color: #818181;
-  text-decoration: none;
-  letter-spacing: 2px;
-  background-color: #2d343604;
-  border-style: none;
-  font-size: 18px;
-  padding: 3px;
+
+div#contmenu .optionMenu {
+  color: #b3b3b3;
+  letter-spacing: 1px;
+  font-size: 16px;
+
 }
 
-mat-toolbar.menu div#contmenu .optionMenu.social {
 
-  padding: 7px;
-}
 
-mat-toolbar.menu div#contmenu .optionMenu:hover a,
-mat-toolbar.menu div#contmenu .optionMenu:hover {
+/* div#contmenu .optionMenu:hover a,
+div#contmenu .optionMenu:hover {
   color: #ffffff;
 }
+
+div#contmenu .optionMenu.active {
+  color: #ffffff;
+} */
+
+
+div.contme {
+  float: left;
+  height: auto;
+  width: auto;
+  margin: 210px auto auto 110px;
+}
+
+
 
 h1 strong#point {
   color: #e349c4;
@@ -87,15 +73,6 @@ span {
   left: 17px;
 }
 
-/* .line::before {
-  content: "";
-  left: -45px;
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #e349c4;
-  top: 0.5em;
-} */
 
 .line::before {
   content: "";
@@ -107,12 +84,6 @@ span {
   top: -5px;
 }
 
-mat-toolbar.menu div.contpre {
-  float: left;
-  height: auto;
-  width: auto;
-  margin: 210px auto auto 110px;
-}
 
 #hello {
   color: white;
@@ -170,13 +141,13 @@ body {
   width: 100%;
 }
 
-.mat-mdc-raised-button#raised:hover {
+#raised:hover {
   background-color: #e349c400;
   color: #ffffff;
   /*  border: 1px solid#ffffffea; */
 }
 
-.mat-mdc-raised-button#raised {
+#raised {
   margin-top: 30px;
   /*   transition: all 0.5s ease; */
   transform: translate(0%, -20%);
@@ -193,9 +164,6 @@ body {
   border-radius: 2px;
 }
 
-menu div#contmenu .optionMenu.active {
-  color: #ffffff;
-}
 
 $base: 0.6rem;
 
@@ -230,11 +198,132 @@ $base: 0.6rem;
 
 .activa {
   font-weight: bold !important;
-  
+
   color: rgb(228, 8, 8) !important;
 }
 
 .inactiva {
   font-weight: bold !important;
   color: #d0ff00 !important
+}
+
+@media (max-width: 991px) {
+
+  div#contmenu .optionMenu {
+    color: #f3f3f3;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-left: 10px;
+ 
+  
+  }
+
+    div#contmenu .optionMenu.social {
+  display: none;
+  }
+  section#head div.cont {
+
+    margin: 50px auto;
+
+  }
+
+ 
+
+  div#contmenu {
+
+    transform: rotate(0deg) translateY(0px);
+    transform-origin: top right;
+    left: 42px;
+
+
+  }
+}
+
+@media (max-width: 742px) {
+
+
+  #raised {
+    margin-top: 40px;
+  }
+
+  h1 strong#point {
+    font-size: 62px;
+  }
+
+  .line::before {
+    content: "";
+    top: -8px;
+  }
+
+
+  #hello {
+    font-size: 40px;
+  }
+
+  #name {
+    font-size: 40px;
+  }
+
+
+  div.contme {
+
+    margin: 210px auto auto 20px;
+  }
+
+   
+
+}
+
+@media (max-width: 572px) { 
+
+
+  #hello {
+    font-size: 38px;
+  }
+
+  #name {
+    font-size: 35px;
+  }
+
+
+  div.contme {
+
+    margin: 210px auto auto 20px;
+  }
+
+   
+
+}
+
+
+@media (max-width: 526px) { 
+
+
+  #hello {
+    font-size: 38px;
+  }
+
+  #name {
+    font-size: 28px;  }
+   
+
+}
+
+.navbar-toggler {
+ 
+  line-height: 0;
+  color:rgba(0, 128, 0, 0);
+  background-color: rgba(29, 29, 29, 0.096);
+  border:  none;
+ margin-left: 4px;
+  border-radius: 0;
+ 
+}
+.navbar-toggler-icon {
+   
+ 
+  color: #ffffff;
+   
+ 
+  left: 0px;
 }

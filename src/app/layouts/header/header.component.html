@@ -1,48 +1,77 @@
-<section id="head">
-    <div class="cont" homeDir>
-        <mat-toolbar class="menu">
-            <div id="contmenu">
+<section id="head" class="container-fluid">
+    <div id="contmenu">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <div class="container-fluid">
+              
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation" (click)="toggleState()">
+                    <span class="navbar-toggler-icon"></span>
+                </button>                
+   
+              
+                    <div   class="collapse navbar-collapse" id="navbarNavDropdown"[ngClass]="{ 'collapse' : isCollapse }">
+                   
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active optionMenu social" aria-current="page" href="#">Email</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link optionMenu social" href="#">Github</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link optionMenu social" href="#">Linkedin</a>
+                        </li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item">
+                            <a class="nav-link optionMenu " href="#" #portfolio>Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link optionMenu" href="#" #about>About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active optionMenu" aria-current="page" href="#" #home>Home</a>
+                        </li>
 
-                <button class="optionMenu social ">Email</button>
-                <button class="optionMenu social">Github</button>
-                <button class="optionMenu social">Linkedin</button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-                <button class="optionMenu" > <a href="" #portfolio>Portafolio</a></button>
-                <button class="optionMenu" routerLink="about" routerLinkActive="active"><a #about>about</a></button>
-
-
-                <button class="optionMenu point" routerLink="/" routerLinkActive="active"
-                    [routerLinkActiveOptions]={exact:true}><a href="" #home>Home</a></button>
-
-                <!-- <button (click)="goDown1()" mat-button class="optionMenu"  routerLink="about"
-                    routerLinkActive="active">about</button>
-                      <button  [ngClass]="newValue == 0 ? 'resaltar' : 'deresaltar'" mat-button class="optionMenu point" routerLink="/" routerLinkActive="active"
-                    [routerLinkActiveOptions]={exact:true}>.</button>
-           
-
-                <button mat-button class="optionMenu point" routerLink="/" routerLinkActive="active"
-                    [routerLinkActiveOptions]={exact:true}>.</button> -->
-
+                    </ul>
+                </div>
             </div>
-
-            <div class="contpre">
+        </nav>
+    </div>
+    <div class="row cont">
+        <div class="col-12" id="presentacion">
+            <div class="contme col-xs-12">
                 <h1 id="hello">Hola<strong id="point">.</strong></h1>
                 <span id="name" class="line">
                     Soy Programadora Web
                 </span>
-
                 <div id="conthello">
-                    <button mat-raised-button id="raised" class="btn btn1">
+                    <button id="raised" class="btn btn1">
                         Ver CV
                     </button>
                 </div>
 
             </div>
-        </mat-toolbar>
+        </div>
+ 
+            <!-- <div id="contmenu">
+                <button class="optionMenu social ">Email</button>
+                <button class="optionMenu social">Github</button>
+                <button class="optionMenu social">Linkedin</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
+                <button class="optionMenu"> <a href="" #portfolio>Portafolio</a></button>
+                <button class="optionMenu" routerLink="about" routerLinkActive="active"><a #about>about</a></button>
+
+                <button class="optionMenu point" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]={exact:true}><a href="" #home>Home</a></button>
+            </div> -->
+        
     </div>
-
 </section>
-<app-about></app-about>
-<app-trabajo></app-trabajo>
+
+<!--   <app-about></app-about> -->
+
+<!--  <div class="cont" homeDir> -->
+<!-- <app-trabajo></app-trabajo>   -->
