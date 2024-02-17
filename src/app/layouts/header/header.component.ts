@@ -9,18 +9,18 @@ import { Component, ElementRef, Renderer2, ViewChild, } from '@angular/core';
 
 export class HeaderComponent {
 
-  @ViewChild('about', { static: true }) buttonAbout: ElementRef<HTMLHeadElement> ;
-  @ViewChild('portfolio', { static: true }) buttonTrabajo: ElementRef <HTMLHeadElement> ;
-  @ViewChild('home', { static: true }) buttonHome: ElementRef <HTMLHeadElement> ;
- 
+  @ViewChild('about', { static: true }) buttonAbout: ElementRef<HTMLHeadElement>;
+  @ViewChild('portfolio', { static: true }) buttonTrabajo: ElementRef<HTMLHeadElement>;
+  @ViewChild('home', { static: true }) buttonHome: ElementRef<HTMLHeadElement>;
+
   isCollapse = true;   // guardamos el valor
-    toggleState() { // manejador del evento
-        let foo = this.isCollapse;
-        this.isCollapse = foo === false ? true : false; 
-    }
+  toggleState() { // manejador del evento
+    let foo = this.isCollapse;
+    this.isCollapse = foo === false ? true : false;
+  }
   constructor() { }
-//comunicacion padre hijo menuAbout = 2;
-  
+  //comunicacion padre hijo menuAbout = 2;
+
 
 
 }

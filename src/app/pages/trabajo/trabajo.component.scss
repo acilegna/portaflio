@@ -1,0 +1,52 @@
+.section {
+    //  padding: 2rem 0 60rem; // rough idea for space
+    border: 1px solid black;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+    will-change: opacity;
+
+    &.visible {
+        opacity: 1;
+    }
+
+    &#contwork {
+        background-color: rgb(255, 255, 255);
+        height: 100%;
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+
+#section {
+    height: 100%;
+    width: 100%;
+}
+
+a.works {
+    color: #ec1b1b;
+    margin-bottom: 15px;
+    margin-left: 0;
+    padding-bottom: 5px;
+    line-height: 1.5;
+    text-decoration: none;
+
+}
+
+#rowork {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+div#work {
+    background-color: #1d1d20;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+
+}
+
+div#descripcion {
+    background-color: #1c1cb9;
+     
+}
+///////////////////////////////////////////////////////////////////////////////////////////

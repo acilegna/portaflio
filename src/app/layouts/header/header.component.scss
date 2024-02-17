@@ -1,5 +1,6 @@
-#presentacion {
-  //background-color: red;
+.navbar-toggler {
+  background-color: palevioletred;
+
 }
 
 #head {
@@ -16,7 +17,7 @@ section#head div.cont {
   background-size: 100%;
   background-size: cover;
 
-   background-image: url("../../../assets/images/IMG_32071.jpg");
+  background-image: url("../../../assets/images/IMG_32071.jpg");
   margin: 30px auto;
   -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
   -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
@@ -209,25 +210,29 @@ $base: 0.6rem;
 
 @media (max-width: 991px) {
 
+
+
   div#contmenu .optionMenu {
     color: #f3f3f3;
     letter-spacing: 1px;
     font-size: 16px;
     margin-left: 10px;
- 
-  
+
+
   }
 
-    div#contmenu .optionMenu.social {
-  display: none;
+  div#contmenu .optionMenu.social {
+    display: none;
   }
+
   section#head div.cont {
+    height: 91%;
 
     margin: 50px auto;
 
   }
 
- 
+
 
   div#contmenu {
 
@@ -270,11 +275,11 @@ $base: 0.6rem;
     margin: 210px auto auto 20px;
   }
 
-   
+
 
 }
 
-@media (max-width: 572px) { 
+@media (max-width: 572px) {
 
 
   #hello {
@@ -291,12 +296,10 @@ $base: 0.6rem;
     margin: 210px auto auto 20px;
   }
 
-   
-
 }
 
 
-@media (max-width: 526px) { 
+@media (max-width: 526px) {
 
 
   #hello {
@@ -304,26 +307,29 @@ $base: 0.6rem;
   }
 
   #name {
-    font-size: 28px;  }
-   
+    font-size: 28px;
+  }
+
 
 }
 
 .navbar-toggler {
- 
+
   line-height: 0;
-  color:rgba(0, 128, 0, 0);
+  color: rgba(0, 128, 0, 0);
   background-color: rgba(29, 29, 29, 0.096);
-  border:  none;
- margin-left: 4px;
+  border: none;
+  margin-left: 4px;
   border-radius: 0;
- 
+
+
 }
+
 .navbar-toggler-icon {
-   
- 
+
+
   color: #ffffff;
-   
- 
+
+
   left: 0px;
 }
