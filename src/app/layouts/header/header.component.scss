@@ -38,7 +38,7 @@ div#contmenu {
 div#contmenu .optionMenu {
   color: #b3b3b3;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-family: 'Raleway'; font-size: 16px; 
 
 }
 
@@ -65,8 +65,8 @@ div.contme {
 
 h1 strong#point {
   color: #e349c4;
-  font-size: 65px;
-}
+  
+  font-family: 'Raleway';font-size: 85px;}
 
 span {
   display: inline-block;
@@ -77,25 +77,28 @@ span {
 
 .line::before {
   content: "";
-  left: -16px;
+  left: -12px;
   position: absolute;
   width: 3px;
   height: 40px;
   background-color: #e349c4;
-  top: -5px;
+  top: 11px;
 }
 
 
 #hello {
   color: white;
-  font-size: 44px;
+  font-family: 'Raleway'; font-size: 80px; 
   font-weight: bold;
   margin-bottom: 33px;
 }
 
 #name {
-  color: rgb(255, 255, 255);
-  font-size: 40px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  line-height: 1.1;
+  color: rgb(255, 255, 255); 
+  font-family: 'Raleway';font-size: 55px;
   font-weight: lighter;
 }
 
@@ -114,7 +117,7 @@ body {
   font-size: 14px;
   font-family: "montserrat";
   text-decoration: none;
-  margin: 30px 0;
+ // margin: 30px 0;
   border: 1px solid #e349c4;
   padding: 14px 60px;
   text-transform: uppercase;
@@ -149,16 +152,16 @@ body {
 }
 
 #raised {
-  margin-top: 30px;
+  margin-top: 50px;
   /*   transition: all 0.5s ease; */
   transform: translate(0%, -20%);
   border: 1px solid #e349c4;
   color: #e349c4;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Raleway'; font-size: 17px; 
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
-  font-size: 17px;
+   
   background-color: transparent;
   padding: 10px;
   outline: none;
@@ -207,17 +210,18 @@ $base: 0.6rem;
   font-weight: bold !important;
   color: #d0ff00 !important
 }
+@media (max-width: 1026px) {
+  div.contme {
 
+    margin: 180px auto auto 40px;
+  }
+}
 @media (max-width: 991px) {
-
-
-
   div#contmenu .optionMenu {
     color: #f3f3f3;
     letter-spacing: 1px;
     font-size: 16px;
     margin-left: 10px;
-
 
   }
 
@@ -232,20 +236,15 @@ $base: 0.6rem;
 
   }
 
-
-
   div#contmenu {
 
     transform: rotate(0deg) translateY(0px);
     transform-origin: top right;
     left: 42px;
-
-
   }
 }
 
-@media (max-width: 742px) {
-
+@media (max-width: 862px) {
 
   #raised {
     margin-top: 40px;
@@ -257,25 +256,22 @@ $base: 0.6rem;
 
   .line::before {
     content: "";
-    top: -8px;
+    top: 5px;
   }
 
-
   #hello {
-    font-size: 40px;
+    font-size: 44px;
   }
 
   #name {
-    font-size: 40px;
+    font-size: 44px;
   }
 
 
   div.contme {
 
-    margin: 210px auto auto 20px;
+    margin: 170px auto auto 30px;
   }
-
-
 
 }
 
@@ -293,15 +289,21 @@ $base: 0.6rem;
 
   div.contme {
 
-    margin: 210px auto auto 20px;
+    margin: 160px auto auto 20px;
   }
-
+  .line::before {
+    content: "";
+    top: 2px;
+  }
 }
 
 
 @media (max-width: 526px) {
 
-
+  .line::before {
+    content: "";
+    top: -4px;
+  }
   #hello {
     font-size: 38px;
   }

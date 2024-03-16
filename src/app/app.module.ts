@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 
-import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -19,11 +19,12 @@ import { AboutDirective } from './directivas/about.directive';
  
 import { TrabajoDirective} from './directivas/trabajo.directive';
  import { HomeDirective } from './directivas/home.directive';
+ import { PruebaDirective } from './directivas/prueba.directive';
  
 import { MatCardModule } from '@angular/material/card';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
- 
- 
+import {  AlertModule } from 'ngx-bootstrap/alert'
+import { TabsModule } from 'ngx-bootstrap/tabs'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,16 +33,19 @@ import { TrabajoComponent } from './pages/trabajo/trabajo.component';
     FooterComponent,  
     AboutDirective, TrabajoComponent, 
     TrabajoDirective,
-    HomeDirective
+    HomeDirective,PruebaDirective
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule ,
     MatToolbarModule,
+   AlertModule.forRoot(), TabsModule.forRoot() 
+ 
   ],
   providers: [],
   bootstrap: [AppComponent],

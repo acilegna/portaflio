@@ -1,13 +1,22 @@
  //importar boostrp
-@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+//@import "node_modules/bootstrap/dist/css/bootstrap.min.css";
+/* Importing Bootstrap SCSS file. */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+//@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+
+  //font-family: Roboto, "Helvetica Neue", sans  font-family: 'Raleway';font-size: 22px;
 }
 html {
   scroll-behavior: smooth;
 }
+
+

@@ -10,63 +10,89 @@ import {
   Input,
   Output,
   EventEmitter,
+  AfterViewInit,
 } from '@angular/core';
 
 import { HeaderComponent } from '../layouts/header/header.component';
-import { TrabajoComponent } from '../pages/trabajo/trabajo.component';
+import { AboutComponent } from '../pages/about/about.component';
+
 @Directive({
-  selector: '[TrabajoDir]',
+  selector: '[aboutDir]',
 })
-export class TrabajoDirective implements OnInit {
-  @Input() thresholdMin = 0.5;
+export class AboutDirective implements OnInit, AfterViewInit {
+  @Input() thresholdMax = 0.4;
+  @Input() thresholdMin = 0.1;
   @Output() isVisible = new EventEmitter<string>();
-  //@ViewChild('TrabajoCompon', { static: false }) trabajoCompon = TrabajoComponent;
+  @Input() rootMargin = '70px 70px 70px 70px';
 
   constructor(
     private element: ElementRef,
     private renderer: Renderer2,
     private header: HeaderComponent,
-    private trabajo: TrabajoComponent
+    private about: AboutComponent
   ) {}
+
+  public ngAfterViewInit(): void {}
 
   ngOnInit() {
     this.createObserver();
   }
 
+  addClassName(className: any) {
+    this.renderer.addClass(this.element.nativeElement, className);
+    this.isVisible.emit();
+  }
+
+  removeClassName(className: any) {
+    if (this.element.nativeElement.classList.contains(className)) {
+      this.renderer.removeClass(this.element.nativeElement, className);
+    }
+  }
+
   createObserver() {
-    const option = {
+    const options = {
       threshold: [this.thresholdMin],
+
+      rootMargin: this.rootMargin,
     };
 
     const callback = (entries: any) => {
       entries &&
         entries.forEach((entry: any) => {
           // if (entry.isIntersecting) {
-          // console.log(entry.intersectionRatio)
-          // if (entry.isIntersecting) {
           if (entry.intersectionRatio > 0) {
-            // this.trabajo.toggleImage();
-
+            // this.about.visible();
             this.renderer.addClass(
-              this.header.buttonTrabajo.nativeElement,
+              this.header.buttonAbout.nativeElement,
               'activa'
             );
-          } else {
-          
+
+            this.addClassName('visible');
+
+            if (
+              this.header.buttonHome.nativeElement.classList.contains(
+                'activa'
+              ) ||
+              this.header.buttonTrabajo.nativeElement.classList.contains(
+                'activa'
+              )
+            ) {
               this.renderer.removeClass(
                 this.header.buttonHome.nativeElement,
                 'activa'
               );
               this.renderer.removeClass(
-                this.header.buttonAbout.nativeElement,
+                this.header.buttonTrabajo.nativeElement,
                 'activa'
               );
-            
+            }
+          } else {
+            this.removeClassName('visible');
           }
         });
     };
 
-    const observer = new IntersectionObserver(callback, option);
+    const observer = new IntersectionObserver(callback, options);
     const target = this.element.nativeElement;
     target && observer.observe(target);
   }

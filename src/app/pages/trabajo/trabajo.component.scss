@@ -1,10 +1,11 @@
+ 
 .section {
     //  padding: 2rem 0 60rem; // rough idea for space
     border: 1px solid black;
     opacity: 1;
     transition: opacity 1s ease-out;
     will-change: opacity;
-
+  
     &.visible {
         opacity: 1;
     }
@@ -18,6 +19,7 @@
 }
 
 #section {
+    
     height: 100%;
     width: 100%;
 }
@@ -35,18 +37,111 @@ a.works {
 #rowork {
     margin-right: 0px;
     margin-left: 0px;
+    height: 100%;
 }
 
 div#work {
-    background-color: #1d1d20;
+    background-color: #8d0f0f;
     flex-direction: column;
     display: flex;
     position: relative;
+    height: 100%;
 
 }
 
 div#descripcion {
-    background-color: #1c1cb9;
-     
+    background-color: #08b673;
+    height: 100%;
+
+
 }
+
 ///////////////////////////////////////////////////////////////////////////////////////////
+
+
+.fade {
+    opacity: 1;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.nav .nav-item button.active {
+    background-color: transparent;
+    color: var(--bs-danger) !important;
+}
+
+.nav .nav-item button.active::before {
+    content: "";
+    border-right: 4px solid #e349c4;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.title-page {
+    color: rgb(143, 39, 39);
+   // font-size: 44px;
+    font-weight: bold;
+    font-family: 'Raleway';font-size: 40px;
+
+}
+
+#pills-tabContent,
+#pills-home-tab {
+    margin-top: 90px;
+}
+
+.text-descripcion {
+    color: rgb(10, 10, 10);
+    font-size: 25px;
+    letter-spacing: 3px;
+    word-spacing: 4px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+
+a.button-site {
+    background: #e349c4;
+    border: 0;
+    bottom: 20px;
+    color: #fff;
+    font-size: 10pt;
+    font-weight: 600;
+    padding: 11px 30px;
+    /*  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+  transition: all 0.5s;
+  visibility:visible; */
+    text-decoration: none;
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 35px;
+
+
+}
+
+
+
+.border-primary {
+    border-color: rgba(255, 0, 0, 0) !important;
+}
+
+.border {
+    border-style: none !important;
+    border-color: rgba(255, 0, 0, 0);
+    border-width: 0;
+}
+.nav-link{
+    font-family: 'Raleway';font-size: 25px;
+    letter-spacing: 3px;
+    
+    line-height: 1.1;
+}
+
+ 
