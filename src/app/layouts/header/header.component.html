@@ -1,4 +1,4 @@
-<section id="head" class="container-fluid">
+<section id="home" class="container-fluid contback">
   <div id="contmenu">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
@@ -37,19 +37,15 @@
             </li>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <li class="nav-item">
-              <a class="nav-link optionMenu" routerLink="prtaflio" #portfolio
+              <a class="nav-link optionMenu" href="#portfolio" id="three"
                 >Portafolio</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link optionMenu" routerLink="about" #about>About</a>
+              <a class="nav-link optionMenu" href="#about" id="two">About</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active optionMenu"
-                aria-current="page"
-                href="#"
-                #home
+              <a class="nav-link activa optionMenu" id="one" href="#home"
                 >Home</a
               >
             </li>
@@ -58,7 +54,7 @@
       </div>
     </nav>
   </div>
-  <div class="row cont" homeDir>
+  <div class="row cont">
     <div class="col-12" id="presentacion">
       <div class="contme col-xs-12">
         <h1 id="hello">Hola<strong id="point">.</strong></h1>
@@ -68,21 +64,13 @@
         </div>
       </div>
     </div>
-
-    <!-- <div id="contmenu">
-                <button class="optionMenu social ">Email</button>
-                <button class="optionMenu social">Github</button>
-                <button class="optionMenu social">Linkedin</button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-                <button class="optionMenu"> <a href="" #portfolio>Portafolio</a></button>
-                <button class="optionMenu" routerLink="about" routerLinkActive="active"><a #about>about</a></button>
-
-                <button class="optionMenu point" routerLink="/" routerLinkActive="active"
-                    [routerLinkActiveOptions]={exact:true}><a href="" #home>Home</a></button>
-            </div> -->
   </div>
 </section>
 
-<app-about></app-about>
-<!-- <app-trabajo></app-trabajo>  -->
+<section id="about" class="container-fluid">
+  <app-about></app-about>
+</section>
+
+<section id="portfolio" class="container-fluid">
+  <app-trabajo></app-trabajo>
+</section>

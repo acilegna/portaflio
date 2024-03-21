@@ -40,7 +40,7 @@ export class HomeDirective implements OnInit {
     const callback = (entries: any) => {
       entries &&
         entries.forEach((entry: any) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting ) {
             this.renderer.addClass(
               this.header.buttonHome.nativeElement,
               'activa'

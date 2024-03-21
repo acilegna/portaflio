@@ -1,7 +1,7 @@
-  .section {
+  .about {
    //  padding: 2rem 0 60rem; // rough idea for space
    border: 1px solid black;
-   opacity: 0;
+   opacity: 1;
    transition: opacity 1s ease-out;
    will-change: opacity;
 
@@ -16,11 +16,7 @@
      margin: 0px auto;
    }
  }
-
- #section {
-   height: 100%;
-   width: 100%;
- }
+ 
 
  .presentation {
    height: auto;
@@ -47,7 +43,7 @@
    top: -5px;
  }
 
- #about {
+ #txtabout {
    color: rgb(255, 255, 255);
    font-family: 'Raleway';font-size: 48px;
     
@@ -64,7 +60,7 @@
    margin-left: 120px;
  }
 
- h1#about {
+ h1#txtabout {
    margin-left: 90px;
  }
 
@@ -159,7 +155,7 @@
      
    }
 
-   h1#about {
+   h1#txtabout {
      margin-left: 60px;
    }
 

@@ -15,18 +15,15 @@ import {
 
 import { HeaderComponent } from '../layouts/header/header.component';
 import { AboutComponent } from '../pages/about/about.component';
-import { debounceTime, Observable, Subscription } from 'rxjs';
+
 @Directive({
   selector: '[aboutDir]',
 })
 export class AboutDirective implements OnInit, AfterViewInit {
+  @Input() thresholdMax = 0.4;
+  @Input() thresholdMin = 0.1;
   @Output() isVisible = new EventEmitter<string>();
-  subscription: Subscription;
- // @Input() root: HTMLElement | null = null;
- // @Input() rootMargin = '10px 10px 10px 10px ';
-  @Input() threshold = 0.5;
- // @Input() debounceTime = 500;
-  //@Input() isContinuous = false;
+  @Input() rootMargin = '70px 70px 70px 70px';
 
   constructor(
     private element: ElementRef,
@@ -39,13 +36,6 @@ export class AboutDirective implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.createObserver();
-  }
-  /*  ngOnInit() {
-     this.subscription = this.createAndObserve()
-   } */
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
   }
 
   addClassName(className: any) {
@@ -60,18 +50,17 @@ export class AboutDirective implements OnInit, AfterViewInit {
   }
 
   createObserver() {
-    const options: IntersectionObserverInit = {
-      //root: this.root,
-     // rootMargin: this.rootMargin,
-      threshold: this.threshold,
+    const options = {
+      threshold: [this.thresholdMin],
+
+      rootMargin: this.rootMargin,
     };
 
     const callback = (entries: any) => {
       entries &&
         entries.forEach((entry: any) => {
           // if (entry.isIntersecting) {
-            console.log(entry)
-          if (entry.intersectionRatio > 0  )  {
+          if (entry.intersectionRatio > 0) {
             // this.about.visible();
             this.renderer.addClass(
               this.header.buttonAbout.nativeElement,
@@ -96,18 +85,9 @@ export class AboutDirective implements OnInit, AfterViewInit {
                 this.header.buttonTrabajo.nativeElement,
                 'activa'
               );
-              //   observer.disconnect();
             }
           } else {
             this.removeClassName('visible');
-            this.renderer.removeClass(
-              this.header.buttonHome.nativeElement,
-              'activa'
-            );
-            this.renderer.removeClass(
-              this.header.buttonTrabajo.nativeElement,
-              'activa'
-            );
           }
         });
     };
