@@ -45,19 +45,23 @@ export class TrabajoDirective implements OnInit {
           // if (entry.isIntersecting) {  
           // console.log(entry.intersectionRatio)
           // if (entry.isIntersecting) { 
-          if (entry.intersectionRatio > 0) {
-            this.trabajo.toggleImage();
-
-            this.renderer.addClass(this.header.buttonTrabajo.nativeElement, 'activa');
-
-
+          
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+           // this.trabajo.toggleImage();
+           //document.querySelector('.activa').classList.remove('activa');
+           this.header.buttonTrabajo.nativeElement.classList.add('activa')
+           this.header.buttonHome.nativeElement.classList.remove('activa')
+           this.header.buttonAbout.nativeElement.classList.remove('activa')
+           //console.log(this.header.buttonHome.nativeElement)
+           console.log( entry.target)
+/* 
             if (this.header.buttonHome.nativeElement.classList.contains('activa') ||
               this.header.buttonAbout.nativeElement.classList.contains('activa')) {
 
               this.renderer.removeClass(this.header.buttonHome.nativeElement, 'activa');
               this.renderer.removeClass(this.header.buttonAbout.nativeElement, 'activa');
 
-            }
+            } */
 
           } else {
 
@@ -66,7 +70,7 @@ export class TrabajoDirective implements OnInit {
     };
 
     const observer = new IntersectionObserver(callback, option);
-    const target = this.element.nativeElement;
+    const target = this.header.section.nativeElement;
     target && observer.observe(target);
 
   }

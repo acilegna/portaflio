@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
- 
+import { RouterModule, Routes } from '@angular/router';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -44,10 +44,19 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     MatIconModule,
     MatCardModule ,
     MatToolbarModule,
-   AlertModule.forRoot(), TabsModule.forRoot() 
+   AlertModule.forRoot(), TabsModule.forRoot() ,
+   BrowserAnimationsModule,
+    RouterModule.forRoot([
+    { path: 'portfolio', component: TrabajoComponent, data: {animation: 'TrabajoPage'} },
+    { path: 'about', component: AboutComponent, data: {animation: 'AboutPage'} },
+  
+  ])  
  
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+
+ 

@@ -60,40 +60,20 @@ export class AboutDirective implements OnInit, AfterViewInit {
       entries &&
         entries.forEach((entry: any) => {
           // if (entry.isIntersecting) {
-          if (entry.intersectionRatio > 0) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+              // this.trabajo.toggleImage();
+              //document.querySelector('.activa').classList.remove('activa');
+              this.header.buttonTrabajo.nativeElement.classList.remove('activa')
+              this.header.buttonHome.nativeElement.classList.remove('activa')
+              this.header.buttonAbout.nativeElement.classList.add('activa')
             // this.about.visible();
-            this.renderer.addClass(
-              this.header.buttonAbout.nativeElement,
-              'activa'
-            );
-
-            this.addClassName('visible');
-
-            if (
-              this.header.buttonHome.nativeElement.classList.contains(
-                'activa'
-              ) ||
-              this.header.buttonTrabajo.nativeElement.classList.contains(
-                'activa'
-              )
-            ) {
-              this.renderer.removeClass(
-                this.header.buttonHome.nativeElement,
-                'activa'
-              );
-              this.renderer.removeClass(
-                this.header.buttonTrabajo.nativeElement,
-                'activa'
-              );
+             
             }
-          } else {
-            this.removeClassName('visible');
-          }
         });
     };
 
     const observer = new IntersectionObserver(callback, options);
-    const target = this.element.nativeElement;
+    const target = this.header.section.nativeElement;
     target && observer.observe(target);
   }
 }

@@ -1,75 +1,101 @@
 import {
   Directive,
   OnInit,
-  OnDestroy,
-  Input,
-  Output,
-  EventEmitter,
+  OnDestroy, 
   Renderer2,
   ElementRef,
 } from '@angular/core'
-import { debounceTime, Observable, Subscription } from 'rxjs'
-import { HeaderComponent } from '../layouts/header/header.component';
+ import { AboutComponent } from '../pages/about/about.component';
+ import { HeaderComponent } from '../layouts/header/header.component';
 @Directive({
-  selector: '[appObserveElement]',
-  exportAs: 'intersection',
+  selector: '[prueba]',
+ 
 })
 export class PruebaDirective implements OnInit, OnDestroy {
-  @Input() root: HTMLElement | null = null
-  @Input() rootMargin = '0px auto; '
-  @Input() threshold = 0
-  @Input() debounceTime = 500
-  @Input() isContinuous = false
-
-  @Output() isIntersecting = new EventEmitter<boolean>()
-
-  _isIntersecting = false
-  subscription: Subscription
-
-
-  constructor(private element: ElementRef, private renderer: Renderer2, private header: HeaderComponent) {
+ 
+ 
+  constructor(private element: ElementRef, private renderer: Renderer2, private header:HeaderComponent
+    ) {
 
   }
 
   ngOnInit() {
-    this.subscription = this.createAndObserve()
+   this.change()
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe()
+     
   }
+ 
+  change() {
+   // let miVariable = new AboutComponent;
+    const changeNav = (entries: any) => {
+      entries.forEach((entry: any) => {
+        // verificar el elemnto que esta siendo intersectado
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+          // encontrar los elements (<a> ) que contenga clase activa y eliminarla
+          document.querySelector('.activa').classList.remove('activa');
 
-  createAndObserve() {
-    const options: IntersectionObserverInit = {
-      root: this.root,
-      rootMargin: this.rootMargin,
-      threshold: this.threshold,
-    }
+          //obteber id de la seccion que esta siendo intersectada
+          var id = entry.target.getAttribute('id');
+           
+           
+          if(id=="about"){
+           
+            // console.log( "this.about.visible()")
+           //  miVariable.visible();
 
-    return new Observable<boolean>(subscriber => {
-      const intersectionObserver = new IntersectionObserver(entries => {
-        const { isIntersecting } = entries[0]
+          }
+        // console.log(about)  
+          //encontrar la etiqueta del menu que coincida con el id de la seccion intersectada  y agregar clase "activa"
+          var newLink = document
+            .querySelector(`.nav-link[href="#${id}"]`)
+            .classList.add('activa');
+        }
+      });
+    };
 
-        subscriber.next(isIntersecting)
+    const options = {
+      threshold: 0.55,
+    };
 
-        isIntersecting &&
+    const observer = new IntersectionObserver(changeNav, options);
 
-          !this.isContinuous &&
-          intersectionObserver.disconnect()
-      }, options)
-
-      intersectionObserver.observe(this.element.nativeElement)
-
-      return {
-        unsubscribe() {
-          intersectionObserver.disconnect()
-        },
-      }
-    })
-      .pipe(debounceTime(this.debounceTime))
-      .subscribe(status => {
-        this.isIntersecting.emit(status)
-        this._isIntersecting = status
-      })
+    // elemento observado section
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
   }
+  /* change() {
+    
+    const changeNav = (entries: any) => {
+      entries.forEach((entry: any) => {
+        // verificar el elemnto que esta siendo intersectado
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+          // encontrar los elements (<a> ) que contenga clase activa y eliminarla
+         
+         if(this.element.nativeElement.id=="about"){
+         // console.log( this.about.visible())
+        
+  
+        
+         }
+        }
+      });
+    };
+
+    const options = {
+      threshold: 0.55,
+    };
+
+    const observer = new IntersectionObserver(changeNav, options);
+
+    // elemento observado section
+    //const target = this.element.nativeElement;
+    const sections = this.element.nativeElement;
+     
+      observer.observe(sections);
+    
+  } */
 }

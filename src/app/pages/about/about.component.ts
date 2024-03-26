@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { trigger, state, animate, transition, style } from '@angular/animations';
+import {
+  trigger,
+  state,
+  animate,
+  transition,
+  style,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-about',
@@ -58,39 +64,37 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
           }))
       ])
   ]) ] */
-  animations: [
+   animations: [
     trigger('enterState', [
       state(
         'void',
         style({
           transform: 'translateX(-100%)',
           opacity: '0',
-        })),
-      transition(':enter',[
-        animate('.5s ease-in-out', style({
-          transform:'translateX(0)',
-          opacity:1
-        }))
-      ])
+        })
+      ),
+      transition(':enter', [
+        animate(
+          '.5s ease-in-out',
+          style({
+            transform: 'translateX(0)',
+            opacity: 1,
+          })
+        ),
+      ]),
     ]),
-  ],
+  ], 
 })
 export class AboutComponent {
+   
 
-    isVisible = true;
-  visible() {
-  
-  this.isVisible == false ? this.isVisible = true : this.isVisible = false
-  }
-  
-  constructor( ) { }
+  constructor() {}
+ 
+ 
   //comunicacion a hijo about desde padre header@Input() about: any;
-  
-
- 
- 
-
+valor=33
   ngOnInit() {
- 
+
   }
 }
+   

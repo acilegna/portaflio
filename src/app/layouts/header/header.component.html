@@ -1,5 +1,6 @@
-<section id="home" class="container-fluid contback">
-  <div id="contmenu">
+ 
+<section id="home" class="container-fluid contback" #section>
+  <div id="contmenu" prueba>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <button
@@ -37,15 +38,16 @@
             </li>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
             <li class="nav-item">
-              <a class="nav-link optionMenu" href="#portfolio" id="three"
+              <a class="nav-link optionMenu" href="#portfolio" id="three" #portfolio
                 >Portafolio</a
+               
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link optionMenu" href="#about" id="two">About</a>
+              <a class="nav-link optionMenu"   href="#about" id="two" #about>About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link activa optionMenu" id="one" href="#home"
+              <a class="nav-link activa optionMenu" id="one"  href="#home" #home
                 >Home</a
               >
             </li>
@@ -67,10 +69,11 @@
   </div>
 </section>
 
-<section id="about" class="container-fluid">
+<section id="about" class="container-fluid" #section  >
   <app-about></app-about>
 </section>
 
-<section id="portfolio" class="container-fluid">
+<section id="portfolio" class="container-fluid" #section>
   <app-trabajo></app-trabajo>
 </section>
+ 
