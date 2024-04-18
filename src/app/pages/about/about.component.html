@@ -1,18 +1,19 @@
-  
+<div id="textBox"></div>
     <div class="about" id="contabout">
         <div class="presentation col-md-12">
-            <div  @enterState *ngIf="this.valor==33">
+            
+            <div  @enterState *ngIf="hijo==='about'">
             <h1   id="txtabout" class="line">Acerca de <strong id="point">mí</strong></h1>
-        </div>
+        </div> 
             <span id="name" class="expand">Soy Angelica Ruiz, programadora Web Junior.</span>
             <p id="code">He trabajado en Backend y Frontend con PHP, JS,
                 TS, CSS3 y HTML5 para crear proyectos personales y profesionales como FreeLancer. <br>Puedo ayudarte
                 en
                 tu próximo proyecto<a href="
-            " class="write">escríbeme.</a>
+            " class="write">escríbeme.</a>{{hijo}}
             </p>
         </div>
+       
     </div>
   
-
 

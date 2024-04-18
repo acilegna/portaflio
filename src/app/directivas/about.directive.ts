@@ -29,7 +29,7 @@ export class AboutDirective implements OnInit, AfterViewInit {
     private element: ElementRef,
     private renderer: Renderer2,
     private header: HeaderComponent,
-    private about: AboutComponent
+   /*  private about: AboutComponent */
   ) {}
 
   public ngAfterViewInit(): void {}
@@ -37,11 +37,16 @@ export class AboutDirective implements OnInit, AfterViewInit {
   ngOnInit() {
     this.createObserver();
   }
-
   addClassName(className: any) {
     this.renderer.addClass(this.element.nativeElement, className);
     this.isVisible.emit();
+    console.log(this.isVisible.emit())
   }
+/*   addClassName(className: any) {
+    this.renderer.addClass(this.element.nativeElement, className);
+    this.isVisible.emit();
+    console.log(this.isVisible.emit())
+  } */
 
   removeClassName(className: any) {
     if (this.element.nativeElement.classList.contains(className)) {

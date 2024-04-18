@@ -1,19 +1,21 @@
 import { Injectable, ViewChild } from '@angular/core';
- 
 
+import { AboutComponent } from '../pages/about/about.component';
+ 
 @Injectable({
   providedIn: 'root',
 })
+
 export class ChangeNavService {
  
+
   constructor() {
- 
-   
+    
+
   }
-  
 
   change() {
-    
+  //  let miVariable = new AboutComponent;
     const changeNav = (entries: any) => {
       entries.forEach((entry: any) => {
         // verificar el elemnto que esta siendo intersectado
@@ -22,8 +24,14 @@ export class ChangeNavService {
           document.querySelector('.activa').classList.remove('activa');
 
           //obteber id de la seccion que esta siendo intersectada
-          var id = entry.target.getAttribute('id');
-        // console.log(about)  
+         var id = entry.target.getAttribute('id');
+        // this. Input.nativeElement.value = 'Whale!';
+         
+       
+          // console.log( "this.about.visible()")
+          // miVariable.visible(id);
+
+          // console.log(about)
           //encontrar la etiqueta del menu que coincida con el id de la seccion intersectada  y agregar clase "activa"
           var newLink = document
             .querySelector(`.nav-link[href="#${id}"]`)
@@ -44,4 +52,8 @@ export class ChangeNavService {
       observer.observe(section);
     });
   }
+
+  myOtherFn  () {
+    return "id";
+}
 }

@@ -1,36 +1,45 @@
 import {
   Directive,
   OnInit,
-  OnDestroy, 
+  OnDestroy,
   Renderer2,
   ElementRef,
-} from '@angular/core'
- import { AboutComponent } from '../pages/about/about.component';
- import { HeaderComponent } from '../layouts/header/header.component';
+  EventEmitter,
+  Output,
+  ViewChild,
+  AfterViewInit,
+} from '@angular/core';
+import { AboutComponent } from '../pages/about/about.component';
+import { HeaderComponent } from '../layouts/header/header.component';
 @Directive({
   selector: '[prueba]',
- 
 })
-export class PruebaDirective implements OnInit, OnDestroy {
- 
- 
-  constructor(private element: ElementRef, private renderer: Renderer2, private header:HeaderComponent
-    ) {
+export class PruebaDirective implements OnInit, OnDestroy, AfterViewInit {
+  @Output() trigger = new EventEmitter();
 
+  constructor(
+    private element: ElementRef,
+    private renderer: Renderer2,
+    private header: HeaderComponent
+  ) {}
+
+  ngAfterViewInit() {
+    this.change();
   }
 
   ngOnInit() {
-   this.change()
+    //this.change()
+
+    window.location.replace('#home');
   }
 
-  ngOnDestroy() {
-     
-  }
- 
+  ngOnDestroy() {}
+
   change() {
-   // let miVariable = new AboutComponent;
+    //let miVariable = new AboutComponent;
     const changeNav = (entries: any) => {
       entries.forEach((entry: any) => {
+      
         // verificar el elemnto que esta siendo intersectado
         if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
           // encontrar los elements (<a> ) que contenga clase activa y eliminarla
@@ -38,15 +47,18 @@ export class PruebaDirective implements OnInit, OnDestroy {
 
           //obteber id de la seccion que esta siendo intersectada
           var id = entry.target.getAttribute('id');
-           
-           
-          if(id=="about"){
-           
-            // console.log( "this.about.visible()")
-           //  miVariable.visible();
+          //this.header.valor=id
+         // if (id === 'about') {
+            this.trigger.emit(entry);
+          //}
+          window.location.replace('#' + id);
 
-          }
-        // console.log(about)  
+          // this .header.Input.nativeElement.value= id;
+
+          // console.log( "this.about.visible()")
+          //  miVariable.visible();
+
+          // console.log(about)
           //encontrar la etiqueta del menu que coincida con el id de la seccion intersectada  y agregar clase "activa"
           var newLink = document
             .querySelector(`.nav-link[href="#${id}"]`)

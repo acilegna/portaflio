@@ -1,6 +1,7 @@
  
-<section id="home" class="container-fluid contback" #section>
-  <div id="contmenu" prueba>
+<section id="home" class="container-fluid contback" #section  >
+  <div id="contmenu" >
+  
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
         <button
@@ -32,6 +33,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link optionMenu social" href="#">Github</a>
+            
             </li>
             <li class="nav-item">
               <a class="nav-link optionMenu social" href="#">Linkedin</a>
@@ -43,14 +45,18 @@
                
               >
             </li>
+          
+
             <li class="nav-item">
               <a class="nav-link optionMenu"   href="#about" id="two" #about>About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link activa optionMenu" id="one"  href="#home" #home
+              <a class="nav-link activa optionMenu" id="one"  href="#home"  #home
                 >Home</a
               >
             </li>
+         
+           
           </ul>
         </div>
       </div>
@@ -69,8 +75,8 @@
   </div>
 </section>
 
-<section id="about" class="container-fluid" #section  >
-  <app-about></app-about>
+<section id="about" class="container-fluid" #section prueba (trigger)="onTrigger($event)" >
+  <app-about [hijo]="padre" ></app-about>
 </section>
 
 <section id="portfolio" class="container-fluid" #section>
