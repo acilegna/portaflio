@@ -13,27 +13,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
- 
+
 //importar directiva
-import { AboutDirective } from './directivas/about.directive';
- 
-import { TrabajoDirective} from './directivas/trabajo.directive';
- import { HomeDirective } from './directivas/home.directive';
- import { PruebaDirective } from './directivas/prueba.directive';
- 
+ import { InterObserver} from './directivas/InterObserver.directive';
+
 import { MatCardModule } from '@angular/material/card';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
-import {  AlertModule } from 'ngx-bootstrap/alert'
-import { TabsModule } from 'ngx-bootstrap/tabs'; 
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutComponent,
-    FooterComponent,  
-    AboutDirective, TrabajoComponent, 
-    TrabajoDirective,
-    HomeDirective,PruebaDirective
+    FooterComponent, 
+    TrabajoComponent,
+    InterObserver
   ],
   imports: [
     BrowserModule,
@@ -42,21 +37,25 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule ,
+    MatCardModule,
     MatToolbarModule,
-   AlertModule.forRoot(), TabsModule.forRoot() ,
-   BrowserAnimationsModule,
+    AlertModule.forRoot(),
+    TabsModule.forRoot(),
+    BrowserAnimationsModule,
     RouterModule.forRoot([
-    { path: 'portfolio', component: TrabajoComponent, data: {animation: 'TrabajoPage'} },
-    { path: 'about', component: AboutComponent, data: {animation: 'AboutPage'} },
-  
-  ])  
- 
+      {
+        path: 'portfolio',
+        component: TrabajoComponent,
+        data: { animation: 'TrabajoPage' },
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+        data: { animation: 'AboutPage' },
+      },
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
-
- 

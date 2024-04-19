@@ -1,21 +1,30 @@
-import { Injectable, ViewChild } from '@angular/core';
+import {
+  Directive,
+  OnInit,
+  EventEmitter,
+  Output,
+  AfterViewInit,
+} from '@angular/core';
 
-import { AboutComponent } from '../pages/about/about.component';
- 
-@Injectable({
-  providedIn: 'root',
+@Directive({
+  selector: '[intersection]',
 })
+export class InterObserver implements OnInit,AfterViewInit {
+  @Output() trigger = new EventEmitter();
 
-export class ChangeNavService {
- 
+  constructor() {}
 
-  constructor() {
-    
-
+  ngAfterViewInit() {
+    this.change();
   }
 
+  ngOnInit() {
+    window.location.replace('#home');
+  }
+
+
+
   change() {
-  //  let miVariable = new AboutComponent;
     const changeNav = (entries: any) => {
       entries.forEach((entry: any) => {
         // verificar el elemnto que esta siendo intersectado
@@ -24,12 +33,11 @@ export class ChangeNavService {
           document.querySelector('.activa').classList.remove('activa');
 
           //obteber id de la seccion que esta siendo intersectada
-         var id = entry.target.getAttribute('id');
-        // this. Input.nativeElement.value = 'Whale!';
-         
-       
-          // console.log( "this.about.visible()")
-          // miVariable.visible(id);
+          var id = entry.target.getAttribute('id');
+
+          this.trigger.emit(id);
+
+          window.location.replace('#' + id);
 
           // console.log(about)
           //encontrar la etiqueta del menu que coincida con el id de la seccion intersectada  y agregar clase "activa"
@@ -52,8 +60,4 @@ export class ChangeNavService {
       observer.observe(section);
     });
   }
-
-  myOtherFn  () {
-    return "id";
-}
 }

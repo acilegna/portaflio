@@ -1,13 +1,5 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
-import { ChangeNavService } from 'src/app/services/change-nav.service';
-import { Router } from '@angular/router';
-import { PruebaDirective } from 'src/app/directivas/prueba.directive';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -22,33 +14,19 @@ export class HeaderComponent {
   @ViewChild('section', { static: true }) section: ElementRef<HTMLHeadElement>;
   @ViewChild('input', { static: true }) Input: ElementRef<HTMLInputElement>;
   isCollapse = true; // guardamos el valor
-  
+
   //valor a recibir
-public padre = 'papa';
+  public padre = 'papa';
   toggleState() {
     // manejador del evento
     let foo = this.isCollapse;
     this.isCollapse = foo === false ? true : false;
   }
 
-  onTrigger(entries: any) {
- //console.log(entries)
- var id = entries.target.getAttribute('id');
- /* console.log(id)
- this.padre=id */
- this.padre=id
+  onTrigger(id: any) {
+    this.padre = id;
   }
-  constructor(
-    private changeService: ChangeNavService,
-    private render: Renderer2,
-    private router: Router
-  ) {
-   // this.get();
-  }
+  constructor() {}
 
   ngOnInit() {}
-  get() {
-    if (window.location.href == 'http://localhost:4200/#about')
-      console.log('ddd');
-  }
 }
