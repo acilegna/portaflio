@@ -9,7 +9,7 @@ import {
 @Directive({
   selector: '[intersection]',
 })
-export class InterObserver implements OnInit,AfterViewInit {
+export class InterObserver implements OnInit, AfterViewInit {
   @Output() trigger = new EventEmitter();
 
   constructor() {}
@@ -21,8 +21,6 @@ export class InterObserver implements OnInit,AfterViewInit {
   ngOnInit() {
     window.location.replace('#home');
   }
-
-
 
   change() {
     const changeNav = (entries: any) => {

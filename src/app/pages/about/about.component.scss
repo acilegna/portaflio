@@ -1,190 +1,194 @@
-  .about {
-   //  padding: 2rem 0 60rem; // rough idea for space
-   border: 1px solid black;
-   opacity: 1;
-   transition: opacity 1s ease-out;
-   will-change: opacity;
-
-   &.visible {
-     opacity: 1;
-   }
-
-   &#contabout {
-     background-color: rgb(63, 63, 63);
-     height: 100%;
-     width: 90%;
-     margin: 0px auto;
-   }
- }
- 
-
+.about#contabout {
+  //  padding: 2rem 0 60rem; // rough idea for space
+  border: 1px solid rgb(66, 66, 66);
+  opacity: 1;
+  transition: opacity 1s ease-out;
+  will-change: opacity;
+  //scroll-snap-align: center;
+  background-color: rgb(32, 32, 32);
+  height: 100%;
+  width: 90%;
+  margin: 0px auto;
+}
  .presentation {
-   height: auto;
-   width: auto;
-   padding-top: 110px;
-   margin-left: 30px;
-   margin-right: 30px;
-   white-space: normal;
- }
+  
+  height: auto;
+  width: auto;
+  padding-top: 90px;
+  margin-left: 30px;
+  margin-right: 30px;
+  white-space: normal;
+} 
 
- h1 {
-   position: relative;
-   left: 50px;
-   top: 60px;
- }
+h1 {
+  position: relative;
+  left: 50px;
+  top: 30px;
+}
 
- .line::before {
-   content: "";
-   left: -16px;
-   position: absolute;
-   width: 3px;
-   height: 40px;
-   background-color: #e349c4;
-   top: -5px;
- }
+.line::before {
+  content: "";
+  left: -16px;
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background-color: #e349c4;
+  top: -5px;
+}
 
- #txtabout {
-   color: rgb(255, 255, 255);
-   font-family: 'Raleway';font-size: 48px;
-    
-   font-weight: bold;
-   margin-bottom: 85px;
- }
+#txtabout {
+  color: rgb(255, 255, 255);
+  font-family: "Raleway";
+  font-size: 48px;
 
- h1 #point {
-   color: #e349c4;
- }
+  font-weight: bold;
+  margin-bottom: 85px;
+}
 
- span#name,
- p#code {
-   margin-left: 120px;
- }
+h1 #point {
+  color: #e349c4;
+}
 
- h1#txtabout {
-   margin-left: 90px;
- }
+span#name,
+p#code {
+  margin-left: 120px;
+}
 
- span#name {
-   color: rgb(252, 252, 252);
-   font-family: 'Raleway';font-size: 25px;
+h1#txtabout {
+  margin-left: 90px;
+}
+
+span#name {
+  color: rgb(252, 252, 252);
+  font-family: "Raleway";
+  font-size: 25px;
+
+  font-weight: lighter;
+}
+
+p#code {
+  font-family: "Raleway";
+  font-size: 17px;
+  color: white;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+
+.write {
+
+  text-decoration: none;
+  margin-left: 5px;
+  position: relative; 
+	//float: left;
+  background-color: rgb(32, 32, 32);
+  color: #e349c4;
+	font-size: 1.1em;
+}
+
  
-   font-weight: lighter;
- }
 
- p#code {
-  font-family: 'Raleway';font-size: 17px;
-   color: white;
-   margin-left: 120px;
-   margin-top: 20px;
- }
+.write span {
+  position:absolute;
+  right:0;
+  width:0;
+  background-color: rgb(32, 32, 32);
+  border-left: 2px solid #e349c4;
+  animation: escribir 2s steps(35) infinite alternate;
+}
 
-
-
- .write {
-   color: #e349c4;
-   text-decoration: none;
-   margin-left: 5px;
- }
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0%}
+}
 
 
- @keyframes expansion {
-   from {
-     transform: scaleY(0.1);
-   }
+@keyframes expansion {
+  from {
+    transform: scaleY(0.1);
+  }
 
-   to {
-     transform: scaleY(1);
-   }
- }
+  to {
+    transform: scaleY(1);
+  }
+}
 
+body {
+  font-family: sans-serif;
+}
 
+#section-one {
+  background-color: #4c5954;
+  height: 100vh;
+  width: 100%;
+}
 
- body {
-   font-family: sans-serif;
- }
+#section-two {
+  background-color: #bf9a78;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- #section-one {
-   background-color: #4c5954;
-   height: 100vh;
-   width: 100%;
- }
+#section-two h1 {
+  color: #0d0d0d;
+}
 
- #section-two {
-   background-color: #bf9a78;
-   height: 100vh;
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
 
- #section-two h1 {
-   color: #0d0d0d;
- }
+#colouredDiv {
+  background-color: #260101;
+  width: 100px;
+  height: 50px;
+}
 
- #container {
-   display: flex;
-   flex-direction: column;
-   height: 50%;
-   justify-content: space-between;
-   align-items: center;
- }
-
- #colouredDiv {
-   background-color: #260101;
-   width: 100px;
-   height: 50px;
- }
-
- @media (max-width: 680px) {
-  span#name.expand{
-
+@media (max-width: 680px) {
+  span#name.expand {
     font-size: 25px;
     text-align: justify;
-    
   }
- }
+}
 
- 
- @media (max-width: 1244px) {
+@media (max-width: 1244px) {
+  span#name,
+  p#code {
+    margin-left: 20px;
+    text-align: justify;
+  }
 
-   span#name,
-   p#code {
-     margin-left: 20px;
-     text-align: justify;
-     
-   }
+  h1#txtabout {
+    margin-left: 60px;
+  }
 
-   h1#txtabout {
-     margin-left: 60px;
-   }
+  span#name {
+    color: rgb(252, 252, 252);
+    font-size: 25px;
+    font-weight: lighter;
+  }
 
-   span#name {
-     color: rgb(252, 252, 252);
-     font-size: 25px;
-     font-weight: lighter;
-   }
+  //////
+  p#code {
+    // margin-left: 50px;
+    text-align: justify;
+    white-space: pre-wrap;
+  }
 
-   //////
-   p#code {
-     // margin-left: 50px;
-     text-align: justify;
-     white-space: pre-wrap;
-   }
+  h1 {
+    left: -25px;
+  }
 
-   h1 {
-     left: -25px;
-   }
-
-   .line::before {
-     content: "";
-     left: -13px;
-   }
-
- } 
-
-
-
+  .line::before {
+    content: "";
+    left: -13px;
+  }
+}
 
 /* 
  .page-wrapper {

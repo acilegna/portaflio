@@ -1,18 +1,40 @@
-.navbar-toggler {
-  background-color: palevioletred;
-
-}
-
-#about,#portfolio {
-  height: 100%;
+.contain {
+  position: absolute;
+  z-index: 99999999999999999;
+  overflow: auto;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
   width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
+.contain section {
+  scroll-snap-align: start;
+}
+
 .contback {
   background-size: 100%;
   background-size: cover;
   background-image: url("../../../assets/images/IMG_3207.jpg");
   height: 100%;
   display: flex;
+}
+
+div#contmenu {
+  transform: rotate(-90deg) translateX(10px);
+  transform-origin: bottom right;
+  position: fixed;
+  right: 20px;
+  scroll-snap-align: start;
+}
+
+div#contmenu .optionMenu {
+  color: #fab8e1;
+  letter-spacing: 1px;
+  font-family: "Raleway";
+ 
+  font-size: 16px;
 }
 
 section div.cont {
@@ -28,26 +50,21 @@ section div.cont {
   box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
 }
 
-
-div#contmenu {
-  transform: rotate(-90deg) translateX(10px);
-  transform-origin: bottom right;
-  position: fixed;
-  right: 20px;
-
+.navbar-toggler {
+  background-color: palevioletred;
 }
 
-
-
-div#contmenu .optionMenu {
-  color: #b3b3b3;
-  letter-spacing: 1px;
-  font-family: 'Raleway'; font-size: 16px; 
-
+#about {
+  background-color: rgb(32, 32, 32);
+  height: 100%;
+  //display: flex;
 }
-
-
-
+ 
+#portfolio {
+  background-color: rgb(32, 32, 32);
+  height: 100%;
+  //display: flex;
+}
 /* div#contmenu .optionMenu:hover a,
 div#contmenu .optionMenu:hover {
   color: #ffffff;
@@ -57,7 +74,6 @@ div#contmenu .optionMenu.active {
   color: #ffffff;
 } */
 
-
 div.contme {
   float: left;
   height: auto;
@@ -65,19 +81,18 @@ div.contme {
   margin: 210px auto auto 110px;
 }
 
-
-
 h1 strong#point {
   color: #e349c4;
-  
-  font-family: 'Raleway';font-size: 85px;}
+
+  font-family: "Raleway";
+  font-size: 85px;
+}
 
 span {
   display: inline-block;
   position: relative;
   left: 17px;
 }
-
 
 .line::before {
   content: "";
@@ -89,24 +104,23 @@ span {
   top: 11px;
 }
 
-
 #hello {
   color: white;
-  font-family: 'Raleway'; font-size: 80px; 
+  font-family: "Raleway";
+  font-size: 80px;
   font-weight: bold;
-  margin-bottom: 33px;
+  margin-bottom: 50px;
 }
 
 #name {
   letter-spacing: 3px;
   word-spacing: 3px;
   line-height: 1.1;
-  color: rgb(255, 255, 255); 
-  font-family: 'Raleway';font-size: 55px;
+  color: rgb(255, 255, 255);
+  font-family: "Raleway";
+  font-size: 55px;
   font-weight: lighter;
 }
-
-
 
 body {
   margin: 0;
@@ -121,7 +135,7 @@ body {
   font-size: 14px;
   font-family: "montserrat";
   text-decoration: none;
- // margin: 30px 0;
+  // margin: 30px 0;
   border: 1px solid #e349c4;
   padding: 14px 60px;
   text-transform: uppercase;
@@ -161,17 +175,17 @@ body {
   transform: translate(0%, -20%);
   border: 1px solid #e349c4;
   color: #e349c4;
-  font-family: 'Raleway'; font-size: 17px; 
+  font-family: "Raleway";
+  font-size: 17px;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
-   
+
   background-color: transparent;
   padding: 10px;
   outline: none;
   border-radius: 2px;
 }
-
 
 $base: 0.6rem;
 
@@ -207,18 +221,18 @@ $base: 0.6rem;
   color: rgb(0, 81, 255);
 }
 .activa {
- font-weight: bold !important;
+  font-weight: bold !important;
 
-  color: rgb(228, 8, 8) !important;
+  color: #ffffff !important;
+ 
 }
 
 .inactiva {
   font-weight: bold !important;
-  color: #d0ff00 !important
+  color: #d0ff00 !important;
 }
 @media (max-width: 1026px) {
   div.contme {
-
     margin: 180px auto auto 40px;
   }
 }
@@ -228,7 +242,6 @@ $base: 0.6rem;
     letter-spacing: 1px;
     font-size: 16px;
     margin-left: 10px;
-
   }
 
   div#contmenu .optionMenu.social {
@@ -239,11 +252,9 @@ $base: 0.6rem;
     height: 91%;
 
     margin: 50px auto;
-
   }
 
   div#contmenu {
-
     transform: rotate(0deg) translateY(0px);
     transform-origin: top right;
     left: 42px;
@@ -251,7 +262,6 @@ $base: 0.6rem;
 }
 
 @media (max-width: 862px) {
-
   #raised {
     margin-top: 40px;
   }
@@ -273,17 +283,12 @@ $base: 0.6rem;
     font-size: 44px;
   }
 
-
   div.contme {
-
     margin: 170px auto auto 30px;
   }
-
 }
 
 @media (max-width: 572px) {
-
-
   #hello {
     font-size: 38px;
   }
@@ -292,9 +297,7 @@ $base: 0.6rem;
     font-size: 35px;
   }
 
-
   div.contme {
-
     margin: 160px auto auto 20px;
   }
   .line::before {
@@ -303,9 +306,7 @@ $base: 0.6rem;
   }
 }
 
-
 @media (max-width: 526px) {
-
   .line::before {
     content: "";
     top: -4px;
@@ -317,27 +318,19 @@ $base: 0.6rem;
   #name {
     font-size: 28px;
   }
-
-
 }
 
 .navbar-toggler {
-
   line-height: 0;
   color: rgba(0, 128, 0, 0);
   background-color: rgba(29, 29, 29, 0.096);
   border: none;
   margin-left: 4px;
   border-radius: 0;
-
-
 }
 
 .navbar-toggler-icon {
-
-
   color: #ffffff;
-
 
   left: 0px;
 }

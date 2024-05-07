@@ -1,19 +1,23 @@
-<div id="textBox"></div>
-    <div class="about" id="contabout">
-        <div class="presentation col-md-12">
-            
-            <div  @enterState *ngIf="hijo==='about'">
-            <h1   id="txtabout" class="line">Acerca de <strong id="point">mí</strong></h1>
-        </div> 
-            <span id="name" class="expand">Soy Angelica Ruiz, programadora Web Junior.</span>
-            <p id="code">He trabajado en Backend y Frontend con PHP, JS,
-                TS, CSS3 y HTML5 para crear proyectos personales y profesionales como FreeLancer. <br>Puedo ayudarte
-                en
-                tu próximo proyecto<a href="
-            " class="write">escríbeme.</a>{{hijo}}
-            </p>
-        </div>
-       
+<div class="about" id="contabout"   >
+  <div class="presentation col-md-12"  >
+    <div  >
+      <h1 id="txtabout" class="line"  @enterRight *ngIf="hijo === 'about'">
+        Acerca de <strong id="point">mí</strong>
+      </h1>
     </div>
-  
-
+    <span id="name" class="expand"@enterRight  *ngIf="hijo === 'about'"
+      >Soy Angelica Ruiz, programadora Web Junior.</span
+    >
+   
+    <p id="code"  >
+      He trabajado en Backend y Frontend con PHP, JS, TS, CSS3 y HTML5 para
+      crear proyectos personales y profesionales como FreeLancer. <br />Puedo
+      ayudarte en tu próximo proyecto,<a
+        href="
+            "
+        class="write"
+         >escríbeme..<span>&#160;</span></a
+      >
+    </p>
+  </div>
+</div>

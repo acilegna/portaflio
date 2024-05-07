@@ -1,9 +1,12 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { fadeInGroups, fadeInSeque, statech, zoom } from 'src/app/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  animations: [zoom,statech],
+
 })
 export class HeaderComponent {
   @ViewChild('about', { static: true })
@@ -25,6 +28,7 @@ export class HeaderComponent {
 
   onTrigger(id: any) {
     this.padre = id;
+    
   }
   constructor() {}
 
