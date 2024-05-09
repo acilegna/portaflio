@@ -1,3 +1,11 @@
+//resetear estilos q da por defecto navegador
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .about#contabout {
   //  padding: 2rem 0 60rem; // rough idea for space
   border: 1px solid rgb(66, 66, 66);

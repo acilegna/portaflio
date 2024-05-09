@@ -5,6 +5,7 @@ import {
   Output,
   AfterViewInit,
 } from '@angular/core';
+import { HeaderComponent } from '../layouts/header/header.component';
 
 @Directive({
   selector: '[intersection]',
@@ -12,7 +13,7 @@ import {
 export class InterObserver implements OnInit, AfterViewInit {
   @Output() trigger = new EventEmitter();
 
-  constructor() {}
+  constructor( private header: HeaderComponent) {}
 
   ngAfterViewInit() {
     this.change();
@@ -32,6 +33,11 @@ export class InterObserver implements OnInit, AfterViewInit {
 
           //obteber id de la seccion que esta siendo intersectada
           var id = entry.target.getAttribute('id');
+          
+         /*  if(id==="home"){
+            this.header.ejecuta();
+          } */
+         
 
           this.trigger.emit(id);
 

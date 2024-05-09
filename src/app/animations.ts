@@ -70,33 +70,35 @@ export const fadeInGroups = trigger('fadeInGroups', [
   ]),
 ]);
 
+export const zoom = trigger('enterRight', [
+  transition(':enter', [
+    style({ opacity: 0, transform: 'translateX(-100%)' }),
+    animate(
+      '300ms ease-in',
+      style({ opacity: 1, transform: 'translateX(0%)' })
+    ),
+  ]),
+  transition(':leave', [
+    style({ opacity: 1, transform: 'translateX(0%)' }),
+    animate(
+      '300ms ease-in',
+      style({ opacity: 0, transform: 'translateX(-100%)' })
+    ),
+  ]),
+]);
 
- 
-  export const zoom =trigger('enterRight', [
-    transition(':enter', [
-      style({ opacity: 0, transform: 'translateX(-100%)' }),
-      animate('300ms ease-in', style({ opacity: 1, transform: 'translateX(0%)' }))
-    ]),
-    transition(':leave', [
-      style({ opacity: 1, transform: 'translateX(0%)' }),
-      animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(-100%)' }))
-    ]),
-  ])
- 
-
-  
-  export const statech  = trigger('fadeInSequence', [
-    transition('* <=> *', [
-      query('button', [
-        style({ opacity: 0, transform: 'scale(0)' }),
-        sequence([
-          animate(
-            '500ms 0.01s',
-            style({ opacity: 1, transform: 'scale(0, .01)' })
-          ),
-          animate('200ms 0.01s', style({ transform: 'scale(1, .01)' })),
-          animate('200ms 0.01s', style({ transform: 'scale(1, 1)' })),
-        ]),
+export const statech = trigger('fadeInSequence', [
+  transition('* <=> *', [
+    query('button', [
+      style({ opacity: 0, transform: 'scale(0)' }),
+      sequence([
+        animate(
+          '500ms 0.01s',
+          style({ opacity: 1, transform: 'scale(0, .01)' })
+        ),
+        animate('200ms 0.01s', style({ transform: 'scale(1, .01)' })),
+        animate('200ms 0.01s', style({ transform: 'scale(1, 1)' })),
       ]),
     ]),
-  ]);
+  ]),
+]);
