@@ -1,6 +1,10 @@
+
+
+
 .work {
   //  padding: 2rem 0 60rem; // rough idea for space
-  border: 1px solid black;
+ // border: 1px solid black;
+  border: 0px solid#0c9693;
   opacity: 1;
   transition: opacity 1s ease-out;
   will-change: opacity;
@@ -10,21 +14,22 @@
   }
 
   &#contwork {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     height: 100%;
-    
+
     width: 90%;
     margin: 0px auto;
-    scroll-snap-align: center;
+     
   }
 }
 
 #two {
   height: 100%;
   width: 100%;
+  
 }
 
- 
+
 
 #rowork {
   margin-right: 0px;
@@ -33,17 +38,14 @@
 }
 
 div#work {
-  background-color: #ffffff4b;
+  background-color: #2f1dd1;
   flex-direction: column;
   display: flex;
   position: relative;
   height: 100%;
 }
 
-div#descripcion {
-  background-color: #ffffff31;
-  height: 100%;
-}
+ 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -56,12 +58,19 @@ div#descripcion {
 
 .nav .nav-item button.active {
   background-color: transparent;
-  color: var(--bs-danger) !important;
+ // color:#ee653b !important;
+ 
+ color:#0c9693 !important;
+  
+}
+.nav-link {
+  color: rgb(124, 124, 124) !important;
+
 }
 
 .nav .nav-item button.active::before {
-  content: "";
-  border-right: 4px solid #e349c4;
+  content: ""; 
+  border-right: 0px solid #f57f3a00 ; 
   height: 100%;
   position: absolute;
   left: 0px;
@@ -69,26 +78,26 @@ div#descripcion {
   border-radius: 5px 0 0 5px;
 }
 
- 
+
 
 #pills-tabContent,
 #pills-home-tab {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .text-descripcion {
-  color: rgb(10, 10, 10);
+  color: rgb(99, 99, 99);
   font-size: 25px;
   letter-spacing: 3px;
   word-spacing: 4px;
   line-height: 1.5;
   margin-top: -15px;
-  margin-left: 90px;
+  margin-left: 120px;
   text-align: justify;
 }
 
 a.button-site {
-  background: #e349c4;
+  background: #0c9693;
   border: 0;
   bottom: 20px;
   color: #fff;
@@ -104,7 +113,7 @@ a.button-site {
   position: relative;
   display: block;
   float: left;
-  margin-left: 90px;
+  margin-left: 120px;
   margin-top: 35px;
 }
 
@@ -117,6 +126,7 @@ a.button-site {
   border-color: rgba(255, 0, 0, 0);
   border-width: 0;
 }
+
 .nav-link {
   font-family: "Raleway";
   font-size: 25px;
@@ -126,11 +136,7 @@ a.button-site {
 }
 
 
-h1 {
-  position: relative;
-  left: 30px;
-  top: 90px;
-}
+ 
 
 .line::before {
   content: "";
@@ -138,23 +144,24 @@ h1 {
   position: absolute;
   width: 3px;
   height: 40px;
-  background-color: #e349c4;
-  top: 77px;
+  background-color: #0c9e9c;
+  top: -5px;
 }
-
-#txtabout {
-  color: rgb(107, 16, 16);
-  font-family: "Raleway";
-  font-size: 48px;
-
-  font-weight: bold;
-  margin-bottom: 85px;
-  padding-top: 80px;
-}
-
-
 
 h1#txtabout {
-  margin-left: 90px;
+  color: rgb(73, 73, 73);
+  font-family: "Raleway";
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 65px;
+  //padding-top: 40px;
+  margin-left: 120px;
+
+  position: relative;
+  left: 30px;
+  top: 120px;
 }
 
+
+
+ 

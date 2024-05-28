@@ -11,6 +11,7 @@ import {
   animateChild,
 } from '@angular/animations';
 
+//Trabajos about
 export const translateAnimation = trigger('enterState', [
   state(
     'void',
@@ -29,7 +30,7 @@ export const translateAnimation = trigger('enterState', [
     ),
   ]),
 ]);
-
+//Trabajos
 export const fadeInGroup = trigger('fadeInGroup', [
   transition('* <=> *', [
     query('div', [
@@ -41,8 +42,8 @@ export const fadeInGroup = trigger('fadeInGroup', [
     ]),
   ]),
 ]);
-
-export const fadeInSeque = trigger('fadeInSequence', [
+//Trabajos
+export const fadeInSequence = trigger('fadeInSequence', [
   transition('* <=> *', [
     query('div', [
       style({ opacity: 0, transform: 'scale(0)' }),
@@ -58,6 +59,7 @@ export const fadeInSeque = trigger('fadeInSequence', [
   ]),
 ]);
 
+//Trabajos
 export const fadeInGroups = trigger('fadeInGroups', [
   transition('* <=> *', [
     query('button', [
@@ -70,23 +72,8 @@ export const fadeInGroups = trigger('fadeInGroups', [
   ]),
 ]);
 
-export const zoom = trigger('enterRight', [
-  transition(':enter', [
-    style({ opacity: 0, transform: 'translateX(-100%)' }),
-    animate(
-      '300ms ease-in',
-      style({ opacity: 1, transform: 'translateX(0%)' })
-    ),
-  ]),
-  transition(':leave', [
-    style({ opacity: 1, transform: 'translateX(0%)' }),
-    animate(
-      '300ms ease-in',
-      style({ opacity: 0, transform: 'translateX(-100%)' })
-    ),
-  ]),
-]);
 
+//home
 export const statech = trigger('fadeInSequence', [
   transition('* <=> *', [
     query('button', [
@@ -102,3 +89,38 @@ export const statech = trigger('fadeInSequence', [
     ]),
   ]),
 ]);
+
+
+
+
+
+//about
+export const fadeGroup= trigger('fadeGroup', [
+  transition('* <=> *', [
+    query(':self', [
+      style({ opacity: 0, transform: 'scale(0.8)' }),
+      group([
+        animate('500ms', style({ opacity: 1 })),
+        animate('200ms ease-in', style({ transform: 'scale(1)' })),
+      ]),
+    ]),
+  ]),
+]);
+
+//about
+export const fadeSequen = trigger('fadeSequen', [
+  transition('* <=> *', [
+    query(':self', [
+      style({ opacity: 0, transform: 'scale(0)' }),
+      sequence([
+        animate(
+          '500ms 0.03s',
+          style({ opacity: 1, transform: 'scale(0, .01)' })
+        ),
+        animate('200ms 0.03s', style({ transform: 'scale(1, .01)' })),
+        animate('200ms 0.03s', style({ transform: 'scale(1, 1)' })),
+      ]),
+    ]),
+  ]),
+]);
+

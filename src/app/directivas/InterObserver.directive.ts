@@ -7,13 +7,14 @@ import {
 } from '@angular/core';
 import { HeaderComponent } from '../layouts/header/header.component';
 
+
 @Directive({
   selector: '[intersection]',
 })
 export class InterObserver implements OnInit, AfterViewInit {
   @Output() trigger = new EventEmitter();
 
-  constructor( private header: HeaderComponent) {}
+  constructor(private header: HeaderComponent) { }
 
   ngAfterViewInit() {
     this.change();
@@ -33,17 +34,17 @@ export class InterObserver implements OnInit, AfterViewInit {
 
           //obteber id de la seccion que esta siendo intersectada
           var id = entry.target.getAttribute('id');
-          
-         /*  if(id==="home"){
-            this.header.ejecuta();
-          } */
-         
+
+          /*  this.header.buttonAbout.nativeElement.setAttribute('style', 'color:#0c9693;');
+        
+           this.header.buttons.nativeElement.setAttribute('style', 'color:#0c9693;'); */
+
 
           this.trigger.emit(id);
 
           window.location.replace('#' + id);
 
-          // console.log(about)
+
           //encontrar la etiqueta del menu que coincida con el id de la seccion intersectada  y agregar clase "activa"
           var newLink = document
             .querySelector(`.nav-link[href="#${id}"]`)

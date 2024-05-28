@@ -4,7 +4,7 @@
       <h1 id="txtabout" class="line">Trabajos</h1>
     </div>
 
-    <div class="col-7" id="descripcion" [@fadeInGroup]="sequencesGroup" [@fadeInSequence]="sequences"
+    <div class="col-7"   [@fadeInGroup]="sequencesGroup" [@fadeInSequence]="sequences"
     
     @fadeInSequence *ngIf="hijo === 'portfolio'">
       <div
@@ -52,7 +52,7 @@
       </div>
     </div>
 
-    <div class="col-5" id="work"   @fadeInGroups *ngIf="hijo === 'portfolio'">
+    <div class="col-5"    @fadeInGroups *ngIf="hijo === 'portfolio'">
       <ul
         class="nav nav-pills flex-column nav-pills border-3 me-3 align-items-start"
         id="pills-tab"
