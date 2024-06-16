@@ -1,51 +1,19 @@
-
-
-
-.work {
-  //  padding: 2rem 0 60rem; // rough idea for space
- // border: 1px solid black;
-  border: 0px solid#0c9693;
-  opacity: 1;
-  transition: opacity 1s ease-out;
-  will-change: opacity;
-
-  &.visible {
-    opacity: 1;
-  }
-
-  &#contwork {
-    background-color: #ffffff;
-    height: 100%;
-
-    width: 90%;
-    margin: 0px auto;
-     
-  }
-}
-
-#two {
+.work#contwork {
+  background-color: #bdc0c2;
   height: 100%;
-  width: 100%;
-  
+  width: 90%;
+  margin: 0px auto;
 }
 
-
-
-#rowork {
-  margin-right: 0px;
-  margin-left: 0px;
-  height: 100%;
+#title-description {
+  // background-color: rgb(176, 13, 190);
+  margin: 140px 0px 0px 0px;
 }
 
-div#work {
-  background-color: #2f1dd1;
-  flex-direction: column;
-  display: flex;
-  position: relative;
-  height: 100%;
+#description {
+  // background-color: blue;
+  margin: 0px 0px 0px 0px;
 }
-
- 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,41 +26,35 @@ div#work {
 
 .nav .nav-item button.active {
   background-color: transparent;
- // color:#ee653b !important;
- 
- color:#0c9693 !important;
-  
+  // color:#ee653b !important;
+
+  color: #0c9693 !important;
 }
 .nav-link {
   color: rgb(124, 124, 124) !important;
-
 }
 
-.nav .nav-item button.active::before {
-  content: ""; 
-  border-right: 0px solid #f57f3a00 ; 
+.nav .nav-item button.active::after {
+  content: "";
+  border-right: 0px solid var(--bs-danger);
   height: 100%;
   position: absolute;
-  left: 0px;
+  right: -1px;
   top: 0;
   border-radius: 5px 0 0 5px;
 }
 
 
 
-#pills-tabContent,
-#pills-home-tab {
-  margin-top: 10px;
-}
-
 .text-descripcion {
   color: rgb(99, 99, 99);
   font-size: 25px;
-  letter-spacing: 3px;
-  word-spacing: 4px;
-  line-height: 1.5;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  line-height: 1.4;
   margin-top: -15px;
-  margin-left: 120px;
+  margin-left: 60px;
+  margin-right: 50px;
   text-align: justify;
 }
 
@@ -113,7 +75,7 @@ a.button-site {
   position: relative;
   display: block;
   float: left;
-  margin-left: 120px;
+  margin-left: 60px;
   margin-top: 35px;
 }
 
@@ -135,9 +97,6 @@ a.button-site {
   line-height: 1.1;
 }
 
-
- 
-
 .line::before {
   content: "";
   left: -12px;
@@ -153,15 +112,20 @@ h1#txtabout {
   font-family: "Raleway";
   font-size: 48px;
   font-weight: bold;
-  margin-bottom: 65px;
-  //padding-top: 40px;
-  margin-left: 120px;
-
+  margin: 130px 0px -70px 115px;
+  // margin-bottom: 65px;
+  //left: 115px;
+  //top: 130px;
   position: relative;
-  left: 30px;
-  top: 120px;
 }
 
+@media (max-width: 767px) {
+  .align-items-end {
+    align-items: flex-start !important;
+    margin-left: 54px;
+  }
 
-
- 
+  #description {
+    padding-top: 50px;
+  }
+}
