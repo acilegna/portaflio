@@ -16,12 +16,12 @@
 
 .about#contabout {
  
-  opacity: 1;
-  transition: opacity 1s ease-out;
-  will-change: opacity;
+ // opacity: 1;
+  //transition: opacity 1s ease-out;
+  //will-change: opacity;
   //scroll-snap-align: center;
-  //background-color: rgb(32, 32, 32);
-  background-color: blue;
+  background-color: rgb(32, 32, 32);
+ // background-color: blue;
   height: 100%;
   width: 90%;
   margin: 0px auto;
