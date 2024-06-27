@@ -1,49 +1,36 @@
- 
 .sublogo {
   height: 28px;
-  width:  28px;
+  width: 28px;
   position: absolute;
   right: 200px;
- 
 }
 
 //resetear estilos q da por defecto navegador
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .about#contabout {
- 
- // opacity: 1;
-  //transition: opacity 1s ease-out;
-  //will-change: opacity;
-  //scroll-snap-align: center;
   background-color: rgb(32, 32, 32);
- // background-color: blue;
   height: 100%;
   width: 90%;
   margin: 0px auto;
 }
 
- .presentation {  
+.presentation {
   height: 100%;
   width: auto;
-  //padding-top: 90px;
-  margin-left: 30px;
-  margin-right: 30px;
- // margin-bottom: 30px;
- // background-color: #dd0000;
- background-color: #38c750;
-  white-space: normal;
- 
-} 
 
+  //margin-top:, margin-right:, margin-bottom: y margin-left:.
+  margin: 0px 10px 0px 10px;
+  white-space: normal;
+}
 
 .line::before {
   content: "";
- left: -16px;
+  left: -16px;
   position: absolute;
   width: 3px;
   height: 40px;
@@ -51,38 +38,33 @@
   top: -5px;
 }
 
-h1#txtabout{
-margin-left: 90px;}
+h1#txtabout {
+  margin-left: 60px;
+}
 h2#name,
 p#code {
-  margin-left: 70px;
-  margin-right: 70px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-h1#txtabout{
+h1#txtabout {
   position: relative;
- // left: 50px;
-  top: 90px;
+  top: 110px;
   color: #e7e7e7;
   font-family: "Raleway";
   font-size: 48px;
-  font-weight: bold;  
-
+  font-weight: bold;
 }
 
 h1 #point {
   color: #e349c4;
 }
 
-
-
- 
-
 h2#name {
   color: #e7e7e7;
   font-family: "Raleway";
   font-size: 25px;
-  margin-top: 140px;
+  margin-top: 160px;
   font-weight: lighter;
 }
 
@@ -92,38 +74,35 @@ p#code {
   color: #e7e7e7;
   margin-top: 30px;
   line-height: 1.7em;
-
+  text-align: justify;
 }
 
 .write {
-
   text-decoration: none;
   margin-left: 5px;
-  position: relative; 
-	//float: left;
+  position: relative;
   background-color: rgb(32, 32, 32);
   color: #e349c4;
-	font-size: 1.1em;
- 
+  font-size: 1.1em;
 }
 
- 
-
 .write span {
-  
-  position:absolute;
-  right:0;
-  width:0;
+  position: absolute;
+  right: 0;
+  width: 0;
   background-color: rgb(32, 32, 32);
   border-left: 2px solid #e349c4;
   animation: escribir 2s steps(35) infinite alternate;
 }
 
 @keyframes escribir {
-    from { width: 100% }
-    to { width:0%}
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
-
 
 @keyframes expansion {
   from {
@@ -138,23 +117,48 @@ p#code {
 body {
   font-family: sans-serif;
 }
+@media (max-width: 556px) {
+  a.write {
+    position: absolute;
+    display: block;
+  }
 
-
-
+  h2#name {
+     
+    font-size: 20px;
+    margin-top: 180px;
+    
+  }
+  h2#name,
+  p#code {
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+  
+  h1#txtabout {
+   // position: relative;
+    top: 130px;
+    margin-left: 35px;
+     
+    font-size: 44px;
+   
+  }
+.presentation {
+ 
+  margin: 0px 5px 0px 5px;
+ 
+}
+}
 
 @media (max-width: 725px) {
-  .write {      
-    position: absolute;     
-   
-  }  
-  .line::before {  
+  .write {
+    position: absolute;
+  }
+  .line::before {
     top: 5px;
   }
 
-  h1#txtabout{  
+  h1#txtabout {
     line-height: 1.1em;
   }
-
-
 }
-

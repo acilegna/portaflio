@@ -1,22 +1,31 @@
 <div class="about" id="contabout">
- <!--  <img src="/assets/yo.png" alt="image" class="sublogo">   -->
-  <div class=" col-md-12">
-    <div >
-      <h1 id="txtabout" class="line">
+  <!--  <img src="/assets/yo.png" alt="image" class="sublogo">   -->
+  <div class="presentation col-md-12">
+    <div>
+      <h1 id="txtabout" class="line" @enterState *ngIf="hijo === 'about'">
         Acerca de <strong id="point">mí</strong>
       </h1>
-
     </div>
-    
-    <div  >
-      <h2 id="name" class="expand">Soy Angelica Ruiz, programadora Web Junior. </h2>
-   
-    
+
+    <div
+      [@fadeGroup]="sequencesGroup"
+      [@fadeSequen]="sequences"
+      @fadeSequen
+      *ngIf="hijo === 'about'"
+    >
+      <h2 id="name" class="expand">
+        Soy Angelica Ruiz, programadora Web Junior.
+      </h2>
+
       <p id="code">
         He trabajado en Backend y Frontend con PHP, JS, TS, CSS3 y HTML5 para
         crear proyectos personales y profesionales como FreeLancer. <br />Puedo
-        ayudarte en tu próximo proyecto,<a href="
-            " class="write">escríbeme..<span>&#160;</span></a>
+        ayudarte en tu próximo proyecto,<a
+          href="
+            "
+          class="write"
+          >escríbeme..<span>&#160;</span></a
+        >
       </p>
     </div>
   </div>

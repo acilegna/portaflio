@@ -1,7 +1,7 @@
-<div class="contain">
+<div class="sections">
   <section
     id="home"
-    class="container-fluid contback img-fluid"
+    class="container-fluid contback-home img-fluid"
     #section
     intersection
   >
@@ -36,10 +36,10 @@
                 >
               </li> -->
               <li class="nav-item">
-                <a class="nav-link optionMenu" href="#" #menu>Github</a>
+                <a class="nav-link optionMenu social" href="#" #menu>Github</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link optionMenu" href="#" #menu>Linkedin</a>
+                <a class="nav-link optionMenu social" href="#" #menu>Linkedin</a>
               </li>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
               <li class="nav-item">
@@ -77,15 +77,14 @@
       </nav>
     </div>
 
-    <div class="row cont ">
-       
+    <div class="row home">
       <div class="col-12" id="presentacion">
-        <div class="contme col-xs-12">
+        <div class="cont-presentacion col-xs-12">
           <h1 id="hello" @enterState *ngIf="padre === 'home'">
             Hola<strong id="point">.</strong>
           </h1>
           <span
-            id="name"
+            id="programer"
             class="line"
             [@fadeGroup]="sequencesGroup"
             [@fadeSequen]="sequences"
@@ -95,7 +94,7 @@
             Soy Programadora Web
           </span>
           <div id="conthello" @fadeInSequence *ngIf="padre === 'home'">
-            <button id="raised" class="btn btn1">Ver CV</button>
+            <button id="bton-cv" class="btn btn1">Ver CV</button>
           </div>
         </div>
       </div>

@@ -1,7 +1,6 @@
-.contain {
+.sections {
   position: absolute;
   z-index: 99999999999999999;
-  // overflow: auto;
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
   width: 100%;
@@ -9,23 +8,22 @@
   background-color: aqua;
 }
 
-.contback {
+.contback-home {
   background-size: 100%;
   background-size: cover;
- background-image: url("../../../assets/images/IMG_3207.jpg");
+  background-image: url("../../../assets/images/IMG_3207.jpg");
   height: 100%;
   display: flex;
   background-color: #0b0b0b;
 }
 
-section div.cont {
+section div.home {
   width: 90%;
   background-size: 100%;
   background-size: cover;
-    
-   max-width: 100%;   height: auto; 
+  max-width: 100%;
+  height: auto;
   background-image: url("../../../assets/images/IMG_32071.jpg");
-  //margin: 30px auto;
   margin: 30px auto 0px auto;
   -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
   -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
@@ -36,7 +34,7 @@ div#contmenu {
   transform: rotate(-90deg) translateX(10px);
   transform-origin: bottom right;
   position: fixed;
-  right: 20px;
+  right: 10px;
 }
 
 div#contmenu .optionMenu {
@@ -46,51 +44,38 @@ div#contmenu .optionMenu {
   font-size: 16px;
 }
 
-.navbar-toggler {
-  background-color: palevioletred;
-}
-
-#about {
+section#about {
   background-color: rgb(255, 255, 255);
   height: 100%;
-  //display: flex;
 }
 
-#portfolio {
+section#portfolio {
   background-color: rgb(32, 32, 32);
   height: 100%;
-  //display: flex;
-}
-/* div#contmenu .optionMenu:hover a,
-div#contmenu .optionMenu:hover {
-  color: #ffffff;
 }
 
-div#contmenu .optionMenu.active {
-  color: #ffffff;
-} */
-
-div.contme {
-  // float: left;
-  height: 100%;
+div.cont-presentacion {
   width: auto;
-  /*arriba     derecha  abajo izq*/
-  margin: 150px 90px 0px 90px;
-  //margin: 210px auto auto 110px;
- // background-color: #49e349;
+  margin: 150px 40px 50px 40px;
 }
 
 h1 strong#point {
   color: #e349c4;
-
   font-family: "Raleway";
   font-size: 85px;
 }
 
-span {
+span#programer {
   display: inline-block;
   position: relative;
   left: 17px;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  line-height: 1.1;
+  color: rgb(255, 255, 255);
+  font-family: "Raleway";
+  font-size: 48px;
+  font-weight: lighter;
 }
 
 .line::before {
@@ -100,25 +85,15 @@ span {
   width: 3px;
   height: 40px;
   background-color: #e349c4;
-  top: 11px;
+  top: 7px;
 }
 
 #hello {
   color: white;
   font-family: "Raleway";
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
-  margin-bottom: 50px;
-}
-
-#name {
-  letter-spacing: 3px;
-  word-spacing: 3px;
-  line-height: 1.1;
-  color: rgb(255, 255, 255);
-  font-family: "Raleway";
-  font-size: 55px;
-  font-weight: lighter;
+  margin-bottom: 60px;
 }
 
 body {
@@ -130,11 +105,9 @@ body {
 .btn {
   position: relative;
   display: block;
-
   font-size: 14px;
   font-family: "montserrat";
   text-decoration: none;
-  // margin: 30px 0;
   border: 1px solid #e349c4;
   padding: 14px 60px;
   text-transform: uppercase;
@@ -162,15 +135,13 @@ body {
   width: 100%;
 }
 
-#raised:hover {
+#bton-cv:hover {
   background-color: #e349c400;
   color: #ffffff;
-  /*  border: 1px solid#ffffffea; */
 }
 
-#raised {
-  margin-top: 50px;
-  /*   transition: all 0.5s ease; */
+#bton-cv {
+  margin-top: 60px;
   transform: translate(0%, -20%);
   border: 1px solid #e349c4;
   color: #e349c4;
@@ -179,7 +150,6 @@ body {
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
-
   background-color: transparent;
   padding: 10px;
   outline: none;
@@ -188,40 +158,11 @@ body {
 
 $base: 0.6rem;
 
-/*  html {
-  scroll-behavior: smooth;
-  background-color: red;
-} */
-
-#wrapper {
-  margin: 10px;
-  background: red;
-  width: 300px;
-  height: 300px;
-  overflow-y: auto;
-}
-
-#wrapper div {
-  width: 100%;
-  background: blue;
-  margin: 5px 0px;
-  color: white;
-  height: 60px;
-  text-align: center;
-  font-size: 30px;
-  opacity: 0;
-  transition: all 2s linear;
-}
-
-#wrapper div.show {
-  opacity: 1;
-}
 :host(a) {
   color: rgb(0, 81, 255);
 }
 .activa {
   font-weight: bold !important;
-
   color: #c5c5c5 !important;
 }
 
@@ -231,25 +172,88 @@ $base: 0.6rem;
 }
 
 @media (max-width: 991px) {
-  div#contmenu .optionMenu {
-    color: #f3f3f3;
-    letter-spacing: 1px;
-    font-size: 16px;
-    margin-left: 10px;
+  div#contmenu {
+    transform: rotate(0deg) translateX(0px);
+
+    left: 47px;
   }
 
+  .navbar-toggler {
+    line-height: 0;
+
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin-left: 1px;
+    border-radius: 0;
+  }
+  .navbar {
+    --bs-navbar-padding-x: -2;
+    --bs-navbar-toggler-padding-x: 0.25rem !important;
+    --bs-navbar-toggler-padding-y: 0.1rem !important;
+    --bs-navbar-toggler-focus-width: 0rem;
+  }
+ li .nav-item{
+     
+    margin-top:-70;
+    margin-bottom:0
+
+  }  
   div#contmenu .optionMenu.social {
     display: none;
+  }  
+  /* transform: rotate(0deg) translateX(0px);
+    transform-origin: top right;
+    position: absolute;
+    left: 44px;   */
+}
+/* 
+@media (max-width: 991px) {
+
+   .navbar-toggler-icon {
+    background-color: #e349c4;
+    color: #ffffff;
+    margin-right: 60px;
+    width: 0.5em;
+    height: 0.5em
+  }  
+  
+   .navbar {
+   
+    --bs-navbar-toggler-icon-bg: none !important;
+    --bs-navbar-toggler-padding-x: 0rem !important;
+    --bs-navbar-toggler-padding-y: 0.7rem !important;
+    --bs-navbar-toggler-focus-width: 0rem;
+   
+    
+  }  
+  .navbar-toggler {
+    line-height: 0;
+    
+    //background-color: rgb(112, 13, 46);
+    border: none;
+    margin-left: 4px;
+    border-radius: 0;
   }
+
+  
+  div#contmenu .optionMenu {     
+    margin-left: 10px;
+  }  
+ 
+  div#contmenu .optionMenu.social {
+    display: none;
+  }  
 
   div#contmenu {
-    transform: rotate(0deg) translateY(0px);
+    transform: rotate(0deg) translateX(0px);
     transform-origin: top right;
-    left: 42px;
+    position: absolute;
+    left: 44px;  
   }
-}
 
-@media (max-width: 862px) {
+} */
+
+@media (max-width: 813px) {
   h1 strong#point {
     font-size: 62px;
   }
@@ -259,98 +263,84 @@ $base: 0.6rem;
     top: 5px;
   }
 
-  #name {
-    font-size: 45px;
-  }
-}
-
-@media (max-width: 670px) {
-  div.contme {
-    margin: 150px 40px 0px 40px;
-  }
-
-  #name {
-    font-size: 42px;
-  }
-
-  /* div.contme {
-    margin: 160px auto auto 20px;
-  } */
-  .line::before {
-    content: "";
-    top: 2px;
-  }
-}
-
-@media (max-width: 556px) {
-  .line::before {
-    content: "";
-    top: -4px;
-  }
-  /*  #hello {
-    font-size: 38px;
-  } */
-
-  #name {
+  span#programer {
     font-size: 37px;
   }
 }
 
-.navbar-toggler {
-  line-height: 0;
-  color: rgba(0, 128, 0, 0);
-  background-color: rgba(29, 29, 29, 0.096);
-  border: none;
-  margin-left: 4px;
-  border-radius: 0;
-}
-
-.navbar-toggler-icon {
-  color: #ffffff;
-
-  left: 0px;
-}
-
-@media (max-width: 504px) {
-  /* div.contme {
-    margin: 240px auto auto 20px;
-  } */
-  div.contme {
-    margin: 150px 30px 0px 30px;
-    //margin: 210px auto auto 110px;
-   
+@media (max-width: 669px) {
+  h1#hello {
+    font-size: 54px;
   }
 
   .line::before {
     content: "";
-    top: -4px;
+    top: 1px;
   }
-  #name {
-    font-size: 30px;
+
+  span#programer {
+    font-size: 32px;
   }
 }
 
-@media (max-width: 400px) {
-  #raised {
-    margin-top: 30px;
-    padding: 10px;
+@media (max-width: 607px) {
+  div.cont-presentacion {
+    margin: 180px 0px 0px 0px;
+  }
+}
+@media (max-width: 533px) {
+  h1#hello {
+    font-size: 51px;
   }
 
-  #hello {
-    font-size: 75px;
-    margin-bottom: 40px;
+  span#programer {
+    font-size: 24px;
   }
-  div.contme {
-    margin: 150px 10px 0px 10px;
-    //margin: 210px auto auto 110px;
-   
+}
+
+@media (max-width: 441px) {
+  h1#hello {
+    font-size: 49px;
   }
 
   .line::before {
     content: "";
-    top: -4px;
+    top: 1px;
   }
-  #name {
-    font-size: 30px;
+
+  span#programer {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 389px) {
+  h1#hello {
+    font-size: 47px;
+  }
+
+  .line::before {
+    content: "";
+    top: 1px;
+  }
+
+  span#programer {
+    font-size: 22px;
+  }
+
+  #bton-cv {
+    font-size: 15px;
+  }
+}
+@media (max-width: 339px) {
+  h1#hello {
+    font-size: 45px;
+  }
+
+  span#programer {
+    font-size: 18px;
+  }
+
+  #bton-cv {
+    font-size: 12px;
   }
 }
