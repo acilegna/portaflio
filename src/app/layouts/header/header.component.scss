@@ -8,34 +8,40 @@
   background-color: aqua;
 }
 
+
 .contback-home {
-  background-size: 100%;
-  background-size: cover;
-  background-image: url("../../../assets/images/IMG_3207.jpg");
+  
+  background-size: cover; 
   height: 100%;
+  background-image: url("../../../assets/images/IMG_3207.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: flex;
-  background-color: #0b0b0b;
+  
 }
 
 section div.home {
   width: 90%;
-  background-size: 100%;
-  background-size: cover;
-  max-width: 100%;
+  background-size: cover; 
   height: auto;
   background-image: url("../../../assets/images/IMG_32071.jpg");
-  margin: 30px auto 0px auto;
-  -webkit-box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
-  -moz-box-shadow: 0 0px 2px #111111, 0 0 2px #171717 inset;
-  box-shadow: 0 0px 2px #0b0b0b, 0 0 2px #111111 inset;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px auto 0px auto;
+  
 }
 
-div#contmenu {
-  transform: rotate(-90deg) translateX(10px);
+.navbar {
+  transform: rotate(-90deg) translateX(0px);
   transform-origin: bottom right;
   position: fixed;
-  right: 10px;
+  right: 18px;
+  font-family: "Raleway";
+  font-size: 16px;
 }
+//navbar navbar-expand-lg navbar-light
 
 div#contmenu .optionMenu {
   color: #919191;
@@ -172,18 +178,30 @@ $base: 0.6rem;
 }
 
 @media (max-width: 991px) {
-  div#contmenu {
-    transform: rotate(0deg) translateX(0px);
 
-    left: 47px;
+  
+  .navbar {
+    transform: rotate(0deg) translateX(0px);     
+    position: fixed;
+   left: 10px;
+    font-family: "Raleway";
+    font-size: 16px;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
   }
 
   .navbar-toggler {
-    line-height: 0;
-
     background-color: rgb(255, 255, 255);
     border: none;
-    margin-left: 1px;
+
     border-radius: 0;
   }
   .navbar {
@@ -192,20 +210,15 @@ $base: 0.6rem;
     --bs-navbar-toggler-padding-y: 0.1rem !important;
     --bs-navbar-toggler-focus-width: 0rem;
   }
- li .nav-item{
-     
-    margin-top:-70;
-    margin-bottom:0
-
-  }  
+  li .nav-item {
+    margin-top: -70;
+    margin-bottom: 0;
+  }
   div#contmenu .optionMenu.social {
     display: none;
-  }  
-  /* transform: rotate(0deg) translateX(0px);
-    transform-origin: top right;
-    position: absolute;
-    left: 44px;   */
+  }
 }
+
 /* 
 @media (max-width: 991px) {
 
