@@ -1,16 +1,19 @@
 <div class="work" id="contwork">
   <!-- inicio titulo -->
-  
-    <div class="col-12">
+  <div class="row">
+    <div class="col-12" @enterState *ngIf="hijo === 'portfolio'">
       <h1 id="txtwork" class="line">Trabajos</h1>
     </div>
-   
-
+  </div>
   <!-- fin titulo -->
 
   <div class="row" id="title-description">
     <!-- inicio tab title -->
-    <div class="col-12 col-sm-12 col-md-3">
+    <div
+      class="col-12 col-sm-12 col-md-3"
+      @fadeInGroups
+      *ngIf="hijo === 'portfolio'"
+    >
       <ul
         class="nav nav-pills flex-column nav-pills border-3 me-3 align-items-end"
         id="pills-tab"
@@ -49,7 +52,14 @@
     <!-- fin tab title -->
 
     <!-- inicio tab contenido -->
-    <div class="col-12 col-sm-12 col-md-9" id="description">
+    <div
+      class="col-12 col-sm-12 col-md-9"
+      id="description"
+      [@fadeInGroup]="sequencesGroup"
+      [@fadeInSequence]="sequences"
+      @fadeInSequence
+      *ngIf="hijo === 'portfolio'"
+    >
       <div
         class="tab-content border rounded-3 border-primary p-3 text-danger w-100"
         id="pills-tabContent"

@@ -21,7 +21,7 @@ export class InterObserver implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-   window.location.replace('#home');
+    window.location.replace('#home');
   }
 
   change() {

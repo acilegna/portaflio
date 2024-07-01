@@ -29,7 +29,7 @@ gsap.registerPlugin(ScrollTrigger);
   animations: [statech, translateAnimation, fadeSequen, fadeGroup],
 })
 
-export class HeaderComponent  {
+export class HeaderComponent implements AfterViewInit {
   @ViewChildren('menu') buttonsocialt: QueryList<ElementRef>;
 
   @ViewChild('section', { static: true }) section: ElementRef<HTMLHeadElement>;
@@ -92,5 +92,28 @@ export class HeaderComponent  {
       el.nativeElement.setAttribute('style', 'color: #e349c4')
     );
   }
+  /*   Fíjate que tienes casi lo mismo, pero le pides a Angular que te inyecte el tipo de plataforma
+    (@Inject(PLATFORM_ID) private platformId: Object), y de este modo, antes de suscribirte a windows, 
+    compruebas si efectivamente te encuentras en el navegador con isPlatformBrowser(this.platformId). */
 
+  ngAfterViewInit(): void {
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (isPlatformBrowser(this.platformId)) {
+      gsap.to('.sublogo', {
+        x: '-38vw', // mover 32 a la izquierda, positivo ala derecha
+        y: '17.3vh',
+        scale: 3.5,
+        rotate: 360,
+        scrollTrigger: {
+          trigger: '.sublogo', //elemento animar
+          //markers: true,
+  
+          start: 'top 120%',
+          end: 'top 40%',
+          scrub: 3, //
+        },
+      });
+    }
+  }
 }

@@ -44,11 +44,11 @@
                 >
               </li>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-              <!--       <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link optionMenu" href="#contact" id="two" #menu
                   >Contact</a
                 >
-              </li> -->
+              </li>
               <li class="nav-item">
                 <a
                   class="nav-link optionMenu"
@@ -82,9 +82,17 @@
     <div class="row home">
       <div class="col-12" id="presentacion">
         <div class="cont-presentacion col-xs-12">
-          <h1 id="hello">Hola<strong id="point">.</strong></h1>
-          <span id="programer" class="line"> Soy Programadora Web </span>
-          <div id="conthello">
+          <h1 id="hello" >
+            Hola<strong id="point">.</strong>
+          </h1>
+          <span
+            id="programer"
+            class="line"
+             
+          >
+            Soy Programadora Web
+          </span>
+          <div id="conthello"  >
             <button id="bton-cv" class="btn btn1">Ver CV</button>
           </div>
         </div>
@@ -106,7 +114,6 @@
     id="portfolio"
     class="container-fluid"
     #section
-    intersection
     (trigger)="onTrigger($event)"
   >
     <app-trabajo [hijo]="padre"> </app-trabajo>

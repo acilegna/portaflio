@@ -42,7 +42,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     AlertModule.forRoot(),
     TabsModule.forRoot(),
     BrowserAnimationsModule,
-/*     RouterModule.forRoot([
+    RouterModule.forRoot([
       {
         path: 'portfolio',
         component: TrabajoComponent,
@@ -53,7 +53,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
         component: AboutComponent,
         data: { animation: 'AboutPage' },
       },
-    ]), */
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent],
