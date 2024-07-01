@@ -1,33 +1,29 @@
 <div class="sections">
-  <section
-    id="home"
-    class="container-fluid contback-home img-fluid"
-    #section
-    intersection
-  >
-    <div id="contmenu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid container-nav">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            (click)="toggleState()"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+  <section id="home" class="container-fluid" #section intersection>
+    <div class="home" id="conthome">
+      <div id="contmenu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid container-nav">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              (click)="toggleState()"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div
-            class="collapse navbar-collapse"
-            id="navbarNavDropdown"
-            [ngClass]="{ collapse: isCollapse }"
-          >
-            <ul class="navbar-nav">
-              <!-- <li class="nav-item">
+            <div
+              class="collapse navbar-collapse"
+              id="navbarNavDropdown"
+              [ngClass]="{ collapse: isCollapse }"
+            >
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item">
                 <a
                   class="nav-link active optionMenu social"
                   aria-current="page"
@@ -35,57 +31,60 @@
                   >Email</a
                 >
               </li> -->
-              <li class="nav-item">
-                <a class="nav-link optionMenu social" href="#" #menu>Github</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link optionMenu social" href="#" #menu
-                  >Linkedin</a
-                >
-              </li>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-              <!--       <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link optionMenu social" href="#" #menu
+                    >Github</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link optionMenu social" href="#" #menu
+                    >Linkedin</a
+                  >
+                </li>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                <!--       <li class="nav-item">
                 <a class="nav-link optionMenu" href="#contact" id="two" #menu
                   >Contact</a
                 >
               </li> -->
-              <li class="nav-item">
-                <a
-                  class="nav-link optionMenu"
-                  href="#portfolio"
-                  id="three"
-                  #menu
-                  >Portfolio</a
-                >
-              </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link optionMenu"
+                    href="#portfolio"
+                    id="three"
+                    #menu
+                    >Portfolio</a
+                  >
+                </li>
 
-              <li class="nav-item">
-                <a class="nav-link optionMenu" href="#about" id="two" #menu
-                  >About</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link activa optionMenu"
-                  id="one"
-                  href="#home"
-                  #menu
-                  >Home</a
-                >
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link optionMenu" href="#about" id="two" #menu
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link activa optionMenu"
+                    id="one"
+                    href="#home"
+                    #menu
+                    >Home</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
 
-    <div class="row home">
-      <div class="col-12" id="presentacion">
-        <div class="cont-presentacion col-xs-12">
-          <h1 id="hello">Hola<strong id="point">.</strong></h1>
-          <span id="programer" class="line"> Soy Programadora Web </span>
-          <div id="conthello">
-            <button id="bton-cv" class="btn btn1">Ver CV</button>
+      <div class="row home">
+        <div class="col-12" id="presentacion">
+          <div class="cont-presentacion col-xs-12">
+            <h1 id="hello">Hola<strong id="point">.</strong></h1>
+            <span id="programer" class="line"> Soy Programadora Web </span>
+            <div id="conthello">
+              <button id="bton-cv" class="btn btn1">Ver CV</button>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +100,6 @@
   >
     <app-about [hijo]="padre"></app-about>
   </section>
-
   <section
     id="portfolio"
     class="container-fluid"

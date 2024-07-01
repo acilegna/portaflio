@@ -8,8 +8,39 @@
   background-color: aqua;
 }
 
+section#about {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+}
 
-.contback-home {
+section#home {
+  background-size: cover; 
+  height: 100%;
+  background-image: url("../../../assets/images/IMG_3207.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+}
+section#portfolio {
+  background-color: rgb(32, 32, 32);
+  height: 100%;
+}
+
+.home#conthome {
+ 
+
+  width: 90%;
+  background-size: cover; 
+  height: auto;
+  background-image: url("../../../assets/images/IMG_32071.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px auto 0px auto;
+}
+
+/* .contback-home {
   
   background-size: cover; 
   height: 100%;
@@ -19,9 +50,9 @@
   background-attachment: fixed;
   display: flex;
   
-}
+} */
 
-section div.home {
+/* section div.home {
   width: 90%;
   background-size: cover; 
   height: auto;
@@ -31,7 +62,7 @@ section div.home {
   background-attachment: fixed;
   margin: 0px auto 0px auto;
   
-}
+} */
 
 .navbar {
   transform: rotate(-90deg) translateX(0px);
@@ -50,15 +81,7 @@ div#contmenu .optionMenu {
   font-size: 16px;
 }
 
-section#about {
-  background-color: rgb(255, 255, 255);
-  height: 100%;
-}
 
-section#portfolio {
-  background-color: rgb(32, 32, 32);
-  height: 100%;
-}
 
 div.cont-presentacion {
   width: auto;
