@@ -64,21 +64,27 @@ section#portfolio {
   
 } */
 
-.navbar {
-  transform: rotate(-90deg) translateX(0px);
-  transform-origin: bottom right;
+/* .navbar {
   position: fixed;
-  right: 18px;
   font-family: "Raleway";
   font-size: 16px;
-}
+ 
+   
+} */
 //navbar navbar-expand-lg navbar-light
-
+.navbar {
+  position: fixed;
+  font-family: "Raleway";
+  font-size: 16px;
+ 
+  //background-color: rgb(0, 255, 76);
+}
 div#contmenu .optionMenu {
   color: #919191;
   letter-spacing: 1px;
   font-family: "Raleway";
   font-size: 16px;
+   
 }
 
 
@@ -204,11 +210,14 @@ $base: 0.6rem;
 
   
   .navbar {
-    transform: rotate(0deg) translateX(0px);     
+
+    position: fixed;
+  
+   /*  transform: rotate(0deg) translateX(0px);     
     position: fixed;
    left: 10px;
     font-family: "Raleway";
-    font-size: 16px;
+    font-size: 16px; */
   }
 
   .navbar-toggler-icon {

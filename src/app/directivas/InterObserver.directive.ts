@@ -21,20 +21,22 @@ export class InterObserver implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-   window.location.replace('#home');
+  // window.location.replace('#home');
   }
 
   change() {
     const changeNav = (entries: any) => {
       entries.forEach((entry: any) => {
-        // verificar el elemnto que esta siendo intersectado
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+        // verificar el elemnto que esta siendo intersectado c
+        console.log(entry.intersectionRatio )
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.55    ) {
           // encontrar los elements (<a> ) que contenga clase activa y eliminarla
           document.querySelector('.activa').classList.remove('activa');
 
           //obteber id de la seccion que esta siendo intersectada
           var id = entry.target.getAttribute('id');
 
+        
           /*  this.header.buttonAbout.nativeElement.setAttribute('style', 'color:#0c9693;');
         
            this.header.buttons.nativeElement.setAttribute('style', 'color:#0c9693;'); */
@@ -42,7 +44,7 @@ export class InterObserver implements OnInit, AfterViewInit {
 
           this.trigger.emit(id);
 
-          window.location.replace('#' + id);
+         // window.location.replace('#' + id);
 
 
           //encontrar la etiqueta del menu que coincida con el id de la seccion intersectada  y agregar clase "activa"
