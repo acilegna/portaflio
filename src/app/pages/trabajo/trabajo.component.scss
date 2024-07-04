@@ -133,12 +133,17 @@ a.button-site {
 @media (max-width: 767px) {
   .align-items-end {
     align-items: flex-start !important;
-    margin-left: 54px;
+   // margin-left: 54px;
+    margin-bottom: 30px;
   }
 
-  #description {
-    padding-top: 50px;
+  #cont-txtwork {
+    margin: 150px 0px 0px 27px;
+     
   }
+/*   #description {
+    padding-top: 50px;
+  } */
 
   .text-descripcion {
     font-size: 20px;
@@ -149,8 +154,7 @@ a.button-site {
 
   h1#txtwork {
     font-size: 44px;
-
-    padding-top: 130px;
+// padding-top: 130px;
   }
 
   a.button-site {
@@ -159,6 +163,6 @@ a.button-site {
   }
 
   #pills-tab {
-    margin-left: -2px;
+    margin-left: 15px;
   }
 }

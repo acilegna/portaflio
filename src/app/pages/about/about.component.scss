@@ -38,9 +38,6 @@
   top: -5px;
 }
 
-h1#txtabout {
-  margin-left: 60px;
-}
 h2#name,
 p#code {
   margin-left: 40px;
@@ -48,6 +45,7 @@ p#code {
 }
 
 h1#txtabout {
+  margin-left: 60px;
   position: relative;
   top: 140px;
   color: #e7e7e7;
@@ -60,9 +58,8 @@ h1 #point {
   color: #e349c4;
 }
 
-#cont-presentation{
+#cont-presentation {
   padding-top: 180px;
-  
 }
 h2#name {
   color: #e7e7e7;
@@ -128,30 +125,25 @@ body {
   }
 
   h2#name {
-     
     font-size: 20px;
-    margin-top: 180px;
-    
+    //margin-top: 180px;
   }
   h2#name,
   p#code {
     margin-left: 17px;
     margin-right: 17px;
   }
-  
+
   h1#txtabout {
-   // position: relative;
+    // position: relative;
     top: 130px;
     margin-left: 35px;
-     
-    font-size: 44px;
-   
+
+    font-size: 40px;
   }
-.presentation {
- 
-  margin: 0px 5px 0px 5px;
- 
-}
+  .presentation {
+    margin: 0px 5px 0px 5px;
+  }
 }
 
 @media (max-width: 725px) {
