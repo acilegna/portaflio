@@ -11,10 +11,9 @@ import {
 } from '@angular/core';
 
 import {
-  statech,
+ 
   translateAnimation,
-  fadeSequen,
-  fadeGroup,
+  Animation, translates
 } from 'src/app/animations';
 
 import { gsap } from 'gsap';
@@ -26,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations: [statech, translateAnimation, fadeSequen, fadeGroup],
+  animations: [ translateAnimation, Animation, translates],
 })
 
 export class HeaderComponent  {
@@ -36,12 +35,17 @@ export class HeaderComponent  {
   @ViewChild('input', { static: true }) Input: ElementRef<HTMLInputElement>;
   isCollapse = true; // guardamos el valor
 
+   
+
   //valor a recibir
   public padre = 'papa';
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   sequencesGroup = true;
   sequences = true;
+
+ 
+
 
   sequencesChange() {
     this.sequences = !this.sequences;

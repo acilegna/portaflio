@@ -13,7 +13,7 @@ import { HeaderComponent } from '../layouts/header/header.component';
 })
 export class InterObserver implements OnInit, AfterViewInit {
   @Output() trigger = new EventEmitter();
-
+ 
   constructor(private header: HeaderComponent) { }
 
   ngAfterViewInit() {
@@ -28,15 +28,15 @@ export class InterObserver implements OnInit, AfterViewInit {
     const changeNav = (entries: any) => {
       entries.forEach((entry: any) => {
         // verificar el elemnto que esta siendo intersectado c
-        console.log(entry.intersectionRatio )
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.55    ) {
+       
+        if (entry.isIntersecting      ) {
           // encontrar los elements (<a> ) que contenga clase activa y eliminarla
           document.querySelector('.activa').classList.remove('activa');
 
           //obteber id de la seccion que esta siendo intersectada
           var id = entry.target.getAttribute('id');
-
-        
+          
+    
           /*  this.header.buttonAbout.nativeElement.setAttribute('style', 'color:#0c9693;');
         
            this.header.buttons.nativeElement.setAttribute('style', 'color:#0c9693;'); */
@@ -53,10 +53,11 @@ export class InterObserver implements OnInit, AfterViewInit {
             .classList.add('activa');
         }
       });
+      
     };
 
     const options = {
-      threshold: 0.55,
+      threshold:0.95,
     };
 
     const observer = new IntersectionObserver(changeNav, options);

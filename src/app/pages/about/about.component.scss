@@ -20,9 +20,9 @@
 }
 
 .presentation {
-  height: 100%;
+  height: 90%;
   width: auto;
-
+  //margin-top: 180px;
   //margin-top:, margin-right:, margin-bottom: y margin-left:.
   margin: 0px 10px 0px 10px;
   white-space: normal;
@@ -60,11 +60,15 @@ h1 #point {
   color: #e349c4;
 }
 
+#cont-presentation{
+  padding-top: 180px;
+  
+}
 h2#name {
   color: #e7e7e7;
   font-family: "Raleway";
   font-size: 25px;
-  margin-top: 180px;
+  //margin-top: 180px;
   font-weight: lighter;
 }
 

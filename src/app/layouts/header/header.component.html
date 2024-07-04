@@ -74,11 +74,14 @@
       
       <div class="row home">
         <div class="col-12" id="presentacion">
-          <div class="cont-presentacion col-xs-12">
-            <h1 id="hello">Hola<strong id="point">.</strong></h1>
-            <span id="programer" class="line"> Soy Programadora Web </span>
+          <div class="cont-presentacion col-xs-12" >
+          
+
+              <h1 id="hello" @entrada *ngIf="padre === 'home'">
+                Hola<strong id="point">.</strong></h1>
+            <span id="programer" class="line" @fadeInOut *ngIf="padre === 'home'" > Soy Programadora Web </span>
             <div id="conthello">
-              <button id="bton-cv" class="btn btn1">Ver CV</button>
+              <button id="bton-cv" class="btn btn1" @fadeInOut *ngIf="padre === 'home'">Ver CV</button>
             </div>
           </div>
         </div>

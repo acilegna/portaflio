@@ -2,14 +2,14 @@
  
   <div class="presentation col-md-12">
     <div>
-      <h1 id="txtabout" class="line"  >
+      <h1 id="txtabout" class="line"  @entrada *ngIf="hijo === 'about'">
         Acerca de <strong id="point">mí</strong>
       </h1>
     </div>
 
-    <div
+    <div @fadeInOut *ngIf="hijo === 'about'"
       
-    >
+   id="cont-presentation" >
       <h2 id="name" class="expand">
         Soy Angelica Ruiz, programadora Web Junior.
       </h2>
