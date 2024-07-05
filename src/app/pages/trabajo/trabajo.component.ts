@@ -1,13 +1,12 @@
 import { Component, Input } from '@angular/core';
-
-import { trigger, transition, animate, style } from '@angular/animations';
-import {  translateAnimation,Animation, translates } from 'src/app/animations';
+ 
+import {  translateAnimation,Animation, translates,hijo2,hijo3,container} from 'src/app/animations';
 
 @Component({
   selector: 'app-trabajo',
   templateUrl: './trabajo.component.html',
   styleUrls: ['./trabajo.component.scss'],
-  animations: [translateAnimation, Animation, translates],
+  animations: [translateAnimation, Animation,   translates,hijo2,hijo3, container],
 })
 export class TrabajoComponent {
   @Input() hijo = '';

@@ -228,6 +228,12 @@ $base: 0.6rem;
 
     border-radius: 0;
   }
+
+  .nav-link {
+    display: block;
+    padding-bottom: 1px;
+
+  }  
   .navbar {
     --bs-navbar-padding-x: -2;
     --bs-navbar-toggler-padding-x: 0.25rem !important;

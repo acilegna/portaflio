@@ -79,9 +79,9 @@
 
               <h1 id="hello" @entrada *ngIf="padre === 'home'">
                 Hola<strong id="point">.</strong></h1>
-            <span id="programer" class="line" @fadeInOut *ngIf="padre === 'home'" > Soy Programadora Web </span>
-            <div id="conthello">
-              <button id="bton-cv" class="btn btn1" @fadeInOut *ngIf="padre === 'home'">Ver CV</button>
+            <span id="programer" class="line"  @enterState  *ngIf="padre === 'home'" > Soy Programadora Web </span>
+            <div id="conthello" @enterState *ngIf="padre === 'home'">
+              <button id="bton-cv" class="btn btn1" >Ver CV</button>
             </div>
           </div>
         </div>
