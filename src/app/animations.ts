@@ -13,7 +13,7 @@ export const translates = trigger('entrada', [
   state(
     'void',
     style({
-      transform: 'translateX(-100%)',
+      transform: 'translateX(-70%)',
       opacity: '0',
     })
   ),
