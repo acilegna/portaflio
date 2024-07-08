@@ -13,11 +13,11 @@ import {
 import {
  
   translateAnimation,
-  Animation, translates
+  Animation, translates,fadeInGroup,fadeInSequence
 } from 'src/app/animations';
 
 import { gsap } from 'gsap';
-import { isPlatformBrowser } from '@angular/common';
+//import { isPlatformBrowser } from '@angular/common';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +25,7 @@ gsap.registerPlugin(ScrollTrigger);
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations: [ translateAnimation, Animation, translates],
+  animations: [ translateAnimation, Animation, translates,fadeInGroup,fadeInSequence],
 })
 
 export class HeaderComponent  {

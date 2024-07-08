@@ -57,16 +57,18 @@
         </nav>
       </div>
 
-      <div class="cont-presentacion col-12 col-sm-12 col-md-12">
+      <div class="cont-presentacion col-12 col-sm-12 col-md-12"  >
         <h1 id="hello" @entrada *ngIf="padre === 'home'">
           Hola<strong id="point">.</strong>
         </h1>
-        <span id="programer" class="line" @enterState *ngIf="padre === 'home'">
+        <div   @fadeInSequence *ngIf="padre === 'home'" > 
+        <span id="programer" class="line animate"  >
           Soy Programadora Web
         </span>
-        <div id="conthello" @enterState *ngIf="padre === 'home'">
+        <div id="conthello" class="animate" >
           <button id="bton-cv" class="btn btn1">Ver CV</button>
         </div>
+      </div>
       </div>
     </div>
   </section>

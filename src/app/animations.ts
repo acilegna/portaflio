@@ -1,19 +1,19 @@
 import {
   animate,
   animateChild,
+  group,
   query,
   state,
   style,
   transition,
-  trigger,
-} from '@angular/animations';
-
-//Trabajos about
+  trigger,sequence
+} from '@angular/animations'; 
+//about
 export const translates = trigger('entrada', [
   state(
     'void',
     style({
-      transform: 'translateX(-70%)',
+      transform: 'translateX(-50%)',
       opacity: '0',
     })
   ),
@@ -28,9 +28,53 @@ export const translates = trigger('entrada', [
   ]),
 ]);
 
+
+//about
+export const fadeInSequence = trigger('fadeInSequence', [
+  transition('* <=> *', [
+    query('.animate', [
+      style({ opacity: 0, transform: 'scale(0)' }),
+      sequence([
+        animate(
+          '500ms 0.03s',
+          style({ opacity: 1, transform: 'scale(0, .01)' })
+        ),
+        animate('200ms 0.03s', style({ transform: 'scale(1, .01)' })),
+        animate('200ms 0.03s', style({ transform: 'scale(1, 1)' })),
+      ]),
+    ]),
+  ]),
+]);
+
+
+
+ 
+
+
+ //Trabajos
+export const fadeInGroup = trigger('fadeInGroup', [
+  transition('* <=> *', [
+    query('div', [
+      style({ opacity: 0, transform: 'scale(0.8)' }),
+      group([
+        animate('500ms', style({ opacity: 1 })),
+        animate('200ms ease-in', style({ transform: 'scale(1)' })),
+      ]),
+    ]),
+  ]),
+]);
+
+
+
+
+
+
+
+
+
 export const translateAnimation = trigger('fadeInOut', [
   transition(':enter', [
-    style({ opacity: 0, transform: 'translateX(-15px)' }),
+    style({ opacity: 0, transform: 'translateX(15px)' }),
     animate('1s', style({ opacity: 1, transform: 'translateX(0)' })),
   ]),
   transition(':leave', [

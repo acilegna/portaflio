@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 
-import {    translateAnimation, Animation,translates} from 'src/app/animations';
+import {
+  translates, fadeInSequence
+} from 'src/app/animations';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +10,7 @@ import {    translateAnimation, Animation,translates} from 'src/app/animations';
   styleUrls: ['./about.component.scss'],
  
  
-  animations: [translateAnimation, Animation, translates],
+  animations: [  translates, fadeInSequence],
  
 })
 export class AboutComponent {

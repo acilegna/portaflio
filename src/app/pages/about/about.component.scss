@@ -18,15 +18,20 @@
   max-height: fit-content;
   width: 90%;
   margin: 0px auto;
+  position: relative;
 }
 
 .presentation {
-  height: 90%;
-  width: auto;
-  //margin-top: 180px;
-  //margin-top:, margin-right:, margin-bottom: y margin-left:.
-  margin: 0px 10px 0px 10px;
-  white-space: normal;
+  //div centrado
+  width: 92%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+ // background-color: blueviolet;
+  margin: auto;
 }
 
 .line::before {
@@ -39,16 +44,9 @@
   top: -5px;
 }
 
-h2#name,
-p#code {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
 h1#txtabout {
-  margin-left: 60px;
+  margin-left: 16px;
   position: relative;
-  top: 140px;
   color: #e7e7e7;
   font-family: "Raleway";
   font-size: 48px;
@@ -60,13 +58,12 @@ h1 #point {
 }
 
 #cont-presentation {
-  padding-top: 180px;
+  padding-top: 30px;
 }
 h2#name {
   color: #e7e7e7;
   font-family: "Raleway";
   font-size: 25px;
-  //margin-top: 180px;
   font-weight: lighter;
 }
 
@@ -74,7 +71,6 @@ p#code {
   font-family: "Raleway";
   font-size: 17px;
   color: #e7e7e7;
-  margin-top: 30px;
   line-height: 1.7em;
   text-align: justify;
 }
@@ -119,6 +115,23 @@ p#code {
 body {
   font-family: sans-serif;
 }
+
+@media (max-width: 517px) {
+  .presentation {
+   
+    height: 400px;
+
+     
+  }
+}
+
+@media (max-width: 337px) {
+  .presentation {
+   
+    height: 520px;
+  }
+}
+
 @media (max-width: 556px) {
   a.write {
     position: absolute;
@@ -126,24 +139,11 @@ body {
   }
 
   h2#name {
-    font-size: 20px;
-    //margin-top: 180px;
-  }
-  h2#name,
-  p#code {
-    margin-left: 17px;
-    margin-right: 17px;
+    font-size: 19px;
   }
 
   h1#txtabout {
-    // position: relative;
-    top: 130px;
-    margin-left: 35px;
-
-    font-size: 40px;
-  }
-  .presentation {
-    margin: 0px 5px 0px 5px;
+    font-size: 38px;
   }
 }
 

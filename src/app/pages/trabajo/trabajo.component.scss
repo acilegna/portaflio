@@ -3,6 +3,20 @@
   height: 100%;
   width: 90%;
   margin: 0px auto;
+  position: relative;
+}
+
+#mywork {
+  //div centrado
+  width: 92%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  //background-color: blueviolet;
+  margin: auto;
 }
 
 * {
@@ -11,14 +25,14 @@
   box-sizing: border-box;
 }
 
-
 #cont-txtwork {
-  margin: 150px 0px 0px 70px;
+  // margin: 150px 0px 0px 70px;
   height: auto;
   width: auto;
 }
 
 h1#txtwork {
+  margin-left: 16px;
   color: rgb(73, 73, 73);
   font-family: "Raleway";
   font-size: 48px;
@@ -30,20 +44,18 @@ h1#txtwork {
 
 .line::before {
   content: "";
-  left: -12px;
+  left: -16px;
   position: absolute;
   width: 3px;
   height: 40px;
   background-color: #0c9e9c;
-  top: 0px;
+  top: -5px;
 }
 
 #cont-description {
-  //background-color: rgb(176, 13, 190);
-  margin: 60px 0px 0px 0px;
-  // margin: 140px 0px 0px 0px;
+  // background-color: rgb(152, 228, 10);
+  margin: 50px 0px 0px 0px;
 }
- 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -55,9 +67,7 @@ h1#txtwork {
 }
 
 .nav .nav-item button.active {
-  background-color: transparent;
-  // color:#ee653b !important;
-
+  background-color: transparent;  
   color: #0c9693 !important;
 }
 
@@ -69,13 +79,10 @@ h1#txtwork {
   color: rgb(124, 124, 124) !important;
 }
 
- 
-
 .nav .nav-item button.active::after {
   content: "";
   border-right: 0px solid var(--bs-danger);
   height: 100%;
-  
   position: absolute;
   right: -1px;
   top: 0;
@@ -83,18 +90,18 @@ h1#txtwork {
 }
 
 .text-descripcion {
+  //color: red;
   color: rgb(99, 99, 99);
   font-size: 25px;
   letter-spacing: 2px;
   word-spacing: 1px;
   line-height: 1.4;
   margin-top: -15px;
-  margin-left: 60px;
-  margin-right: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
   text-align: justify;
   font-family: "Raleway";
-
-  // font-weight: bold;
+  //background-color: brown;
 }
 
 a.button-site {
@@ -104,18 +111,13 @@ a.button-site {
   color: #fff;
   font-size: 10pt;
   font-weight: 600;
-  padding: 11px 30px;
-  /*  cursor: pointer;
-  pointer-events: none;
-  position: absolute;
-  transition: all 0.5s;
-  visibility:visible; */
+  padding: 11px 30px;   
   font-family: "Raleway";
   text-decoration: none;
   position: relative;
   display: block;
   float: left;
-  margin-left: 60px;
+  margin-left: 30px;
   margin-top: 45px;
 }
 
@@ -129,40 +131,79 @@ a.button-site {
   border-width: 0;
 }
 
-
-@media (max-width: 767px) {
-  .align-items-end {
-    align-items: flex-start !important;
-   // margin-left: 54px;
-    margin-bottom: 30px;
-  }
-
-  #cont-txtwork {
-    margin: 150px 0px 0px 27px;
-     
-  }
-/*   #description {
-    padding-top: 50px;
-  } */
-
-  .text-descripcion {
-    font-size: 20px;
-    margin-top: -15px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+@media (max-width:991px) {
 
   h1#txtwork {
+     
     font-size: 44px;
-// padding-top: 130px;
+   
   }
-
+  .text-descripcion {
+    color: rgb(8, 8, 8);
+    //color: rgb(99, 99, 99);
+    font-size: 21px;
+      margin-top: -15px;
+    margin-left: 0px;
+    margin-right: 0px;
+     
+  }
   a.button-site {
-    margin-left: 5px;
-    margin-top: 37px;
+     bottom: 0px;  
+    margin-left: 0px;
+    margin-top: 15px;
   }
 
-  #pills-tab {
-    margin-left: 15px;
+  .align-items-end {
+    align-items: flex-start !important;
+    margin-left: 13px;
+  }
+
+  #cont-description {
+    
+    margin: 35px 0px 0px 0px;
+  }
+
+  .nav-link {     
+    font-size: 21px;     
+  }
+
+  #mywork {    
+    height: 300px;
+    
   }
 }
+@media (max-width:777px) {
+  .text-descripcion {    
+    font-size: 19px;      
+     
+  }
+  .nav-link {     
+    font-size: 19px;     
+  }
+  h1#txtwork {
+     
+    font-size: 42px;
+   
+  }
+  #mywork {
+    height: 350px;
+  }
+}
+
+@media (max-width:487px) {
+  .text-descripcion {    
+    font-size: 16px;      
+     
+  }
+  .nav-link {     
+    font-size: 16px;     
+  }
+  h1#txtwork {     
+    font-size: 38px;   
+  }
+  #mywork {
+    height: 350px;
+  }
+}
+ 
+ 

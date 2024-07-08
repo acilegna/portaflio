@@ -36,47 +36,16 @@ section#portfolio {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0px auto 0px auto;
-
   position: relative;
 }
 
-/* .contback-home {
-  
-  background-size: cover; 
-  height: 100%;
-  background-image: url("../../../assets/images/IMG_3207.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: flex;
-  
-} */
-
-/* section div.home {
-  width: 90%;
-  background-size: cover; 
-  height: auto;
-  background-image: url("../../../assets/images/IMG_32071.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  margin: 0px auto 0px auto;
-  
-} */
-
-/* .navbar {
-  position: fixed;
-  font-family: "Raleway";
-  font-size: 16px;
  
-   
-} */
-//navbar navbar-expand-lg navbar-light
+ 
 .navbar {
   position: fixed;
   font-family: "Raleway";
   font-size: 16px;
-
+  z-index: 1;
   //background-color: rgb(0, 255, 76);
 }
 div#contmenu .optionMenu {
@@ -87,7 +56,7 @@ div#contmenu .optionMenu {
 }
 
 div.cont-presentacion {
-  
+  //div centrado
   width: 92%;
   height: 300px;
   position: absolute;
@@ -96,8 +65,6 @@ div.cont-presentacion {
   bottom: 0;
   right: 0;
   margin: auto;
- // margin: 0px 40px 0px 40px;
- // background-color: #feb139;
 }
 
 h1 strong#point {
@@ -136,11 +103,11 @@ span#programer {
   font-size: 70px;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 90px;
+  line-height: 100px;
   //margin-bottom: 60px;
 }
 #bton-cv {
-  margin-top: 60px;
+  margin-top: 50px;
   transform: translate(0%, -20%);
   border: 1px solid #e349c4;
   color: #e349c4;
@@ -213,18 +180,10 @@ $base: 0.6rem;
   color: #d0ff00 !important;
 }
 
- 
- 
-
 @media (max-width: 991px) {
   .navbar {
     position: fixed;
-
-    /*  transform: rotate(0deg) translateX(0px);     
-    position: fixed;
-   left: 10px;
-    font-family: "Raleway";
-    font-size: 16px; */
+    
   }
 
   .navbar-toggler-icon {

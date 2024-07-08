@@ -1,20 +1,20 @@
 <div class="about" id="contabout">
  
-  <div class="presentation col-md-12">
-    <div>
+  <div class="presentation col-md-12" >
+    <div >
       <h1 id="txtabout" class="line"  @entrada *ngIf="hijo === 'about'">
         Acerca de <strong id="point">mí</strong>
       </h1>
     </div>
 
-    <div @fadeInOut *ngIf="hijo === 'about'"
+    <div  
       
-   id="cont-presentation" >
-      <h2 id="name" class="expand">
+   id="cont-presentation" @fadeInSequence *ngIf="hijo === 'about'" >
+      <h2 id="name" class="expand animate">
         Soy Angelica Ruiz, programadora Web Junior.
       </h2>
 
-      <p id="code">
+      <p id="code" class="animate">
         He trabajado en Backend y Frontend con PHP, JS, TS, CSS3 y HTML5 para
         crear proyectos personales y profesionales como FreeLancer. <br />Puedo
         ayudarte en tu próximo proyecto,<a
