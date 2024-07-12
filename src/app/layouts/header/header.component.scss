@@ -1,3 +1,39 @@
+li.nav-item a:before,
+li.nav-item a:after {
+  position: absolute;
+  opacity: 0;
+  font-size: 16px;
+  top: 7px;
+  transition: all 0.3s;
+}
+
+li.nav-item a:before {
+  content: "<";
+  left: -3px;
+  transform: translateX(10px);
+}
+
+li.nav-item a:after {
+  content: ">";
+  right: -3px;
+  transform: translateX(-10px);
+}
+
+li.nav-item a.activa:before,
+li.nav-item a.activa:after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+li.nav-item a {
+  position: relative;
+  z-index: 0;
+}
+.activa {
+  font-weight: bold !important;
+  color: #b8b7b7 !important;
+}
+
 .sections {
   position: absolute;
   z-index: 99999999999999999;
@@ -5,7 +41,7 @@
   scrollbar-width: none !important;
   width: 100%;
   height: 100%;
-  background-image: url("../../../assets/images/IMG_3207.jpg");
+  // background-image: url("../../../assets/images/IMG_32070.png");
 }
 
 section#about {
@@ -16,55 +52,58 @@ section#about {
 section#home {
   background-size: cover;
   height: 100%;
-  background-image: url("../../../assets/images/IMG_3207.jpg");
-  background-position: center center;
+  //background-color:#1c1c1c;
+  background-image: url("../../../assets/images/IMG_32070.jpg");
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
 }
 section#portfolio {
-  background-color: rgb(32, 32, 32);
+  background-color: #141414;
   height: 100%;
 }
-
+section#contact {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+}
 .home#conthome {
   width: 90%;
-  background-size: cover;
+  //background-color: red;
   height: auto;
-  background-image: url("../../../assets/images/IMG_32071.jpg");
-  background-position: center center;
+  background-image: url("../../../assets/images/IMG_32070.jpg");
+  background-size: cover;
+  // background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0px auto 0px auto;
   position: relative;
 }
 
- 
- 
 .navbar {
   position: fixed;
-  font-family: "Raleway";
-  font-size: 16px;
   z-index: 1;
-  //background-color: rgb(0, 255, 76);
+ 
 }
 div#contmenu .optionMenu {
   color: #919191;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-family: "Raleway";
   font-size: 16px;
+  margin-right: 10px;
 }
 
 div.cont-presentacion {
   //div centrado
   width: 92%;
-  height: 300px;
+  height: 250px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   margin: auto;
+  //background-color: red;
 }
 
 h1 strong#point {
@@ -83,7 +122,7 @@ span#programer {
   line-height: 1.1;
   color: rgb(255, 255, 255);
   font-family: "Raleway";
-  font-size: 46px;
+  font-size: 44px;
   font-weight: lighter;
 }
 
@@ -94,17 +133,18 @@ span#programer {
   width: 3px;
   height: 40px;
   background-color: #e349c4;
-  top: 7px;
+  top: 5px;
 }
 
 #hello {
   color: white;
   font-family: "Raleway";
-  font-size: 70px;
+  font-size: 68px;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: 100px;
-  //margin-bottom: 60px;
+
+  //background-color: blue;
+  margin-bottom: 50px;
 }
 #bton-cv {
   margin-top: 50px;
@@ -112,7 +152,7 @@ span#programer {
   border: 1px solid #e349c4;
   color: #e349c4;
   font-family: "Raleway";
-  font-size: 17px;
+  font-size: 15px;
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
@@ -170,20 +210,10 @@ $base: 0.6rem;
 :host(a) {
   color: rgb(0, 81, 255);
 }
-.activa {
-  font-weight: bold !important;
-  color: #c5c5c5 !important;
-}
-
-.inactiva {
-  font-weight: bold !important;
-  color: #d0ff00 !important;
-}
 
 @media (max-width: 991px) {
   .navbar {
     position: fixed;
-    
   }
 
   .navbar-toggler-icon {
@@ -233,7 +263,7 @@ $base: 0.6rem;
   }
 
   span#programer {
-    font-size: 37px;
+    font-size: 40px;
   }
 }
 
@@ -248,17 +278,17 @@ $base: 0.6rem;
   }
 
   span#programer {
-    font-size: 32px;
+    font-size: 37px;
   }
 }
 
-@media (max-width: 533px) {
+@media (max-width: 615px) {
   h1#hello {
     font-size: 51px;
   }
 
   span#programer {
-    font-size: 24px;
+    font-size: 33px;
   }
 
   .line::before {
@@ -268,22 +298,22 @@ $base: 0.6rem;
   }
 }
 
-@media (max-width: 441px) {
+@media (max-width: 567px) {
   h1#hello {
     font-size: 49px;
   }
 
   .line::before {
     content: "";
-    top: 1px;
+    top: -2px;
   }
 
   span#programer {
-    font-size: 27px;
+    font-size: 29px;
   }
 }
 
-@media (max-width: 389px) {
+@media (max-width: 409px) {
   h1#hello {
     font-size: 47px;
   }
@@ -294,7 +324,7 @@ $base: 0.6rem;
   }
 
   span#programer {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   #bton-cv {
@@ -307,10 +337,38 @@ $base: 0.6rem;
   }
 
   span#programer {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   #bton-cv {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 313px) {
+  h1#hello {
+    font-size: 43px;
+  }
+
+  span#programer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 293px) {
+  h1#hello {
+    font-size: 40px;
+  }
+
+  span#programer {
+    font-size: 15px;
+  }
+
+  #bton-cv {
+    margin-top: 45px;
+
+    font-size: 12px;
+
+    padding: 8px;
   }
 }

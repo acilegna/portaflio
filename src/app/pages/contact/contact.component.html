@@ -1,0 +1,55 @@
+<div class="contact" id="cntcontac">
+  <div class="presentation col-lg-12 col-md-12">
+    <div class="col-12" id="cont-txtcontact">
+      <h1 id="txtcontact" class="line" @entrada *ngIf="hijo === 'contact'">
+        Contacto
+      </h1>
+    </div>
+    <div id="formulario" @fadeInOut *ngIf="hijo === 'contact'">
+      <form>
+        <div class="input-group mb-3">
+          <span
+            class="input-group-text bi-person-circle icon"
+            id="basic-addon1"
+          ></span>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Nombre"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text bi-at icon" id="basic-addon1"></span>
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email"
+            aria-label="email"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text bi-pencil icon"></span>
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            placeholder="Mensaje"
+          ></textarea>
+        </div>
+
+        <div class="col-auto">
+          <button
+            type="submit"
+            class="btn btn-primary mb-3 bi-send icon"
+            id="btnenviar"
+          >
+            Enviar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

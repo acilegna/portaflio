@@ -1,0 +1,67 @@
+.contact#cntcontac {
+  background-color: #141414;
+  height: 100%;
+  max-height: fit-content;
+  width: 90%;
+  margin: 0px auto;
+  position: relative;
+}
+
+.presentation {
+  //div centrado
+  width: 92%;
+  height: 330px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  //background-color: blueviolet;
+  margin: auto;
+}
+.icon {
+  font-size: 1rem;
+  color: rgb(22, 22, 22);
+}
+
+h1#txtcontact {
+  margin-left: 16px;
+  color: #ffffff;
+   
+  font-family: "Raleway";
+  font-size: 46px;
+  font-weight: bold;
+  //margin: 0px 0px -70px 60px;
+  font-family: "Raleway";
+  position: relative;
+}
+
+.line::before {
+  content: "";
+  left: -16px;
+  position: absolute;
+  width: 3px;
+  height: 40px;
+  background-color: #e39f63;
+  top: -2px;
+}
+
+#cont-txtcontact {
+   padding-bottom: 45px;
+ 
+}
+#btnenviar{
+  background-color: #e39f63;
+  color: rgb(34, 33, 33);
+  --bs-btn-border-color: #eb9a54;
+  --bs-btn-hover-border-color: #0a57ca00;
+  --bs-btn-active-bg: #0aca2a00;
+  --bs-btn-active-border-color: #0a52be00;
+
+}
+ 
+
+form input:focus, form textarea:focus  {
+  box-shadow: 0 0 1px #eb9a54;
+  border: 1px solid #818181;
+}

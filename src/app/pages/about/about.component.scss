@@ -13,7 +13,7 @@
 }
 
 .about#contabout {
-  background-color: rgb(32, 32, 32);
+  background-color: #141414;
   height: 100%;
   max-height: fit-content;
   width: 90%;
@@ -73,13 +73,17 @@ p#code {
   color: #e7e7e7;
   line-height: 1.7em;
   text-align: justify;
+  letter-spacing: 0.2px;
+  word-spacing: 0.2px;
 }
+
+ 
 
 .write {
   text-decoration: none;
   margin-left: 5px;
   position: relative;
-  background-color: rgb(32, 32, 32);
+  background-color:#141414;
   color: #e349c4;
   font-size: 1.1em;
 }
@@ -88,7 +92,7 @@ p#code {
   position: absolute;
   right: 0;
   width: 0;
-  background-color: rgb(32, 32, 32);
+  background-color: #141414;
   border-left: 2px solid #e349c4;
   animation: escribir 2s steps(35) infinite alternate;
 }

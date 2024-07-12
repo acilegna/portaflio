@@ -21,6 +21,7 @@ import { MatCardModule } from '@angular/material/card';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
 import { AlertModule } from 'ngx-bootstrap/alert';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ContactComponent } from './pages/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     AboutComponent,
     FooterComponent, 
     TrabajoComponent,
-    InterObserver
+    InterObserver,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -62,7 +62,7 @@ export class HeaderComponent  {
 
   onTrigger(id: any) {
     this.padre = id;
-
+ 
     if (this.padre == 'home') {
       this.styleRed();
     }
@@ -73,6 +73,10 @@ export class HeaderComponent  {
 
     if (this.padre == 'portfolio') {
       this.styleBlue();
+    }
+
+    if (this.padre == 'contact') {
+      this.stylewhite();
     }
   }
 
@@ -94,6 +98,13 @@ export class HeaderComponent  {
     let toArray = this.buttonsocialt.toArray();
     let ref = toArray.find((el) =>
       el.nativeElement.setAttribute('style', 'color: #e349c4')
+    );
+  }
+
+  stylewhite() {
+    let toArray = this.buttonsocialt.toArray();
+    let ref = toArray.find((el) =>
+      el.nativeElement.setAttribute('style', 'color: #e39f63')
     );
   }
 
