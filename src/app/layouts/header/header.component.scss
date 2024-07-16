@@ -45,11 +45,13 @@ li.nav-item a {
 }
 
 section#about {
+  --bs-gutter-x: 0rem !important;
   background-color: rgb(255, 255, 255);
   height: 100%;
 }
 
 section#home {
+  --bs-gutter-x: 0rem !important;
   background-size: cover;
   height: 100%;
   //background-color:#1c1c1c;
@@ -60,10 +62,12 @@ section#home {
   display: flex;
 }
 section#portfolio {
+  --bs-gutter-x: 0rem !important;
   background-color: #141414;
   height: 100%;
 }
 section#contact {
+  --bs-gutter-x: 0rem !important;
   background-color: rgb(255, 255, 255);
   height: 100%;
 }
@@ -216,6 +220,7 @@ $base: 0.6rem;
   }
 
   li.nav-item a:after {
+    content: ">";
     right: auto;
   }
 
@@ -230,11 +235,7 @@ $base: 0.6rem;
     z-index: 0;
   }
 
-  .navbar {
-    position: fixed;
-  }
-
-  .navbar-toggler-icon {
+  /*  .navbar-toggler-icon {
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
@@ -242,28 +243,37 @@ $base: 0.6rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
-  }
+ 
+    
+  } */
 
   .navbar-toggler {
-    background-color: rgb(255, 255, 255);
+    // background-color: rgba(199, 15, 15, 0);
     border: none;
-
     border-radius: 0;
   }
 
   .nav-link {
     display: block;
-    padding-bottom: 1px;
+
+    // padding-bottom: 2px;
+    // margin-left: 20px;
+    // background-color: beige;
+    //float: right;
   }
   .navbar {
-    --bs-navbar-padding-x: -2;
+    --bs-navbar-toggler-focus-width: 0rem;
     --bs-navbar-toggler-padding-x: 0.25rem !important;
     --bs-navbar-toggler-padding-y: 0.1rem !important;
-    --bs-navbar-toggler-focus-width: 0rem;
+    --bs-navbar-padding-x: -2;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 90%;
   }
   li .nav-item {
     margin-top: -70;
     margin-bottom: 0;
+    // float: right;
   }
   div#contmenu .optionMenu.social {
     display: none;
