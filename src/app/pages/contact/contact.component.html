@@ -6,20 +6,24 @@
       </h1>
     </div>
     <div id="formulario" @fadeInOut *ngIf="hijo === 'contact'">
-      <form>
+      <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
+    
         <div class="input-group mb-3">
           <span
             class="input-group-text bi-person-circle icon"
             id="basic-addon1"
           ></span>
           <input
-            type="email"
+            type="text"
             class="form-control"
             placeholder="Nombre"
             aria-label="Username"
             aria-describedby="basic-addon1"
+            name="nombre" ngModel
           />
+          
         </div>
+ 
         <div class="input-group mb-3">
           <span class="input-group-text bi-at icon" id="basic-addon1"></span>
           <input
@@ -28,6 +32,7 @@
             placeholder="Email"
             aria-label="email"
             aria-describedby="basic-addon1"
+            name="email" ngModel
           />
         </div>
 
@@ -37,6 +42,7 @@
             class="form-control"
             aria-label="With textarea"
             placeholder="Mensaje"
+            name="mensaje" ngModel
           ></textarea>
         </div>
 
