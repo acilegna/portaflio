@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import {
   translateAnimation,
   Animation,
@@ -9,8 +10,6 @@ import {
 } from 'src/app/animations';
 import { MessageService } from 'src/app/services/message.service';
 
-//import * as swal from 'sweetalert';
-import swal from'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -30,9 +29,10 @@ export class ContactComponent {
   constructor(public _MessageService: MessageService) {}
   @Input() hijo = '';
   contactForm(form: any) {
-    this._MessageService.sendMessage(form).subscribe(() => {
-    //swal.fire("Formulario de contacto", "Mensaje enviado correctamente", 'success');
-    });
-    }
-
+    this._MessageService.sendMessage(form).subscribe(() => {});
+  }
+ 
+  ngOnInit() {
+ 
+  }
 }

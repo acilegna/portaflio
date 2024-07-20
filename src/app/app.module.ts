@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
  
- 
+
 import { HttpClientModule } from '@angular/common/http';
  
  
@@ -52,6 +52,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     AlertModule.forRoot(),
     TabsModule.forRoot(),
     BrowserAnimationsModule,
+ 
 /*     RouterModule.forRoot([
       {
         path: 'portfolio',

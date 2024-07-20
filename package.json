@@ -27,8 +27,6 @@
     "ngx-bootstrap": "^10.3.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
-    "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.12.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
