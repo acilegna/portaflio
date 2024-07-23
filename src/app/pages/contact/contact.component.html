@@ -7,7 +7,6 @@
     </div>
     <div id="formulario" @fadeInOut *ngIf="hijo === 'contact'">
       <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
-    
         <div class="input-group mb-3">
           <span
             class="input-group-text bi-person-circle icon"
@@ -19,11 +18,16 @@
             placeholder="Nombre"
             aria-label="Username"
             aria-describedby="basic-addon1"
-            name="nombre" ngModel
+            name="nombre"
+            [(ngModel)]="nombre"
+            [formControl]="nameControl"
           />
-          
+
+          <div *ngIf="nameControl.invalid && nameControl.touched" class="mesaje">
+            El nombre es requerido.
+          </div>
         </div>
- 
+
         <div class="input-group mb-3">
           <span class="input-group-text bi-at icon" id="basic-addon1"></span>
           <input
@@ -32,8 +36,14 @@
             placeholder="Email"
             aria-label="email"
             aria-describedby="basic-addon1"
-            name="email" ngModel
+            name="email"
+            [(ngModel)]="email"
+            [formControl]="emailControl"
           />
+
+          <div *ngIf="emailControl.invalid && emailControl.touched" class="mesaje">
+            Ingrese un correo electrónico válido.
+          </div>
         </div>
 
         <div class="input-group mb-3">
@@ -42,8 +52,14 @@
             class="form-control"
             aria-label="With textarea"
             placeholder="Mensaje"
-            name="mensaje" ngModel
+            name="mensaje"
+            [(ngModel)]="mensaje"
+            [formControl]="mensajeControl"
           ></textarea>
+          
+          <div *ngIf="mensajeControl.invalid && mensajeControl.touched" class="mesaje">
+            El mensaje no puede quedar vacío
+          </div>
         </div>
 
         <div class="col-auto">
@@ -51,12 +67,10 @@
             type="submit"
             class="btn btn-primary mb-3 bi-send icon"
             id="btnenviar"
+            [disabled]="!nameControl.valid || !emailControl.valid || !mensajeControl.valid"
           >
             Enviar
           </button>
-
-          
-        
         </div>
       </form>
     </div>

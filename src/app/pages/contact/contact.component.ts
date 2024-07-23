@@ -9,8 +9,10 @@ import {
   container,
 } from 'src/app/animations';
 import { MessageService } from 'src/app/services/message.service';
+import Swal from 'sweetalert2';
 
-
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+ 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -26,13 +28,37 @@ import { MessageService } from 'src/app/services/message.service';
   ],
 })
 export class ContactComponent {
+
+  nombre = '';
+  email = '';
+  mensaje='';
+  nameControl = new FormControl('', Validators.required);
+  emailControl = new FormControl('', [Validators.required, Validators.email]);
+  mensajeControl = new FormControl('', [Validators.required]);
+
+  resultado!: string;
+
   constructor(public _MessageService: MessageService) {}
   @Input() hijo = '';
+
   contactForm(form: any) {
-    this._MessageService.sendMessage(form).subscribe(() => {});
+    this._MessageService.sendMessage(form).subscribe(() => {
+      this.simpleNotification();
+    });
   }
- 
-  ngOnInit() {
- 
+
+  simpleNotification() {
+    Swal.fire({
+      position: 'center',
+      background: '#141414',
+      color: 'white',
+      width: 350,
+      title: 'Mensaje enviado',
+      icon: 'success',
+      iconColor: '#e39f63',
+      confirmButtonColor: '#e39f63',
+      confirmButtonText: 'Ok',
+    });
   }
+  ngOnInit() {}
 }

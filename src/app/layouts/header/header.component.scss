@@ -36,7 +36,7 @@ li.nav-item a {
 
 .sections {
   position: absolute;
-  z-index: 99999999999999999;
+ // comentado   20 julio  ver si no da error en estilos z-index: 99999999999999999;
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
   width: 100%;

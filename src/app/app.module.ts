@@ -6,10 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
- 
-
 import { HttpClientModule } from '@angular/common/http';
- 
+import { ReactiveFormsModule } from '@angular/forms';
  
 import { MessageService } from './services/message.service';
 
@@ -20,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
+
 
 //importar directiva
  import { InterObserver} from './directivas/InterObserver.directive';
@@ -40,6 +39,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     ContactComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -49,6 +49,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     MatIconModule,
     MatCardModule,
     MatToolbarModule,
+
     AlertModule.forRoot(),
     TabsModule.forRoot(),
     BrowserAnimationsModule,
