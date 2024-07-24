@@ -11,7 +11,7 @@ import {
 import { MessageService } from 'src/app/services/message.service';
 import Swal from 'sweetalert2';
 
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {  FormControl, Validators } from '@angular/forms';
  
 @Component({
   selector: 'app-contact',
@@ -43,7 +43,7 @@ export class ContactComponent {
 
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
-      this.simpleNotification();
+    //  this.simpleNotification();
     });
   }
 

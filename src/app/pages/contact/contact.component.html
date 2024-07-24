@@ -19,13 +19,11 @@
             aria-label="Username"
             aria-describedby="basic-addon1"
             name="nombre"
-            [(ngModel)]="nombre"
-            [formControl]="nameControl"
+            ngModel 
+      
           />
 
-          <div *ngIf="nameControl.invalid && nameControl.touched" class="mesaje">
-            El nombre es requerido.
-          </div>
+          
         </div>
 
         <div class="input-group mb-3">
@@ -37,13 +35,11 @@
             aria-label="email"
             aria-describedby="basic-addon1"
             name="email"
-            [(ngModel)]="email"
-            [formControl]="emailControl"
+            ngModel 
+           
           />
 
-          <div *ngIf="emailControl.invalid && emailControl.touched" class="mesaje">
-            Ingrese un correo electrónico válido.
-          </div>
+           
         </div>
 
         <div class="input-group mb-3">
@@ -53,13 +49,10 @@
             aria-label="With textarea"
             placeholder="Mensaje"
             name="mensaje"
-            [(ngModel)]="mensaje"
-            [formControl]="mensajeControl"
+            ngModel 
+          
           ></textarea>
           
-          <div *ngIf="mensajeControl.invalid && mensajeControl.touched" class="mesaje">
-            El mensaje no puede quedar vacío
-          </div>
         </div>
 
         <div class="col-auto">
@@ -67,7 +60,7 @@
             type="submit"
             class="btn btn-primary mb-3 bi-send icon"
             id="btnenviar"
-            [disabled]="!nameControl.valid || !emailControl.valid || !mensajeControl.valid"
+             
           >
             Enviar
           </button>
