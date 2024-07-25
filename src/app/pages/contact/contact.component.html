@@ -6,7 +6,11 @@
       </h1>
     </div>
     <div id="formulario" @fadeInOut *ngIf="hijo === 'contact'">
-      <form (ngSubmit)="contactForm(form.value)" #form="ngForm">
+      <form
+        (ngSubmit)="contactForm(form.value)"
+        #form="ngForm"
+        [formGroup]="myForm"
+      >
         <div class="input-group mb-3">
           <span
             class="input-group-text bi-person-circle icon"
@@ -20,14 +24,16 @@
             aria-label="Username"
             aria-describedby="basic-addon1"
             name="nombre"
-            [(ngModel)]="nombre"
+            ngModel
+            formControlName="nombre"
           />
 
           <div
-            *ngIf="nameControl.invalid && nameControl.touched"
-            class="mesaje"
+            *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty"
           >
-            El nombre es requerido.
+            <p *ngIf="myForm.get('nombre').hasError('required') " class="mesaje">
+              El nombre es requerido.
+            </p>
           </div>
         </div>
 
@@ -40,13 +46,14 @@
             aria-label="email"
             aria-describedby="basic-addon1"
             name="email"
-            [(ngModel)]="email" 
+            ngModel
+            formControlName="email"
           />
-          <div
-            *ngIf="emailControl.invalid && emailControl.touched"
-            class="mesaje"
-          >
-            Ingrese un correo electrónico válido.
+
+          <div *ngIf="myForm.get('email').errors && myForm.get('email').dirty">
+            <p *ngIf="myForm.get('email').hasError('required')" class="mesaje">
+              Ingrese un correo electrónico válido.
+            </p>
           </div>
         </div>
 
@@ -57,13 +64,19 @@
             aria-label="With textarea"
             placeholder="Mensaje"
             name="mensaje"
-            [(ngModel)]="mensaje"
+            ngModel
+            formControlName="mensaje"
           ></textarea>
+
           <div
-            *ngIf="mensajeControl.invalid && mensajeControl.touched"
-            class="mesaje"
+            *ngIf="myForm.get('mensaje').errors && myForm.get('mensaje').dirty"
           >
-            El mensaje no puede quedar vacío
+            <p
+              *ngIf="myForm.get('mensaje').hasError('required')"
+              class="mesaje"
+            >
+              El mensaje no puede quedar vacío
+            </p>
           </div>
         </div>
 
@@ -72,6 +85,11 @@
             type="submit"
             class="btn btn-primary mb-3 bi-send icon"
             id="btnenviar"
+            [disabled]="
+              !myForm.get('mensaje').valid ||
+              !myForm.get('email').valid ||
+              !myForm.get('mensaje').valid
+            "
           >
             Enviar
           </button>

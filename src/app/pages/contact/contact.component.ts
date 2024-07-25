@@ -11,7 +11,12 @@ import {
 import { MessageService } from 'src/app/services/message.service';
 import Swal from 'sweetalert2';
 
-import { FormControl, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -28,16 +33,17 @@ import { FormControl, Validators } from '@angular/forms';
   ],
 })
 export class ContactComponent {
-  nombre = '';
-  email = '';
-  mensaje = '';
-  nameControl = new FormControl('', Validators.required);
-  emailControl = new FormControl('', [Validators.required, Validators.email]);
-  mensajeControl = new FormControl('', [Validators.required]);
-
   resultado!: string;
+  myForm: FormGroup;
 
-  constructor(public _MessageService: MessageService) {}
+  constructor(public _MessageService: MessageService, public fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      nombre: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      mensaje: ['', [Validators.required]],
+    });
+  }
+
   @Input() hijo = '';
 
   contactForm(form: any) {
