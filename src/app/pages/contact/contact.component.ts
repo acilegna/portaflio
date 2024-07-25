@@ -11,8 +11,8 @@ import {
 import { MessageService } from 'src/app/services/message.service';
 import Swal from 'sweetalert2';
 
-import {  FormControl, Validators } from '@angular/forms';
- 
+import { FormControl, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -28,10 +28,9 @@ import {  FormControl, Validators } from '@angular/forms';
   ],
 })
 export class ContactComponent {
-
   nombre = '';
   email = '';
-  mensaje='';
+  mensaje = '';
   nameControl = new FormControl('', Validators.required);
   emailControl = new FormControl('', [Validators.required, Validators.email]);
   mensajeControl = new FormControl('', [Validators.required]);
@@ -43,7 +42,7 @@ export class ContactComponent {
 
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
-    //  this.simpleNotification();
+      this.simpleNotification();
     });
   }
 
