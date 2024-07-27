@@ -49,7 +49,7 @@ export class ContactComponent {
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
 
-      console.log(form['nombre'])
+    
       this.simpleNotification();
     });
   }
