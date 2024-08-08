@@ -48,9 +48,8 @@ export class ContactComponent {
 
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
-
-    
       this.simpleNotification();
+      this.clear();
     });
   }
 
@@ -67,5 +66,16 @@ export class ContactComponent {
       confirmButtonText: 'Ok',
     });
   }
+
+  clear() {
+
+    this.myForm = this.fb.group({
+      nombre: ['' ]
+      
+    });
+  }
+
+
+
   ngOnInit() {}
 }
