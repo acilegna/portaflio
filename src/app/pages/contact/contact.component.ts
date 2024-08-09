@@ -36,9 +36,9 @@ export class ContactComponent {
   resultado!: string;
   myForm: FormGroup;
 
+  @ViewChild('inputnombre') inputnombre: ElementRef;
   @ViewChild('inputemail') inputemail: ElementRef;
   @ViewChild('inputarea') inputarea: ElementRef;
-  @ViewChild('inputname') inputname: ElementRef;
 
   constructor(public _MessageService: MessageService, public fb: FormBuilder) {
     this.myForm = this.fb.group({
@@ -53,7 +53,6 @@ export class ContactComponent {
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
       this.simpleNotification();
-      
     });
   }
 
@@ -69,18 +68,16 @@ export class ContactComponent {
       confirmButtonColor: '#e39f63',
       confirmButtonText: 'Ok',
     }).then((result) => {
-       
       if (result.isConfirmed) {
         this.clear();
-      }  
+      }
     });
   }
 
   clear() {
-     this.inputarea.nativeElement.value="";
-     this.inputname.nativeElement.value="";
-     this.inputemail.nativeElement.value="";
-    
+    this.inputnombre.nativeElement.value = '';
+    this.inputemail.nativeElement.value = '';
+    this.inputarea.nativeElement.value = '';
   }
 
   ngOnInit() {}
