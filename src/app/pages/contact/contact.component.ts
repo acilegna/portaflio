@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 import {
   translateAnimation,
@@ -36,6 +36,10 @@ export class ContactComponent {
   resultado!: string;
   myForm: FormGroup;
 
+  @ViewChild('inputemail') inputemail: ElementRef;
+  @ViewChild('inputarea') inputarea: ElementRef;
+  @ViewChild('inputname') inputname: ElementRef;
+
   constructor(public _MessageService: MessageService, public fb: FormBuilder) {
     this.myForm = this.fb.group({
       nombre: ['', [Validators.required]],
@@ -49,7 +53,7 @@ export class ContactComponent {
   contactForm(form: any) {
     this._MessageService.sendMessage(form).subscribe(() => {
       this.simpleNotification();
-      this.clear();
+      
     });
   }
 
@@ -64,18 +68,20 @@ export class ContactComponent {
       iconColor: '#e39f63',
       confirmButtonColor: '#e39f63',
       confirmButtonText: 'Ok',
+    }).then((result) => {
+       
+      if (result.isConfirmed) {
+        this.clear();
+      }  
     });
   }
 
   clear() {
-
-    this.myForm = this.fb.group({
-      nombre: ['' ]
-      
-    });
+     this.inputarea.nativeElement.value="";
+     this.inputname.nativeElement.value="";
+     this.inputemail.nativeElement.value="";
+    
   }
-
-
 
   ngOnInit() {}
 }
