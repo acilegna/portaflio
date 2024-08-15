@@ -32,7 +32,7 @@
           <div
             *ngIf="myForm.get('nombre').errors && myForm.get('nombre').dirty"
           >
-            <p *ngIf="myForm.get('nombre').hasError('required') " class="mesaje">
+            <p *ngIf="myForm.get('nombre').hasError('required')" class="mesaje">
               El nombre es requerido.
             </p>
           </div>

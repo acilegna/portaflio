@@ -1,18 +1,32 @@
 import { Component, Input } from '@angular/core';
- 
-import {  translateAnimation,Animation, translates,hijo2,hijo3,container} from 'src/app/animations';
+
+import {
+  translateAnimation,
+  Animation,
+  translates,
+  hijo2,
+  hijo3,
+  container,
+} from 'src/app/animations';
 
 @Component({
   selector: 'app-trabajo',
   templateUrl: './trabajo.component.html',
   styleUrls: ['./trabajo.component.scss'],
-  animations: [translateAnimation, Animation,   translates,hijo2,hijo3, container],
+  animations: [
+    translateAnimation,
+    Animation,
+    translates,
+    hijo2,
+    hijo3,
+    container,
+  ],
 })
 export class TrabajoComponent {
   @Input() hijo = '';
-  isVisible = true;
-  
-  
+
+  isVisible: boolean = true;
+
   sequencesGroup = true;
   sequences = true;
 
@@ -28,7 +42,5 @@ export class TrabajoComponent {
       ? (this.isVisible = true)
       : (this.isVisible = false);
   }
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 }

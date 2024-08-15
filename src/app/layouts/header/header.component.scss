@@ -36,7 +36,7 @@ li.nav-item a {
 
 .sections {
   position: absolute;
- // comentado   20 julio  ver si no da error en estilos z-index: 99999999999999999;
+  // comentado   20 julio  ver si no da error en estilos z-index: 99999999999999999;
   -ms-overflow-style: none !important;
   scrollbar-width: none !important;
   width: 100%;
@@ -149,7 +149,8 @@ span#programer {
   //background-color: blue;
   margin-bottom: 50px;
 }
-#bton-cv {
+
+a#bton-cv {
   margin-top: 50px;
   transform: translate(0%, -20%);
   border: 1px solid #e349c4;
@@ -170,7 +171,7 @@ body {
   background: #2d3436;
 }
 
-.btn {
+/* .btn {
   position: relative;
   display: block;
   font-size: 14px;
@@ -181,8 +182,9 @@ body {
   text-transform: uppercase;
   overflow: hidden;
   transition: 1s all ease;
-}
+} */
 
+//pendiente
 .btn::before {
   background: #e349c4;
   content: "";
@@ -203,10 +205,12 @@ body {
   width: 100%;
 }
 
-#bton-cv:hover {
+#bton-cv:hover
+  {
   background-color: #e349c400;
   color: #ffffff;
 }
+ 
 
 $base: 0.6rem;
 

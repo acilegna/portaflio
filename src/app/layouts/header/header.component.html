@@ -3,7 +3,7 @@
     <div class="home" id="conthome">
       <div id="contmenu">
         <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid" >
+          <div class="container-fluid">
             <button
               class="navbar-toggler"
               type="button"
@@ -78,7 +78,13 @@
             Soy Programadora Web
           </span>
           <div id="conthello" class="animate">
-            <button id="bton-cv" class="btn btn1">Ver CV</button>
+            <a
+              id="bton-cv"
+              class="btn btn1"
+              target="_blank"
+              href="https://docs.google.com/document/d/1JtY4Yrcp5xL49azyTojLcUlNVB2EvsuJRcc0vAQhMms/edit?usp=sharing"
+              >Ver CV</a
+            >
           </div>
         </div>
       </div>
@@ -115,7 +121,5 @@
     <app-contact [hijo]="padre"> </app-contact>
   </section>
 
- 
-    <app-footer></app-footer>
-  
+  <app-footer></app-footer>
 </div>

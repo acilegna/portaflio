@@ -8,7 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
- 
+
 import { MessageService } from './services/message.service';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -19,9 +19,8 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 
-
 //importar directiva
- import { InterObserver} from './directivas/InterObserver.directive';
+import { InterObserver } from './directivas/InterObserver.directive';
 
 import { MatCardModule } from '@angular/material/card';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
@@ -33,10 +32,10 @@ import { ContactComponent } from './pages/contact/contact.component';
     AppComponent,
     HeaderComponent,
     AboutComponent,
-    FooterComponent, 
+    FooterComponent,
     TrabajoComponent,
     InterObserver,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     ReactiveFormsModule,
@@ -53,8 +52,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     AlertModule.forRoot(),
     TabsModule.forRoot(),
     BrowserAnimationsModule,
- 
-/*     RouterModule.forRoot([
+
+    /*     RouterModule.forRoot([
       {
         path: 'portfolio',
         component: TrabajoComponent,

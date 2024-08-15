@@ -6,8 +6,9 @@ import {
   state,
   style,
   transition,
-  trigger,sequence
-} from '@angular/animations'; 
+  trigger,
+  sequence,
+} from '@angular/animations';
 //about
 export const translates = trigger('entrada', [
   state(
@@ -28,7 +29,6 @@ export const translates = trigger('entrada', [
   ]),
 ]);
 
-
 //about
 export const fadeInSequence = trigger('fadeInSequence', [
   transition('* <=> *', [
@@ -46,12 +46,7 @@ export const fadeInSequence = trigger('fadeInSequence', [
   ]),
 ]);
 
-
-
- 
-
-
- //Trabajos
+//Trabajos
 export const fadeInGroup = trigger('fadeInGroup', [
   transition('* <=> *', [
     query('div', [
@@ -63,14 +58,6 @@ export const fadeInGroup = trigger('fadeInGroup', [
     ]),
   ]),
 ]);
-
-
-
-
-
-
-
-
 
 export const translateAnimation = trigger('fadeInOut', [
   transition(':enter', [
@@ -89,38 +76,59 @@ export const Animation = trigger('enterState', [
     animate('0.9s', style({ opacity: 1, transform: 'translateX(0)' })),
   ]),
   transition(':leave', [
+    animate('0.9s', style({ opacity: 0, transform: 'translateX(15px)' })),
+  ]),
+]);
+
+export const container = trigger('container', [
+  transition(':enter, :leave', [
+    query('@*', animateChild(), { optional: true }),
+  ]),
+]);
+
+export const hijo2 = trigger('enterRight', [
+  transition(':enter', [
+    style({ opacity: 0, transform: 'translateX(-10%)' }),
+    animate('0.5s ease-in', style({ opacity: 1, transform: 'translateX(0%)' })),
+  ]),
+  transition(':leave', [
+    style({ opacity: 1, transform: 'translateX(0%)' }),
     animate(
-      '0.9s',
-      style({ opacity: 0, transform: 'translateX(15px)' })
+      '0.5s ease-in',
+      style({ opacity: 0, transform: 'translateX(-10%)' })
     ),
   ]),
 ]);
 
-
-export const container = trigger('container', [
-  transition(':enter, :leave', [
-    query('@*', animateChild(), { optional: true })
-  ])
-])
-
-export const hijo2 =     trigger('enterRight', [
-  transition(':enter', [
-    style({ opacity: 0, transform: 'translateX(-10%)' }),
-    animate('0.5s ease-in', style({ opacity: 1, transform: 'translateX(0%)' }))
-  ]),
-  transition(':leave', [
-    style({ opacity: 1, transform: 'translateX(0%)' }),
-    animate('0.5s ease-in', style({ opacity: 0, transform: 'translateX(-10%)' }))
-  ]),
-])
-
-export const hijo3 =       trigger('enterLeft', [
+export const hijo3 = trigger('enterLeft', [
   transition(':enter', [
     style({ opacity: 0, transform: 'translateX(10%)' }),
-    animate('0.5s ease-in', style({ opacity: 1, transform: 'translateX(0%)' }))
+    animate('0.5s ease-in', style({ opacity: 1, transform: 'translateX(0%)' })),
   ]),
   transition(':leave', [
     style({ opacity: 1, transform: 'translateX(0%)' }),
-    animate('0.5s ease-in', style({ opacity: 0, transform: 'translateX(10%)' }))
+    animate(
+      '0.5s ease-in',
+      style({ opacity: 0, transform: 'translateX(10%)' })
+    ),
   ]),
-])
+]);
+
+/* export const slide = trigger('slideInOut', [
+  transition(':enter', [
+    style({ transform: 'translateX(10%)', opacity: 0 }),
+    animate(
+      '60ms ease-in',
+      style({ transform: 'translateX(0%)', opacity: 1 })
+    ),
+  ]),
+
+  transition(':leave', [
+    style({ transform: 'translateX(0%)', opacity: 1 }),
+    animate(
+      '0ms ease-in',
+      style({ transform: 'translateX(10%)', opacity: 0 })
+    ),
+  ]),
+]);
+ */
