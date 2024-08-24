@@ -87,7 +87,7 @@ export class ContactComponent {
 
   ngOnInit() {}
 
-  enviocorreo() {
+/*   enviocorreo() {
     let params = {
       nombre: this.myForm.value.nombre,
       email: this.myForm.value.email,
@@ -100,5 +100,5 @@ export class ContactComponent {
     this.httpclien.post('http://localhost:3000/formulario', params).subscribe(resp=>{
       console.log(resp);
     });
-  }
+  } */
 }
