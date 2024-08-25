@@ -6,11 +6,7 @@
       </h1>
     </div>
     <div id="formulario" @fadeInOut *ngIf="hijo === 'contact'">
-      <form
-        
-        #form="ngForm"
-        [formGroup]="myForm"
-      >
+      <form #form="ngForm" [formGroup]="myForm">
         <div class="input-group mb-3">
           <span
             class="input-group-text bi-person-circle icon"
@@ -93,7 +89,7 @@
               !myForm.get('email').valid ||
               !myForm.get('mensaje').valid
             "
-             (click)="contactForm(form.value)"
+            (click)="enviocorreo()"
           >
             Enviar
           </button>

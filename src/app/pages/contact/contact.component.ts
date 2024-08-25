@@ -8,7 +8,7 @@ import {
   hijo3,
   container,
 } from 'src/app/animations';
-import { MessageService } from 'src/app/services/message.service';
+
 import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
 
@@ -41,11 +41,7 @@ export class ContactComponent {
   @ViewChild('inputemail') inputemail: ElementRef;
   @ViewChild('inputarea') inputarea: ElementRef;
 
-  constructor(
-    public _MessageService: MessageService,
-    public fb: FormBuilder,
-    private httpclien: HttpClient
-  ) {
+  constructor(public fb: FormBuilder, private httpclien: HttpClient) {
     this.myForm = this.fb.group({
       nombre: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -55,12 +51,6 @@ export class ContactComponent {
 
   @Input() hijo = '';
 
-    contactForm(form: any) {
-    this._MessageService.sendMessage(form).subscribe(() => {
-      this.simpleNotification();
-    });
-  }
- 
   simpleNotification() {
     Swal.fire({
       position: 'center',
@@ -87,18 +77,21 @@ export class ContactComponent {
 
   ngOnInit() {}
 
-/*   enviocorreo() {
+  enviocorreo() {
     let params = {
       nombre: this.myForm.value.nombre,
       email: this.myForm.value.email,
       mensaje: this.myForm.value.mensaje,
-     
     };
     //console.log(params)
-    
-   // this.httpclien.post('https://resend-demo.ladoobscurodelaluna.com/formulario', params).subscribe(resp=>{
-    this.httpclien.post('http://localhost:3000/formulario', params).subscribe(resp=>{
-      console.log(resp);
-    });
-  } */
+
+    this.httpclien
+      .post('https://resend-demo.ladoobscurodelaluna.com/formulario', params)
+      .subscribe((resp) => {
+        //this.httpclien.post('http://localhost:3000/formulario', params).subscribe(resp=>{
+        console.log(resp);
+      });
+
+    this.simpleNotification();
+  }
 }

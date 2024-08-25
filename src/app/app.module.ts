@@ -9,7 +9,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { MessageService } from './services/message.service';
+ 
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -66,7 +66,7 @@ import { ContactComponent } from './pages/contact/contact.component';
       },
     ]), */
   ],
-  providers: [MessageService],
+ 
   bootstrap: [AppComponent],
 })
 export class AppModule {}
