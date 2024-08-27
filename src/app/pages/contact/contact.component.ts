@@ -86,9 +86,9 @@ export class ContactComponent {
     //console.log(params)
 
     this.httpclien
-      .post('https://resend-demo.ladoobscurodelaluna.com/formulario', params)
-      .subscribe((resp) => {
-        //this.httpclien.post('http://localhost:3000/formulario', params).subscribe(resp=>{
+      .post('https://resend-demo.ladoobscurodelaluna.com/form', params)
+      .subscribe((resp) => { 
+      //  this.httpclien.post('http://localhost:3000/form', params).subscribe(resp=>{
         console.log(resp);
       });
 
