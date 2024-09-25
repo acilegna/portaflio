@@ -1,10 +1,4 @@
-.sublogo {
-  height: 28px;
-  width: 28px;
-  position: absolute;
-  right: 200px;
-}
-
+ 
 //resetear estilos q da por defecto navegador
 * {
   margin: 0;
@@ -15,7 +9,7 @@
 .about#contabout {
   background-color: #141414;
   height: 100%;
-  max-height: fit-content;
+ // max-height: fit-content;
   width: 90%;
   margin: 0px auto;
   position: relative;
