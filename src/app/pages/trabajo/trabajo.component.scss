@@ -70,6 +70,9 @@ h1#txtwork {
   background-color: transparent;  
   color: #0c9693 !important;
 }
+#pills-home-tab {
+  padding-bottom: 10px;
+}
 
 .nav-link {
   font-family: "Raleway";
@@ -111,7 +114,7 @@ a.button-site {
   color: #fff;
   font-size: 10pt;
   font-weight: 600;
-  padding: 11px 30px;   
+  padding: 11px 30px;
   font-family: "Raleway";
   text-decoration: none;
   position: relative;
@@ -131,24 +134,20 @@ a.button-site {
   border-width: 0;
 }
 
-@media (max-width:991px) {
-
+@media (max-width: 991px) {
   h1#txtwork {
-     
     font-size: 44px;
-   
   }
   .text-descripcion {
     color: rgb(8, 8, 8);
     //color: rgb(99, 99, 99);
     font-size: 21px;
-      margin-top: -15px;
+    margin-top: -15px;
     margin-left: 0px;
     margin-right: 0px;
-     
   }
   a.button-site {
-     bottom: 0px;  
+    bottom: 0px;
     margin-left: 0px;
     margin-top: 15px;
   }
@@ -159,51 +158,43 @@ a.button-site {
   }
 
   #cont-description {
-    
     margin: 35px 0px 0px 0px;
   }
 
-  .nav-link {     
-    font-size: 21px;     
+  .nav-link {
+    font-size: 21px;
   }
 
-  #mywork {    
+  #mywork {
     height: 300px;
-    
   }
 }
-@media (max-width:777px) {
-  .text-descripcion {    
-    font-size: 19px;      
-     
+@media (max-width: 777px) {
+  .text-descripcion {
+    font-size: 19px;
   }
-  .nav-link {     
-    font-size: 19px;     
+  .nav-link {
+    font-size: 19px;
   }
   h1#txtwork {
-     
     font-size: 42px;
-   
   }
   #mywork {
     height: 350px;
   }
 }
 
-@media (max-width:487px) {
-  .text-descripcion {    
-    font-size: 16px;      
-     
+@media (max-width: 487px) {
+  .text-descripcion {
+    font-size: 16px;
   }
-  .nav-link {     
-    font-size: 16px;     
+  .nav-link {
+    font-size: 16px;
   }
-  h1#txtwork {     
-    font-size: 38px;   
+  h1#txtwork {
+    font-size: 38px;
   }
   #mywork {
     height: 350px;
   }
 }
- 
- 
