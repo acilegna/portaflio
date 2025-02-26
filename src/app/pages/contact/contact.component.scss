@@ -1,33 +1,29 @@
 .contact#cntcontac {
-  background-color: #141414;
+  background-color: #202020;
   height: 100%;
- // max-height: fit-content;
+  // max-height: fit-content;
   width: 90%;
   margin: 0px auto;
   position: relative;
 }
 
-.presentation {
+.divcontacto {
   //div centrado
   width: 92%;
-  height: 330px;
-  position: absolute;
+  height:auto;
+ 
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  //background-color: blueviolet;
+   background-color: rgba(32, 2, 59, 0);
   margin: auto;
-}
-.icon {
-  font-size: 1rem;
-  color: rgb(22, 22, 22);
 }
 
 h1#txtcontact {
   margin-left: 16px;
   color: #ffffff;
-   
+
   font-family: "Raleway";
   font-size: 46px;
   font-weight: bold;
@@ -47,27 +43,131 @@ h1#txtcontact {
 }
 
 #cont-txtcontact {
-   padding-bottom: 45px;
+  padding-bottom: 45px;
+  padding-top: 90px;
  
 }
-#btnenviar{
-  background-color: #e39f63;
-  color: rgb(34, 33, 33);
-  --bs-btn-border-color: #eb9a54;
-  --bs-btn-hover-border-color: #0a57ca00;
-  --bs-btn-active-bg: #0aca2a00;
-  --bs-btn-active-border-color: #0a52be00;
 
-}
- 
-
-form input:focus, form textarea:focus  {
+form input:focus,
+form textarea:focus {
   box-shadow: 0 0 1px #eb9a54;
   border: 1px solid #818181;
 }
 
-.mesaje{
-  color:rgb(223 0 0);
+.mesaje {
+  color: rgb(248, 247, 247);
   padding-top: 10px;
   padding-left: 5px;
+}
+#whp {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+}
+#txt-whp {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  background-color: #26d367;
+  padding: 7px 7px 7px 7px;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#msj {
+  color: white;
+  text-align: center;
+}
+.cont-contacto {
+  margin-bottom: 10px;
+
+  margin-top: 0;
+  margin-right: 0;
+  margin-left: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.iconbis {
+  font-size: 40px;
+  color: rgb(199, 152, 100);
+}
+
+.title-box {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  border-radius: 24px;
+  margin-bottom: 12px;
+  color: #fbf4e0;
+}
+
+.datos-contact {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #fbf4e0;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.cont-contacto.two,
+.cont-contacto:hover,
+.cont-contacto:focus {
+  border: 1px solid #c79864;
+}
+ 
+
+textarea.form-control {
+  height: 120px;
+  resize: none;
+  padding-top: 18px;
+}
+#btnenviar {
+  background-color: #c79864;
+  border: 1px solid #c79864;
+  padding: 16px 7px 16px 7px;
+
+  color: rgb(255, 255, 255);
+  --bs-btn-border-color: #eb9a54;
+  --bs-btn-hover-border-color: #0a57ca00;
+  --bs-btn-active-bg: #0aca2a00;
+  --bs-btn-active-border-color: #0a52be00;
+}
+
+.form-control {
+  color: #fff;
+  background-color: #ffffff00;
+  border: 1px solid #c799644b;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+}
+.input-group-text {
+  background-color: #ffffff00;
+  border: 1px solid #323335;
+}
+.icon {
+  font-size: 1rem;
+  color: #c79864;
+}
+#input-email::placeholder, #text-mesaje::placeholder, #input-name::placeholder{
+  color:rgb(85, 85, 85);
+}
+ 
+ .input-group-text{
+  border: 1px solid #c799644b;
+ }
+#text-mesaje:focus, #input-email:focus, #input-name:focus{
+  
+  
+  border: 1px solid #c79864;
+}
+#rowcontact{
+  background-color: #26d36800;
+  padding-bottom: 20px;
+}
+@media (max-width: 767px) {
+    
 }

@@ -7,7 +7,7 @@
 }
 
 .about#contabout {
-  background-color: #141414;
+  background-color: #202020;
   height: 100%;
  // max-height: fit-content;
   width: 90%;
@@ -77,7 +77,7 @@ p#code {
   text-decoration: none;
   margin-left: 5px;
   position: relative;
-  background-color:#141414;
+  background-color:#202020;
   color: #e349c4;
   font-size: 1.1em;
 }
@@ -86,7 +86,7 @@ p#code {
   position: absolute;
   right: 0;
   width: 0;
-  background-color: #141414;
+  background-color: #202020;
   border-left: 2px solid #e349c4;
   animation: escribir 2s steps(35) infinite alternate;
 }
