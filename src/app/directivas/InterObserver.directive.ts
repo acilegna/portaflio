@@ -52,7 +52,7 @@ export class InterObserver implements OnInit, AfterViewInit {
     };
 
     const options = {
-      threshold: 0.95,
+      threshold: 0.98,
     };
 
     const observer = new IntersectionObserver(changeNav, options);

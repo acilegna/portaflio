@@ -10,13 +10,13 @@
 .divcontacto {
   //div centrado
   width: 92%;
-  height:auto;
- 
+  height: 100%;
+
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-   background-color: rgba(32, 2, 59, 0);
+  background-color: rgba(32, 2, 59, 0.966);
   margin: auto;
 }
 
@@ -43,9 +43,8 @@ h1#txtcontact {
 }
 
 #cont-txtcontact {
-  padding-bottom: 45px;
-  padding-top: 90px;
- 
+  padding-bottom: 70px;
+  padding-top: 100px; 
 }
 
 form input:focus,
@@ -117,7 +116,6 @@ form textarea:focus {
 .cont-contacto:focus {
   border: 1px solid #c79864;
 }
- 
 
 textarea.form-control {
   height: 120px;
@@ -152,22 +150,40 @@ textarea.form-control {
   font-size: 1rem;
   color: #c79864;
 }
-#input-email::placeholder, #text-mesaje::placeholder, #input-name::placeholder{
-  color:rgb(85, 85, 85);
+#input-email::placeholder,
+#text-mesaje::placeholder,
+#input-name::placeholder {
+  color: rgb(85, 85, 85);
 }
- 
- .input-group-text{
+
+.input-group-text {
   border: 1px solid #c799644b;
- }
-#text-mesaje:focus, #input-email:focus, #input-name:focus{
-  
-  
+}
+#text-mesaje:focus,
+#input-email:focus,
+#input-name:focus {
   border: 1px solid #c79864;
 }
-#rowcontact{
-  background-color: #26d36800;
-  padding-bottom: 20px;
+#rowcontact {
+  background-color: #18d15fc2;
 }
-@media (max-width: 767px) {
-    
+
+@media (max-width: 991px) {
+  .contact#cntcontac {
+    height: 150vh; /* En dispositivos más pequeños, la altura será del 50% */
+  }
+
+  .divcontacto {
+    height: 150vh; /* En dispositivos más pequeños, la altura será del 50% */
+  }
 }
+@media (max-width: 768px) {
+  .contact#cntcontac {
+    height: 100vh; /* En dispositivos más pequeños, la altura será del 50% */
+  }
+
+  .divcontacto {
+    height: 100vh; /* En dispositivos más pequeños, la altura será del 50% */
+  }
+}
+
