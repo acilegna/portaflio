@@ -151,20 +151,28 @@ span#programer {
   margin-bottom: 50px;
 }
 
-a#bton-cv {
+a.cv {
   margin-top: 50px;
+ margin-right: 10px;
   transform: translate(0%, -20%);
-  border: 1px solid #e349c4;
-  color: #e349c4;
+  border: 1px solid #e349c494;
+  color: #e349c49a;
   font-family: "Raleway";
+   
   font-size: 15px;
-  text-transform: uppercase;
+  text-decoration: none;
   text-align: center;
   line-height: 1;
   background-color: transparent;
-  padding: 12px;
+  padding: 7px;
   outline: none;
   border-radius: 2px;
+}
+
+#cv:hover
+  {
+  background-color: #e349c400;
+  color: #e349c4;
 }
 body {
   margin: 0;
@@ -206,11 +214,7 @@ body {
   width: 100%;
 }
 
-#bton-cv:hover
-  {
-  background-color: #e349c400;
-  color: #ffffff;
-}
+
  
 
 $base: 0.6rem;
