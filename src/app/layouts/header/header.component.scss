@@ -364,14 +364,16 @@ $base: 0.6rem;
 
   .line::before {
     content: "";
-    top: 1px;
+
+     
+    height: 30px;
   }
 
   span#programer {
     font-size: 24px;
   }
 
-  #bton-cv {
+  .cv {
     font-size: 15px;
   }
 }
