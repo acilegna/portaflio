@@ -16,7 +16,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(32, 2, 59, 0.966);
+  background-color: rgba(32, 2, 59, 0);
   margin: auto;
 }
 
@@ -165,7 +165,7 @@ textarea.form-control {
   border: 1px solid #c79864;
 }
 #rowcontact {
-  background-color: #18d15fc2;
+  background-color: #18d15f00;
 }
 
 @media (max-width: 991px) {
@@ -187,3 +187,12 @@ textarea.form-control {
   }
 }
 
+@media (max-width: 360px) {
+  .contact#cntcontac {
+    height: 140vh; /* En dispositivos más pequeños, la altura será del 50% */
+  }
+
+  .divcontacto {
+    height: 140vh; /* En dispositivos más pequeños, la altura será del 50% */
+  }
+}
