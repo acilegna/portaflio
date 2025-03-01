@@ -1,5 +1,5 @@
 .work#contwork {
-  background-color: #ffffff;
+  background-color: #bd1414;
   height: 100%;
   width: 90%;
   margin: 0px auto;
@@ -15,9 +15,10 @@
   left: 0;
   bottom: 0;
   right: 0;
-  //background-color: blueviolet;
+  background-color: blueviolet;
   margin: auto;
 }
+
 
 * {
   margin: 0;
@@ -67,7 +68,7 @@ h1#txtwork {
 }
 
 .nav .nav-item button.active {
-  background-color: transparent;  
+  background-color: transparent;
   color: #0c9693 !important;
 }
 #pills-home-tab {
@@ -132,6 +133,52 @@ a.button-site {
   border-style: none !important;
   border-color: rgba(255, 0, 0, 0);
   border-width: 0;
+}
+
+#conte {
+  background-color: rgb(37, 0, 54);
+}
+#pru {
+  background-color: #6ebd14;
+}
+ 
+.imagen {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+ 
+  margin: 20px auto; /* Márgenes con centrado automático */
+  background: rgb(136, 5, 5);
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#entheos {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  justify-content: center;
+ 
+}
+#entheosimg {
+  display: grid;
+  place-items: center; /* Centra en ambos ejes */
+  
+  margin: 10px 10px 10px 10px;
+  background: lightgray;
+ 
+}
+#title-entheos {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #fbf4e0;
+  text-align: left;
+   
 }
 
 @media (max-width: 991px) {
