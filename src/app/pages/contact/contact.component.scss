@@ -4,7 +4,7 @@
   // max-height: fit-content;
   width: 90%;
   margin: 0px auto;
-  position: relative;
+  
 }
 
 .divcontacto {
@@ -177,15 +177,19 @@ textarea.form-control {
     height: 150vh; /* En dispositivos más pequeños, la altura será del 50% */
   }
 }
- @media (max-width: 768px) {
+
+ 
+/*  @media (max-width: 768px) {
   .contact#cntcontac {
-    height: 120vh;  
+    height: 150vh;  
+    background-color: #26d367;
   }
 
   .divcontacto {
-    height: 120vh;  
+    height: 150vh;  
+    background-color: rgb(43, 54, 54);
   }
-}
+} */
  
 @media (max-width: 360px) {
   .contact#cntcontac {

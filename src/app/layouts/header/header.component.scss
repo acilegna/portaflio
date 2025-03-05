@@ -61,15 +61,20 @@ section#home {
   background-attachment: fixed;
   display: flex;
 }
+ 
 section#portfolio {
   --bs-gutter-x: 0rem !important;
   background-color: #202020;
-  height: 100%;
+ 
+  //height:  100%;
+  min-height: 100vh
+
+
 }
 section#contact {
   --bs-gutter-x: 0rem !important;
   background-color: rgb(255, 255, 255);
-  height:  100%;
+   height:  100%;
   
 }
 .home#conthome {
@@ -223,9 +228,30 @@ $base: 0.6rem;
   color: rgb(0, 81, 255);
 }
  
+
+@media (max-width: 1199px) {
+  section#portfolio {
+  //  min-height: 100vh;
+
+   // height: 100vh;
+  }}
+
+/* @media (max-width: 1199px) {
+  section#portfolio {
+     
+    height: 180vh;
+  }} */
+
 @media (max-width: 991px) {
 
+/*   section#portfolio {
+    
+  
    
+    height: 170vh;
+  
+  
+  } */
   section#contact {
     height: 100vh;  /* En dispositivos más pequeños, la altura será del 50% */
     
@@ -295,6 +321,13 @@ $base: 0.6rem;
     display: none;
   }
 }
+
+@media (max-width: 767px) {
+  section#portfolio {
+   
+    height: auto;
+  }}
+ 
 
 @media (max-width: 813px) {
   h1 strong#point {

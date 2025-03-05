@@ -2,16 +2,9 @@
   <!-- inicio titulo -->
 
   <div class="divcontactos">
-    <!--  <div class="row">
-      <div class="col-12">
-        <h1 id="txtwork" class="line" @enterState *ngIf="hijo === 'portfolio'">Trabajos</h1>
-      </div>
-    </div> -->
     <div class="row">
-      <div class="col-12" id="cont-txtwork" @entrada *ngIf="hijo === 'portfolio'">
-        <h1 id="txtwork" class="line">
-          Trabajos
-        </h1>
+      <div class="col-12" @enterState *ngIf="hijo === 'portfolio'">
+        <h1 id="txtwork" class="line">Trabajos</h1>
       </div>
     </div>
     <!-- fin titulo -->
@@ -53,9 +46,6 @@
       </div>
 
 
-
-
-
       <!--  FILA DOS -->
       <div class="row d-flex gap-3 bs"> <!-- gap-3 añade espacio -->
         <div class="col-md bg-danger text-white p-3">
@@ -86,9 +76,6 @@
         </div>
 
       </div>
-
-
-
 
     </div>
   </div>
