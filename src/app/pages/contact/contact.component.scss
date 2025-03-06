@@ -1,6 +1,7 @@
 .contact#cntcontac {
   background-color: #202020;
-  height: 100%;
+ 
+  min-height: 100vh;
   // max-height: fit-content;
   width: 90%;
   margin: 0px auto;
@@ -10,7 +11,7 @@
 .divcontacto {
   //div centrado
   width: 92%;
-  height: 100%;
+  min-height: 100vh;
 
   top: 0;
   left: 0;
@@ -167,37 +168,12 @@ textarea.form-control {
 #rowcontact {
   background-color: #18d15f00;
 }
-
-@media (max-width: 991px) {
-  .contact#cntcontac {
-    height: 150vh; /* En dispositivos más pequeños, la altura será del 50% */
-  }
-
-  .divcontacto {
-    height: 150vh; /* En dispositivos más pequeños, la altura será del 50% */
-  }
-}
-
- 
-/*  @media (max-width: 768px) {
-  .contact#cntcontac {
-    height: 150vh;  
-    background-color: #26d367;
-  }
-
-  .divcontacto {
-    height: 150vh;  
-    background-color: rgb(43, 54, 54);
-  }
-} */
- 
-@media (max-width: 360px) {
-  .contact#cntcontac {
-    height: 140vh;  
-  }
-
-  .divcontacto {
-    height: 140vh;  
-  }
-} 
+@media (max-width: 1128px) {
+  .datos-contact  {
+    font-size: 10px;
+     
    
+  
+}
+}
+ 
