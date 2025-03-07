@@ -1,3 +1,7 @@
+
+html {
+  scroll-behavior: smooth;
+}
 li.nav-item a:before,
 li.nav-item a:after {
   position: absolute;
@@ -71,7 +75,7 @@ section#portfolio {
 
 
 }
-section#contact {
+section#enlace{
   --bs-gutter-x: 0rem !important;
   background-color: rgb(255, 255, 255);
    //height:  100%;
@@ -230,33 +234,11 @@ $base: 0.6rem;
 }
  
 
-@media (max-width: 1199px) {
-  section#portfolio {
-  //  min-height: 100vh;
 
-   // height: 100vh;
-  }}
-
-/* @media (max-width: 1199px) {
-  section#portfolio {
-     
-    height: 180vh;
-  }} */
 
 @media (max-width: 991px) {
 
-/*   section#portfolio {
-    
-  
-   
-    height: 170vh;
-  
-  
-  } */
-  section#contact {
-   // height: 100vh;  /* En dispositivos más pequeños, la altura será del 50% */
-    
-  }
+
 
   li.nav-item a:before {
     left: -9px;
