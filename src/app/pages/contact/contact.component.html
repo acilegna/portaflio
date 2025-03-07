@@ -7,7 +7,7 @@
     </div>
 
     <div class="row" id="rowcontact">
-      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12" @fadeInOut *ngIf="hijo === 'enlace'">
+      <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12" @entrada *ngIf="hijo === 'enlace'">
         <div class="cont-contacto row">
 
           <div class="col-8">
@@ -51,7 +51,7 @@
       </div>
 
       <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-        <div id="formulario" @fadeInOut *ngIf="hijo === 'enlace'">
+        <div id="formulario" @entrada *ngIf="hijo === 'enlace'">
           <form #form="ngForm" [formGroup]="myForm">
             <div class="input-group mb-3">
               <span class="input-group-text bi-person-circle icon" id="basic-addon1"></span>

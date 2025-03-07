@@ -77,7 +77,7 @@ export class HeaderComponent {
       this.styleBlue();
     }
 
-    if (this.padre == 'contact') {
+    if (this.padre == 'enlace') {
       this.stylewhite();
     }
   }
@@ -85,14 +85,14 @@ export class HeaderComponent {
   styleBlue() {
     let toArray = this.buttonsocialt.toArray();
     let ref = toArray.find((el) =>
-      el.nativeElement.setAttribute('style', 'color:#0c9693')
+      el.nativeElement.setAttribute('style', 'color: #0c9693')
     );
   }
 
   styleRed() {
     let toArray = this.buttonsocialt.toArray();
     let ref = toArray.find((el) =>
-      el.nativeElement.setAttribute('style', 'color:#919191')
+      el.nativeElement.setAttribute('style', 'color: #919191')
     );
   }
 
