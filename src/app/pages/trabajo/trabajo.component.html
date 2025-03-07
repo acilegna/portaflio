@@ -4,16 +4,16 @@
   <div class="divtrabajo">
     <div class="row">
       <div class="col-12">
-        <h1 id="txtwork" class="line" @enterState *ngIf="hijo === 'portfolio'">Trabajos</h1>
+        <h1 id="txtwork" class="line" @entrada *ngIf="hijo === 'portfolio'">Trabajos</h1>
       </div>
     </div>
 
     <!-- fin titulo -->
 
-    <div class="row cont-portafolio" @enterState *ngIf="hijo === 'portfolio'">
+     <div class="row cont-portafolio" @entrada *ngIf="hijo === 'portfolio'">
 
 
-      <div class="row g-3 bs"> <!-- Espacio general entre columnas -->
+      <div class="row g-3 bs">  
 
         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12   text-white" id="fondo">
           <img class="img-fluid" src="assets/images/invitacion.png" alt="Imagen">
@@ -54,7 +54,7 @@
         </div>
 
       </div>
-    </div>
+    </div>  
     <br>
   </div>
 </div>
