@@ -1,87 +1,93 @@
-<div class="sections">
-  <section id="home" class="container-fluid" #section intersection>
-    <div class="home" id="conthome">
-      <div id="contmenu">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-              aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
-              (click)="toggleState()">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+<html>
 
-            <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="{ collapse: isCollapse }">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link activa optionMenu" href="#home" #menu>Inicio
-                  </a>
-                </li>
+<body>
+  <div class="sections">
+    <section id="home" class="container-fluid" #section intersection>
+      <div class="home" id="conthome">
+        <div id="contmenu">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                (click)="toggleState()">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-                <li class="nav-item">
-                  <a class="nav-link optionMenu" href="#about" #menu> Acerca de</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link optionMenu" href="#portfolio" #menu>
-                    Trabajos</a>
-                </li>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="{ collapse: isCollapse }">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link activa optionMenu" href="#home" #menu>Inicio
+                    </a>
+                  </li>
 
-                <li class="nav-item">
-                  <a class="nav-link optionMenu" href="#enlace" #menu>
-                    Contacto</a>
+                  <li class="nav-item">
+                    <a class="nav-link optionMenu" href="#about" #menu> Acerca de</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link optionMenu" href="#portfolio" #menu>
+                      Trabajos</a>
+                  </li>
 
-                </li>
+                  <li class="nav-item">
+                    <a class="nav-link optionMenu" href="#enlace" #menu>
+                      Contacto</a>
 
-              </ul>
+                  </li>
+
+                </ul>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </div>
 
-      <div class="cont-presentacion col-12 col-sm-12 col-md-12">
-        <h1 id="hello" @entrada *ngIf="padre === 'home'">
-          Hola<strong id="point">.</strong>
-        </h1>
-        <div @fadeInSequence *ngIf="padre === 'home'">
-          <span id="programer" class="line animate">
-            Soy programador web
-          </span>
-          <div id="conthello" class="animate">
+        <div class="cont-presentacion col-12 col-sm-12 col-md-12">
+          <h1 id="hello" @entrada *ngIf="padre === 'home'">
+            Hola<strong id="point">.</strong>
+          </h1>
+          <div @fadeInSequence *ngIf="padre === 'home'">
+            <span id="programer" class="line animate">
+              Soy programador web
+            </span>
+            <div id="conthello" class="animate">
 
-            <div class="d-flex justify-content-right align-items-right">
-
-
-              <a class="cv" target="_blank" href="https://www.linkedin.com/in/angelicamruiz/">
-                Linked <i class="bi bi-linkedin"> </i>
-              </a>
+              <div class="d-flex justify-content-right align-items-right">
 
 
-              <a class="cv" target="_blank" href="https://github.com/acilegna">Github <i class="bi bi-github"></i></a>
+                <a class="cv" target="_blank" href="https://www.linkedin.com/in/angelicamruiz/">
+                  Linked <i class="bi bi-linkedin"> </i>
+                </a>
 
 
-              <a class="cv" target="_blank"
-                href="https://drive.google.com/file/d/1beZT9llleyGkzf86R8VlCTl0typ-W9EZ/view?usp=sharing">CV <i
-                  class="bi bi-file-person-fill"></i></a>
+                <a class="cv" target="_blank" href="https://github.com/acilegna">Github <i class="bi bi-github"></i></a>
+
+
+                <a class="cv" target="_blank"
+                  href="https://drive.google.com/file/d/1beZT9llleyGkzf86R8VlCTl0typ-W9EZ/view?usp=sharing">CV <i
+                    class="bi bi-file-person-fill"></i></a>
+              </div>
+              <!--  <a id="bton-cv" class="btn btn1" target="_blank"
+                  href="https://docs.google.com/document/d/1OLU6bx7bgjSwz3jtUnxKCYxgvyC17Sia/edit?usp=sharing&ouid=114759681083765626627&rtpof=true&sd=true">Ver
+                  CV</a> -->
             </div>
-            <!--  <a id="bton-cv" class="btn btn1" target="_blank"
-              href="https://docs.google.com/document/d/1OLU6bx7bgjSwz3jtUnxKCYxgvyC17Sia/edit?usp=sharing&ouid=114759681083765626627&rtpof=true&sd=true">Ver
-              CV</a> -->
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about" class="container-fluid" #section intersection (trigger)="onTrigger($event)">
-    <app-about [hijo]="padre"></app-about>
-  </section>
+    <section id="about" class="container-fluid" #section intersection (trigger)="onTrigger($event)">
+      <app-about [hijo]="padre"></app-about>
+    </section>
 
-  <section id="portfolio" class="container-fluid" #section intersection (trigger)="onTrigger($event)">
-    <app-trabajo [hijo]="padre"> </app-trabajo>
-  </section>
+    <section id="portfolio" class="container-fluid" #section intersection (trigger)="onTrigger($event)">
+      <app-trabajo [hijo]="padre"> </app-trabajo>
+    </section>
 
-  <section id="enlace" class="container-fluid" #section intersection (trigger)="onTrigger($event)">
-    <app-contact [hijo]="padre"> </app-contact>
-  </section>
+    <section id="enlace" class="container-fluid" #section intersection (trigger)="onTrigger($event)">
+      <app-contact [hijo]="padre"> </app-contact>
+    </section>
 
-  <app-footer></app-footer>
-</div>
+    <app-footer></app-footer>
+  </div>
+</body>
+
+</html>
