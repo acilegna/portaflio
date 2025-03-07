@@ -8,7 +8,15 @@
 }
 
 .bs {
-  --bs-gutter-x: 0 rem;
+ 
+ background-color: aqua;
+ margin-right: 0px;  
+  margin-left:  0px; 
+ /* --bs-gutter-x: 1.5rem; */
+/*  --bs-gutter-x: 0 rem;
+   margin-right: calc(-0.5* var(--bs-gutter-x));  
+  margin-left: calc(-0.5* var(--bs-gutter-x));   */
+  //padding-right: calc(var(--bs-gutter-x)* 0.5);
 }
 
 .cont-portafolio {
