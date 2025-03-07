@@ -21,9 +21,20 @@
 }
 
 .cont-portafolio {
-  margin-top: 140px;
+  margin-top: 120px;
+  
 }
-
+h1#txtwork {
+  margin-left: 12px;
+  color: rgb(73, 73, 73);
+  font-family: "Raleway";
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: -120px;
+  //margin: 130px 0px -70px 115px;
+  position: relative;
+}
 .divcontactos {
   //div centrado
   width: 92%;
@@ -59,16 +70,7 @@
   top: -5px;
 }
 
-h1#txtwork {
-  color: rgb(73, 73, 73);
-  font-family: "Raleway";
-  font-size: 48px;
-  font-weight: bold;
-  margin-top: 140px;
-  margin-bottom: -120px;
-  //margin: 130px 0px -70px 115px;
-  position: relative;
-}
+
 .titulo {
   color: #0c9e9c;
   font-weight: bold;
