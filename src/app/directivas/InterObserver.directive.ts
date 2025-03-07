@@ -34,7 +34,7 @@ export class InterObserver implements OnInit, AfterViewInit {
 
           //obteber id de la seccion que esta siendo intersectada
           var id = entry.target.getAttribute('id');
-
+          //console.log(id);
           /*  this.header.buttonAbout.nativeElement.setAttribute('style', 'color:#0c9693;');
         
            this.header.buttons.nativeElement.setAttribute('style', 'color:#0c9693;'); */
@@ -52,7 +52,8 @@ export class InterObserver implements OnInit, AfterViewInit {
     };
 
     const options = {
-      threshold: 0.98,
+      //threshold: 0.98,
+      threshold: [ 0.75, 1] // Activa en diferentes niveles de visibilidad
     };
 
     const observer = new IntersectionObserver(changeNav, options);
