@@ -4,13 +4,13 @@
   <div class="divtrabajo">
     <div class="row">
       <div class="col-12">
-        <h1 id="txtwork" class="line"  >Trabajos</h1>
+        <h1 id="txtwork" class="line" @entrada *ngIf="hijo === 'portfolio'">Trabajos</h1>
       </div>
     </div>
 
     <!-- fin titulo -->
 
-     <div class="row cont-portafolio"  >
+     <div class="row cont-portafolio" @entrada *ngIf="hijo === 'portfolio'">
 
 
       <div class="row g-3 bs">  
