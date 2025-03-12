@@ -272,6 +272,10 @@ $base: 0.6rem;
     
   } */
 
+  #navIcon{
+    color: rgb(255, 255, 255);
+  }
+
   .navbar-toggler {
     // background-color: rgba(199, 15, 15, 0);
     border: none;
@@ -291,7 +295,7 @@ $base: 0.6rem;
     --bs-navbar-toggler-padding-x: 0.25rem !important;
     --bs-navbar-toggler-padding-y: 0.1rem !important;
     --bs-navbar-padding-x: -2;
-    background-color: rgb(255, 255, 255);
+    background-color: #202020;
     position: fixed;
     width: 90%;
   }

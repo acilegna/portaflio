@@ -7,7 +7,8 @@ import {
   hijo2,
   hijo3,
   container,
-  fadeInGroup
+  fadeInGroup,
+  fadeTab
 } from 'src/app/animations';
 
 @Component({
@@ -22,6 +23,8 @@ import {
     hijo3,
     container,
     fadeInGroup,
+    fadeTab
+
   ],
 })
 export class TrabajoComponent {

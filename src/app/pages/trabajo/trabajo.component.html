@@ -10,10 +10,10 @@
 
     <!-- fin titulo -->
 
-    <div class="row cont-portafolio" @entrada *ngIf="hijo === 'portfolio'">
+    <div class="row cont-portafolio" >
 
 
-      <div class="row g-3 bs">
+      <div class="row g-3 bs" @fadeInOut *ngIf="hijo === 'portfolio'">
 
         <ul class="nav nav-tabs">
           <li class="nav-item">
@@ -28,49 +28,49 @@
         <div class="tab-content mt-3">
           <div *ngIf="activeTab === 'tab1'" class="tab-pane fade show active">
 
-            <div class="row">
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12   text-white fondo">
+            <div class="row bs" @fadeInOut *ngIf="hijo === 'portfolio'">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  text-white fondo">
                 <img class="img-fluid" src="assets/images/invitacion.png" alt="Imagen">
                 <div id="superpuesto" class="position-absolute top-50 start-50 translate-middle  p-3  ">
                   <h3 class="titulo">Invitación digital.</h3>
                   <p class="descripcion">Invitación desarrollada con HTML y Bootstrap. </p>
-                  <a href="https://invitationbaby.vercel.app/" class="link"><i class="bi bi-box-arrow-up-right"></i>
+                  <a href="https://invitationbaby.vercel.app/" class="link" target="_blank"><i class="bi bi-box-arrow-up-right"></i>
                   </a>
                 </div>
               </div>
 
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12   text-white fondo">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12   text-white fondo">
                 <img class="img-fluid" src="assets/images/portafolio.png" alt="Imagen">
                 <div id="superpuesto" class="position-absolute top-50 start-50 translate-middle  p-3  ">
                   <h3 class="titulo">Mi portafolio</h3>
                   <p class="descripcion">Portafolio de evidencias desarrollado con Angular, Bootstrap y Node.js (para el
                     envío de correos electrónicos)</p>
-                  <a href="https://portaf-weld.vercel.app/" class="link"><i class="bi bi-box-arrow-up-right"></i></a>
+                  <a href="https://portaf-weld.vercel.app/" class="link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
               </div>
 
             </div>
           </div>
           <div *ngIf="activeTab === 'tab2'" class="tab-pane fade show active">
-            <div class="row">
+            <div class="row bs" @fadeInOut *ngIf="hijo === 'portfolio'">
 
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12   text-white fondo">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12   text-white fondo">
                 <img class="img-fluid" src="assets/images/venta.png" alt="Imagen">
                 <div id="superpuesto" class="position-absolute top-50 start-50 translate-middle  p-3  ">
                   <h3 class="titulo">Punto de venta</h3>
                   <p class="descripcion">Proyecto para el control de inventarios, ventas y gestión de entradas y
                     salidas,
                     desarrollado con Laravel, jQuery, Ajax, JavaScript y MySQL.</p>
-                  <a href="https://github.com/acilegna/ventas" class="link"><i class="bi bi-box-arrow-up-right"></i></a>
+                  <a href="https://github.com/acilegna/ventas" class="link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
               </div>
 
-              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12   text-white fondo">
+              <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12   text-white fondo">
                 <img class="img-fluid" src="assets/images/entheos.png" alt="Imagen">
                 <div id="superpuesto" class="position-absolute top-50 start-50 translate-middle  p-3  ">
                   <h3 class="titulo">Landing page</h3>
                   <p class="descripcion">Página informativa desarrollada con HTML, Bootstrap, jQuery y JavaScript.</p>
-                  <a href="https://entheos-sand.vercel.app/" class="link"><i class="bi bi-box-arrow-up-right"></i></a>
+                  <a href="https://entheos-sand.vercel.app/" class="link" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
               </div>
 
@@ -79,6 +79,5 @@
         </div>
       </div>
     </div>
-    <br>
   </div>
 </div>

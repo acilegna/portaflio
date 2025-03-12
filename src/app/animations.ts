@@ -29,6 +29,19 @@ export const translates = trigger('entrada', [
   ]),
 ]);
 
+//nueva
+export const fadeTab= trigger('fadeInOut', [
+  state('void', style({ opacity: 0, transform: 'translateY(-10px)' })),
+  transition(':enter', [
+    animate('300ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
+  ]),
+  transition(':leave', [
+    animate('300ms ease-in', style({ opacity: 0, transform: 'translateY(10px)' }))
+  ])
+])
+//fin nueva
+
+
 //about
 export const fadeInSequence = trigger('fadeInSequence', [
   transition('* <=> *', [
@@ -114,21 +127,3 @@ export const hijo3 = trigger('enterLeft', [
   ]),
 ]);
 
-/* export const slide = trigger('slideInOut', [
-  transition(':enter', [
-    style({ transform: 'translateX(10%)', opacity: 0 }),
-    animate(
-      '60ms ease-in',
-      style({ transform: 'translateX(0%)', opacity: 1 })
-    ),
-  ]),
-
-  transition(':leave', [
-    style({ transform: 'translateX(0%)', opacity: 1 }),
-    animate(
-      '0ms ease-in',
-      style({ transform: 'translateX(10%)', opacity: 0 })
-    ),
-  ]),
-]);
- */
