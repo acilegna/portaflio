@@ -53,7 +53,8 @@ export class InterObserver implements OnInit, AfterViewInit {
 
     const options = {
       //threshold: 0.98,
-      threshold: [ 0.75, 1] // Activa en diferentes niveles de visibilidad
+      //threshold: [0.25, 0.5, 0.75, 1] // Activa en diferentes niveles de visibilidad
+      threshold: [0.75, 1] // Activa en diferentes niveles de visibilidad
     };
 
     const observer = new IntersectionObserver(changeNav, options);

@@ -25,6 +25,14 @@ import {
   ],
 })
 export class TrabajoComponent {
+
+  activeTab: string = 'tab1'; // Pestaña activa
+
+  setActiveTab(tabName: string) {
+    this.activeTab = tabName;
+  }
+
+
   @Input() hijo = '';
 
   isVisible: boolean = true;

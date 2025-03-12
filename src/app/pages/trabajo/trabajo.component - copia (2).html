@@ -15,19 +15,22 @@
 
       <div class="row g-3 bs">
 
-        <ul class="nav nav-tabs">
-          <li class="nav-item">
-            <a class="nav-link" [ngClass]="{'active': activeTab === 'tab1'}" (click)="setActiveTab('tab1')">Parte 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [ngClass]="{'active': activeTab === 'tab2'}" (click)="setActiveTab('tab2')">Parte 2</a>
-          </li>
+        <!-- Nav Tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
 
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+              role="tab" aria-controls="profile" aria-selected="false">Parte 1</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+              role="tab" aria-controls="contact" aria-selected="false">Parte 2</button>
+          </li>
         </ul>
+        <!-- Contenido de los Tabs -->
+        <div class="tab-content mt-3" id="myTabContent">
 
-        <div class="tab-content mt-3">
-          <div *ngIf="activeTab === 'tab1'" class="tab-pane fade show active">
-
+          <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <div class="row">
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12   text-white fondo">
                 <img class="img-fluid" src="assets/images/invitacion.png" alt="Imagen">
@@ -48,11 +51,11 @@
                   <a href="https://portaf-weld.vercel.app/" class="link"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
               </div>
-
             </div>
           </div>
-          <div *ngIf="activeTab === 'tab2'" class="tab-pane fade show active">
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="row">
+
 
               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12   text-white fondo">
                 <img class="img-fluid" src="assets/images/venta.png" alt="Imagen">
@@ -77,6 +80,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
     <br>
