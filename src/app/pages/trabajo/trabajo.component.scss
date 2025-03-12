@@ -105,10 +105,13 @@ a.link {
 
   color: #ffffff;
   font-weight: bold;
+  transition: font-size 0.5s ease-in-out;
+  font-size: 20px;
 }
 a.link:hover{
   color:#0c9e9c;
-  font-size: larger;
+  font-size: 28px;
+ // font-size: larger;
 }
 
 #superpuesto {

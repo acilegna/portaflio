@@ -295,9 +295,16 @@ $base: 0.6rem;
     --bs-navbar-toggler-padding-x: 0.25rem !important;
     --bs-navbar-toggler-padding-y: 0.1rem !important;
     --bs-navbar-padding-x: -2;
-    background-color: #202020;
+    background-color: #0000006e;
     position: fixed;
+
     width: 90%;
+   // transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+  .navbar:hover {
+   
+    background-color: #202020;
+ 
   }
   li .nav-item {
     margin-top: -70;
